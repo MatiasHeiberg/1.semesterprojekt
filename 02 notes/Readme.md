@@ -1,0 +1,1 @@
+Dette er vores readme/landing page for eksaminator/censor.
