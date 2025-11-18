@@ -43,6 +43,13 @@ Opgaven består af to dele:
 - Forfatter til klasser/metoder skal fremgå via XML-kommentarer
 - Koden skal dokumenteres med relevante kommentarer
 
+```csharp
+/// <summary>
+/// beskrivelse
+/// </summary>
+/// <param name="navn"></param>
+```
+
 ---
 
 ### Brug af GitHub

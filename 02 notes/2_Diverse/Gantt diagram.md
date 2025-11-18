@@ -61,13 +61,36 @@ TODO
 - Projektplanlægning
 - Konktrakt?
 - GANTT
+
 **Ideudvikling**
 - Udarbejd problemformulering
 - Konceptbeskrivelse
 - Fælles orbog
-- Målgruppe
+
 **Forretningsforståelse**
 - BMC
+- ESG (par linjer)
+
+**Kravspecifikation**
+- User stories
+- FURPS+
+
+**Artefakter**
+- Sekvensdiagrammer
+- klassediagrammer
+- use case
+- domænemodel
+- vision board
+
+**UX/UI**
+
+**Implementering**
+  - Medlemskab
+  - Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere
+  - Tilmelding til aktiviteter
+  - Overblik over aktiviteter (for både medlemmer og administratorer)
+  - Data indlæses fra en fil med **mindst 10 medlemmer**
+
 
 **Rapport**
 - Forside (se krav)
