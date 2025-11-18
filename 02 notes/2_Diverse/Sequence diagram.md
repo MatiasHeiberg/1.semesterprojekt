@@ -1,5 +1,6 @@
 # Mermaid Sequence Diagram Guide (Obsidian)
-
+> [!NOTE] Documentation
+> [Sequence diagrams | Mermaid](https://mermaid.js.org/syntax/sequenceDiagram.html)
 ## Minimal Exchange
 ```mermaid
 sequenceDiagram
