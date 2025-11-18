@@ -1,0 +1,10 @@
+views:
+  - type: table
+    name: Procesnoter
+    filters:
+      and:
+        - file.inFolder("1_Procesnoter")
+    order:
+      - file.name
+      - file.ctime
+    markers: none

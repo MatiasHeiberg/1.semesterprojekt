@@ -1,5 +1,6 @@
 # Mermaid Gantt Diagram Guide (Obsidian)
-
+> [!NOTE] Documentation
+> [Gantt diagrams | Mermaid](https://mermaid.js.org/syntax/gantt.html)
 ## Minimal Setup
 ```mermaid
 gantt

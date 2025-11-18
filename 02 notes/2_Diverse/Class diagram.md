@@ -1,5 +1,8 @@
 # Mermaid Class Diagram Guide (Obsidian)
 
+> [!Documentation]
+> [Class diagrams | Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+
 ## Minimal Class
 ```mermaid
 classDiagram

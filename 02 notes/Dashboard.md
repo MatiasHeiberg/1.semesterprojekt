@@ -12,6 +12,7 @@ When you're ready, delete this note and make the vault your own.
 - [[Projektstruktur der øger produktiviteten]]
 - [[Readme]]
 
+
 # Process notes
 - [[1.1]]
 - [[1.1a]]
