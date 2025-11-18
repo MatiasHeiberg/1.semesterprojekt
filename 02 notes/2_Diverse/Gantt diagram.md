@@ -53,3 +53,23 @@ gantt
   Frontend   :active, after a1, 6d
   Docs       :done, 2025-02-10, 2d
 ```
+TODO
+**Forberedelse**
+- Repo (GitHub)
+- Læse opgaveformulering sammen
+- Obsidian opsætning
+- Projektplanlægning
+- Konktrakt?
+- GANTT
+**Ideudvikling**
+- Udarbejd problemformulering
+- Konceptbeskrivelse
+- Fælles orbog
+- Målgruppe
+**Forretningsforståelse**
+- BMC
+
+**Rapport**
+- Forside (se krav)
+- Indholdsfortegnelse
+- Indledning og problemformulering
