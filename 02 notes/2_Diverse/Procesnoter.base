@@ -7,5 +7,4 @@ views:
     order:
       - aliases
       - file.name
-      - file.ctime
     markers: none
