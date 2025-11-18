@@ -1,10 +1,9 @@
 views:
-  - type: table
+  - type: list
     name: Procesnoter
     filters:
       and:
         - file.inFolder("1_Procesnoter")
     order:
-      - aliases
       - file.name
     markers: none
