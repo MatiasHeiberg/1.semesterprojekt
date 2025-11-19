@@ -4,17 +4,17 @@ gantt
     title Projektoversigt
 
     section Forberedelse
-    Repo_opsaetning          :a1, 2025-11-18, 1d
-    Laes_opgaveformulering   :a2, after a1, 1d
-    Obsidian_opsaetning      :a3, after a2, 1d
-    Projektplanlaegning      :a4, after a3, 1d
-    Gantt_plan                    :a5, after a4, 1d
-    Ideudvikling             :a6, after a5, 2d
+    Repo_opsaetning          :a1, 2025-11-18, 1d, done
+    Laes_opgaveformulering   :a2, after a1, 1d, active
+    Obsidian_opsaetning      :a3, after a2, 1d, done
+    Projektplanlaegning      :a4, after a3, 1d, done
+    Gantt_plan                    :a5, after a4, 1d, active
+    Ideudvikling             :a6, after a5, 2d, active
 
     section Problemrum
-    Problemformulering       :b1, after a6, 2d
-    Konceptbeskrivelse       :b2, after b1, 2d
-    Ordbog                   :b3, after b2, 1d
+    Problemformulering       :b1, after a6, 2d, done
+    Konceptbeskrivelse       :b2, after b1, 2d, active
+    Ordbog                   :b3, after b2, 1d, done
     Forretningsforstaaelse   :b4, after b3, 1d
 
     BMC_Key_Partners         :b5, after b4, 1d
