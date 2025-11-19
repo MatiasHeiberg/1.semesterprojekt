@@ -1,0 +1,31 @@
+views:
+  - type: list
+    name: Listevisning
+    filters:
+      and:
+        - type == "begreb"
+        - file.folder != "3_Templates"
+    order:
+      - file.name
+      - beskrivelse
+    cardSize: 490
+    indentProperties: true
+    markers: none
+    separator: " | "
+    imageAspectRatio: 1
+    imageFit: contain
+  - type: table
+    name: Tabelvisning
+    filters:
+      and:
+        - type == "begreb"
+        - file.folder != "3_Templates"
+    order:
+      - file.name
+      - beskrivelse
+    cardSize: 490
+    indentProperties: true
+    markers: none
+    separator: " | "
+    imageAspectRatio: 1
+    imageFit: contain

@@ -7,3 +7,4 @@
 - [[Mermaid guide]]
 - [[Project workflow obsidian to typst]]
 - [[Readme]]
+- [[Ordbog]]
