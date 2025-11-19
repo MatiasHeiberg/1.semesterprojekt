@@ -4,4 +4,5 @@ Aliases:
 - Begrebsapperat
 ---
 
+
 ![[Ord index.base]]
