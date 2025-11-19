@@ -8,3 +8,4 @@
 - [[Project workflow obsidian to typst]]
 - [[Readme]]
 - [[Ordbog]]
+- [[Projektstyring]]
