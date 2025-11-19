@@ -4,6 +4,60 @@ gantt
     title Projektoversigt
 
     section Forberedelse
+    Repo_opsaetning          :done, a1, 2025-11-17, 1d
+    Laes_opgaveformulering   :active, a2, after a1, 0.5d
+    Obsidian_opsaetning      :done, a3, 2025-11-17, 1d
+    Projektplanlaegning      :done, a4, after a3, 1d
+    Gruppekontrakt           :done, a5, after a4, 0.5d
+    Gantt_plan               :active, a6, 2025-11-18, 1d
+   
+    section Ideudvikling
+    Problemformulering       :done, b1, 2025-11-18, 2d
+    Konceptbeskrivelse       :active, b2, after b1, 2d
+    Ordbog                   :done, b3, after b2, 1d
+
+    
+	section Forretning
+    Business Model Canves    :c1, 2025-11-19, 1d
+
+    section UML_Design
+    Vision_board             :d1, 2025-11-21, 0.5d
+    Domaenemodel             :d2, after d2, 0.5d
+    User_Stories             :d4, after d3, 0.5d
+    Kravspecifikation        :d5, after d4, 0.5d
+    Use_Cases                :d6, after d5, 0.5d
+    FURPS_plus               :d7, after d6, 0.5d
+    Sekvensdiagrammer        :d8, after d7, 0.5d
+    Klassediagram            :d9, after d8, 1d
+    UX_UI_Analyse            :d10, after d9, 0.5d
+    UX_UI_skitser            :d11, after d10, 0.5d
+
+    section Implementering
+    Medlemskabssystem        :e1, 2025-11-28, 2d
+    Opret_aktiviteter        :e2, after e1, 2d
+    Tilmelding               :e3, after e2, 2d
+    Aktivitetsoverblik       :e4, after e3, 2d
+    Admin_overblik           :e5, after e4, 2d
+    Data_indlaesning_fra_fil :e6, after e5, 1d
+    Funktionelle_tests       :e7, after e6, 2d
+
+    section Rapport
+    Forside                  :f1, 2025-12-08, 0.5d
+    Indholdsfortegnelse      :f2, after f1, 0.5d
+    Indledning               :f3, after f2, 0.5d
+    Metode_OOA_OOD           :f4, after f3, 0.5d
+    Design_UML_afsnit        :f5, after f4, 0.5d
+    Implementering_afsnit    :f6, after f5, 0.5d
+    Test_afsnit              :f7, after f6, 0.5d
+    Konklusion               :f8, after f7, 0.5d
+```
+
+```mermaid
+gantt
+    dateFormat  YYYY-MM-DD
+    title Projektoversigt
+
+    section Forberedelse
     Repo_opsaetning          :done, a1, 2025-11-18, 1d
     Laes_opgaveformulering   :active, a2, after a1, 1d
     Obsidian_opsaetning      :done, a3, after a2, 1d
