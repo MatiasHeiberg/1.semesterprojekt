@@ -1,6 +1,7 @@
 📌[[Opgaveformulering]]
 📌[[The Natural Planning Model]]
 📌[[Gruppekontrakt]]
+📌[[Udkast]]
 
 - [[Ways to Collaborate on Obsidian]]
 - [[obsidian guide]]
