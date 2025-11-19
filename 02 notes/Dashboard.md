@@ -10,3 +10,6 @@
 - [[Readme]]
 - [[Ordbog]]
 - [[Projektstyring]]
+
+## Forretningsanalyse
+- [[BMC]]
