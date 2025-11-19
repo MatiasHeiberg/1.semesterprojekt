@@ -5,11 +5,11 @@ gantt
 
     section Forberedelse
     RepoOpsætning          :done, a1, 2025-11-17, 1d
-    LæsOpgaveformulering   :active, a2, after a1, 0.5d
+    LæsOpgaveformulering   :done, a2, after a1, 0.5d
     ObsidianOpsætning      :done, a3, 2025-11-17, 1d
-    Projektplanlægning      :done, a4, after a3, 1d
-    Gruppekontrakt           :done, a5, after a4, 0.5d
-    GanttPlan               :active, a6, 2025-11-18, 1d
+    Projektplanlægning     :done, a4, after a3, 1d
+    Gruppekontrakt         :done, a5, after a4, 0.5d
+    GanttPlan              :done, a6, 2025-11-18, 1d
    
     section Ideudvikling
     Problemformulering       :done, b1, 2025-11-18, 2d
@@ -18,7 +18,7 @@ gantt
 
     
 	section Forretning
-    BusinessModelCanves    :c1, 2025-11-19, 1d
+    BusinessModelCanves     :c1, 2025-11-19, 1d
 
     section UML_Design
     VisionBoard             :d1, 2025-11-21, 0.5d
@@ -36,13 +36,13 @@ gantt
     Medlemskabssystem        :e1, 2025-11-28, 2d
     OpretAktiviteter        :e2, after e1, 2d
     Tilmelding               :e3, after e2, 2d
-    Aktivitetsoverblik       :e4, after e3, 2d
-    AdminOverblik           :e5, after e4, 2d
+    Aktivitetsoverblik       :e4, after e3, 1d
+    AdminOverblik           :e5, after e4, 1d
     DataIndlæsningFraFil :e6, after e5, 1d
-    FunktionelleTests       :e7, after e6, 2d
+    FunktionelleTests       :e7, after e6, 1d
 
     section Rapport
-    Forside                  :f1, 2025-12-08, 0.5d
+    Forside                  :f1, 2025-12-03, 0.5d
     Indholdsfortegnelse      :f2, after f1, 0.5d
     Indledning               :f3, after f2, 0.5d
     MetodeOOAOOD           :f4, after f3, 0.5d
