@@ -1,5 +1,5 @@
 ### Hvor stoppede vi igår?
-### Hvad var målet for i dag? (1)
+### Hvad er målet for i dag? (1)
 *Eksempel
 * Færdigøre Gantt
 * Use cases
