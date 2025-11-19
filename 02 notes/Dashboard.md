@@ -2,13 +2,14 @@
 📌[[The Natural Planning Model]]
 📌[[Gruppekontrakt]]
 📌[[Udkast]]
+📌[[Ordbog]]
+📌[[Problemstillinger]]
 
-- [[Ways to Collaborate on Obsidian]]
+
 - [[obsidian guide]]
 - [[Mermaid guide]]
 - [[Project workflow obsidian to typst]]
 - [[Readme]]
-- [[Ordbog]]
 - [[Projektstyring]]
 
 ## Forretningsanalyse
