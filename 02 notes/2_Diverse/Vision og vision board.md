@@ -1,5 +1,5 @@
-### Outcome **Vision**ing
-
+### [[The Natural Planning Model#Outcome **Vision**ing|Vision]]
+### Vision Board
 
 Target Group
 
@@ -7,4 +7,4 @@ Needs
 
 Product
 
-Business Goal
+Business Goals
