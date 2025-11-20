@@ -7,7 +7,7 @@
 - [[Gantt diagram]]
 - [[The Natural Planning Model]]
 - [[Problemstillinger v2]]
-- [[Vision og vision board]]
+- [[Vision Board]]
 
 ## Forretningsanalyse
 - [[BMC]]
