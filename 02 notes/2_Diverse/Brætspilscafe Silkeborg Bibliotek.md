@@ -1,4 +1,5 @@
 
+
 Er du vild med brætspil? Så kom og spil med tirsdag i lige uger på Silkeborg Bibliotek.
 
 Det er lige meget, om du er ny eller garvet, om du er mest til worker placement eller deck building – her handler det om hyggeligt samvær og fælles spiloplevelser. Biblioteket stiller en samling nyere voksenbrætspil til rådighed, fra det populære ”Ticket to Ride” til racerbrætspillet ”Heat”. Du er også velkommen til at tage egne spil med.
