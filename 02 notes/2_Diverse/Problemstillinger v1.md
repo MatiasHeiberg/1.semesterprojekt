@@ -1,6 +1,3 @@
-
-
-
 ## Hvilke udfordringer har arrangementet på nuværende tidspunkt?  
 
 - Det kan være svært for spillere, der ikke kender hinanden eller kommer forskudt, at samles omkring et spil
