@@ -1,3 +1,4 @@
+Arbejder videre fra [[BMC v1]]
 ## 1. Customer Segment
 Borgere/deltagere - nybegyndere eller erfarne deltagere, game masters
 Frivillige - facilitatorer, afviklere, administratorer 

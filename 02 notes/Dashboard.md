@@ -12,7 +12,7 @@
 - [[Vision Board]]
 
 ## Forretningsanalyse
-- [[BMC]]
+- [[BMC v2]]
 - [[PESTLE]]
 - [[ESG]]
 
