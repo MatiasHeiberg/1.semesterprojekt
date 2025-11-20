@@ -1,8 +1,8 @@
 Baseret på [[The Natural Planning Model]]
 Videre arbejde af [[Problemstillinger v1]]
 
-### Purpose (Hvorfor): 
+### [[The Natural Planning Model#Purpose and principles|Purpose]] (Hvorfor): 
 
 
-### Principles (Vilkår)
+### [[The Natural Planning Model#Purpose and principles|Principles]] (Vilkår)
 
