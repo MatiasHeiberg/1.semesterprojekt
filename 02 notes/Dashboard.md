@@ -16,6 +16,9 @@
 - [[PESTLE]]
 - [[ESG]]
 
+### UML
+[[Domænemodel]]
+
 ## Diverse
 - [[obsidian guide]]
 - [[Mermaid guide]]
