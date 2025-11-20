@@ -1,4 +1,5 @@
-[[Problemstillinger v1]]
+Baseret på [[The Natural Planning Model]]
+Videre arbejde af [[Problemstillinger v1]]
 
 ## Hvilke udfordringer har arrangementet på nuværende tidspunkt?  
 
@@ -11,7 +12,7 @@
 - Medarbejdere har ikke overblik over, hvor mange der kommer til arrangementet
 - Der er ingen måde, hvorpå arrangører kan skabe sig historik/overblik over, hvilke spil der er mest populære, og hvad der eventuelt skal kasseres
 
-### Purpose (WHY): 
+### Purpose (Hvorfor): 
 - Brætspilscafeen på Silkeborg Bibliotek skal være mere overskuelig og bedre struktureret for både medarbejdere og spildeltagerne
 - Arrangementet skal være mere inkluderende, så spillere, der dukker op alene, hurtigt og nemt finder medspillere. 
 - Arrangementet skal styrke fællesskab og gøre det nemmere for spilentusiaster at finde hinanden 
@@ -19,7 +20,7 @@
 - Misforståelser, forvirring og risikoen for mangel på pladser skal reduceres
 - Deltagere skal nemt kunne arrangere og planlægge et ønsket spil forud for arrangementet
 
-### Principles
+### Principles (Vilkår)
 - Systemet skal være brugervenligt, så deltagelse ikke kræver tekniske færdigheder (Brugervenlighed)
 - Programmet skal være med til at skabe mere inklusion og styrke fællesskabet i kommunen (Inklusion)
 - Det skal være sikkert at oprette sig som bruger og arrangere nye aktiviteter (Datasikkerhed)
