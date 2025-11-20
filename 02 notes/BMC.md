@@ -1,4 +1,4 @@
-## 1. Customer segment
+## 1. Customer Segment
 Borgere/deltagere - nybegyndere eller erfarne deltagere, game masters
 Frivillige - facilitatorer, afviklere, administratorer 
 Silkeborg Bibliotek - institutionel partner
@@ -26,25 +26,32 @@ Vores system kan understøtte brætspilscafeerne, så arrangementerne bliver et 
 
 Vi vil nå nye medlemmer via facebook og bibliotekets hjemmeside. Derudover forventer vi, at mund-til-mund også vil have en god effekt på tilmeldingsraten. Email-notifikationer skal fungere som middel til at fastholde medlemmer.
 
-## 4. Customer relationship
+## 4. Customer Relationship
 - Frivillige -> systemet afhjælper praktiske, logistiske opgaver og sørger for at give frivillige et godt overblik over et specifikt arrangements størrelse og allerede tilmeldte aktiviteter
 - Borgere -> Med mulighed for at tilmelde sig en spilaktivitet eller oprette sig som game master før arrangementets start sikrer vi, at deltagere oplever et mere trygt og roligt miljø, hvor spillet kan gå i gang, så snart man møder op. Det giver de tilmeldte en bedre oplevelse, hvor der kan fokuseres på det, der er hensigten - at spille brætspil. 
 
-Vores produkt vil give tilmeldte og frivillige en mere gnidningsfri oplevelse, der sikrer en bedre spiloplevelse og et trygt første møde med nye ligesindede
+Vores produkt vil give tilmeldte og frivillige en mere gnidningsfri oplevelse, der sikrer en bedre spiloplevelse og et trygt første møde med nye ligesindede.
 
-## 5. Revenue streams
-- Open source -> ingen omsætning
+## 5. Revenue Streams
+- Det er gratis for brugere at blive medlem og bruge systemet - altså open source
+- Det skaber værdi for biblioteket, fordi ressourcerne bliver bedre udnyttet, og det vil skabe øget deltagelse i et af bibliotekernes kulturtilbud
+- Frivillige aflastes
+- På sigt er der mulighed for andre samarbejdspartnere som brætspilsbutikker og andre kulturinstitutioner
 
-## 6. Key resources
-- Bibliotek 
-	- Location (borde, stole)
-	- Brætspil (fordi brætspil en central resource i en brætspilscafe)
+Vores system vil ikke generere økonomiske indtægter, men man kan i stedet tale om, at det skaber stor indirekte værdi. Mange af de praktiske udfordringer, vi ser i det aktuelle tilbud, bliver løst. De frivilliges arbejde effektiviseres, og arrangementet vil tiltrække flere deltagere. Helt overordnet vil kvaliteten af hele arrangementet blive styrket, og det skaber en stor værdi for biblioteket, der får flere borgere forbi institutionen.  
+
+## 6. Key Resources
+- Biblioteket 
+	- Location (biblioteket låner bygning med borde og stole ud til afviklingen af cafeen)
+	- Brætspil (Biblioteket stiller brætspil til rådighed, som er en central ressource i forbindelse med arrangementet)
 - Frivillige
-	- Arrangører
-	- Udviklere
+	- Arrangører (Frivillige administrerer systemet og hjælper til ved arrangementerne)
+	- Udviklere (Vedligeholder systemet og er ansvarlige for det tekniske design)
+
+Systemet er afhængig af fysiske og menneskelige ressourcer. Biblioteket stiller omgivelserne til rådighed, men frivillige kræfter sørger for driften. 
 
 ## 7. Key activities
-- Socioøkonomisk værdiskabelse (ESG)
+- Socioøkonomisk værdiskabelse (ESG) HVILKE AKTIVITETER UDFØRER VI 
 - Open source
 - Åben for alle at bruge
 - Understøtter public service
