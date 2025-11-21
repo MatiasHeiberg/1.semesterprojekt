@@ -12,8 +12,13 @@ MOSCOW
 - Bruger fungerer som Gamemaster, når de opretter en spilsession, der giver dem rettighed til at redigere eller slette samme session
 - Administrator kan se aktivitetshistorik for den enkelte bruger
 
-
 **Could:**
-
+ - 
 
 **Would:** 
+- Brugeren kan optjene points for at oprette sig som gamemaster eller for at deltage i fysiske arrangementer via systemet
+
+
+FURPS+
+
+
