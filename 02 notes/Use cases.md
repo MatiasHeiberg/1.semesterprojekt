@@ -74,7 +74,7 @@ Administrator ser aktivitetshistorik
 **Casual:**
 **Titel:** Administrator ser aktivitetshistorik  
 **Primær aktør:** Administrator
-**Successcenarie:** Administrator vælger aktivitetshistorik på hovedmenu, administrator får overblik og historik over tidligere arrangementer
+**Successcenarie:** Administrator ser tidligere arrangementer, administrator får overblik og historik over tidligere arrangementer og sessioner.
 
 **5. Oprettelse af arrangementer**
 **Brief:**
