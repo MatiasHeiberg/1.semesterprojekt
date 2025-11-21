@@ -21,10 +21,10 @@ gantt
 
     section UML_Design
     VisionBoard             :done, d1, 2025-11-20, 0.5d
-    Domænemodel             :d2, 2025-11-20, 0.5d
+    Domænemodel             :done, d2, 2025-11-20, 0.5d
     UserStories             :d3, 2025-11-21, 0.5d
-    UseCases                :d5, 2025-11-21, 0.5d
-    FURPS+              :d6, 2025-11-21, 2d
+    UseCases                :done, d5, 2025-11-21, 0.5d
+    FURPS+                  :d6, 2025-11-21, 2d
     Sekvensdiagrammer        :d7, 2025-11-21, 13d
     Klassediagram            :d8, 2025-11-21, 13d
     UXUIAnalyse            :d9, 2025-11-24, 5d
