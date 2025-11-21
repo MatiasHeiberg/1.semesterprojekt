@@ -41,10 +41,37 @@ Formater
 
 
 **1. Håndtere medlemskab**
+*Brief:*
+Administrator fjerner bruger fra systemet.
 
+*Casual:*
+**Titel:** Scenarie titel  
+**Primær aktør:** Bruger  
+**Successcenarie:** Brugeren gør noget og når i mål med opgaven.
 
 **2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere**
+*Brief:*
+Bruger opretter ny spilsession
+
+*Casual:
+**Titel:** Scenarie titel  
+**Primær aktør:** Bruger  
+**Successcenarie:** Brugeren gør noget og når i mål med opgaven.
 
 **3. Tilmelding til aktiviteter**
+*Brief:*
+Bruger tilmelder sig spilsession
+
+*Casual:*
+**Titel:** Scenarie titel  
+**Primær aktør:** Bruger  
+**Successcenarie:** Brugeren gør noget og når i mål med opgaven.
 
 **4. Overblik over aktiviteter**
+*Brief:*
+Administrator ser aktivitetshistorik
+
+*Casual:*
+**Titel:** Scenarie titel  
+**Primær aktør:** Bruger  
+**Successcenarie:** Brugeren gør noget og når i mål med opgaven.
