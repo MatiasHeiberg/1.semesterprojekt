@@ -17,13 +17,12 @@ gantt
 
     
 	section Forretning
-    BusinessModelCanves     :active, c1, 2025-11-19, 1d
+    BusinessModelCanves     :done, c1, 2025-11-19, 1d
 
     section UML_Design
-    VisionBoard             :d1, 2025-11-20, 0.5d
+    VisionBoard             :done, d1, 2025-11-20, 0.5d
     Domænemodel             :d2, 2025-11-20, 0.5d
     UserStories             :d3, 2025-11-21, 0.5d
-    Kravspecifikation        :d4, 2025-11-21, 0.5d
     UseCases                :d5, 2025-11-21, 0.5d
     FURPS+              :d6, 2025-11-21, 2d
     Sekvensdiagrammer        :d7, 2025-11-21, 13d
