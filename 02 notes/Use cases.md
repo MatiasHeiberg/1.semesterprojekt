@@ -56,22 +56,32 @@ Bruger opretter ny spilsession
 **Casual:**
 **Titel:** Bruger opretter ny spilsession  
 **Primær aktør:** Bruger  
-**Successcenarie:** Bruger klikker ind på et specifikt arrangement og trykker opret spilsession vælger spil og deltagerbegrænsning.
+**Successcenarie:** Bruger klikker ind på et specifikt arrangement og trykker opret spilsession, vælger spil og deltagerbegrænsning.
 
 **3. Tilmelding til aktiviteter**
 **Brief:**
 Bruger tilmelder sig spilsession
 
 **Casual:**
-**Titel:** Scenarie titel  
-**Primær aktør:**  
-**Successcenarie:** 
+**Titel:** Bruger tilmelder sig spilsession
+**Primær aktør:**  Bruger
+**Successcenarie:** Bruger vælger arrangement på hovedmenu, vælger en spilsession, læser beskrivelse og tilmelder sig valgte spil
 
 **4. Overblik over aktiviteter**
 **Brief:**
 Administrator ser aktivitetshistorik
 
 **Casual:**
-**Titel:** Scenarie titel  
-**Primær aktør:** Bruger  
-**Successcenarie:** Brugeren gør noget og når i mål med opgaven.
+**Titel:** Administrator ser aktivitetshistorik  
+**Primær aktør:** Administrator
+**Successcenarie:** Administrator vælger aktivitetshistorik på hovedmenu, administrator får overblik og historik over tidligere arrangementer
+
+**5. Oprettelse af arrangementer**
+**Brief:**
+Administrator opretter arrangement med dato og beholdning
+
+**Casual:** 
+**Titel:** Administrator opretter arrangement med dato og spilbeholdning
+**Primær aktør:** Administrator
+**Successcenarie:** Administrator opretter nyt arrangement via hovedmenu. Ved oprettelse vælges dato og den spilbeholdning, game masters kan vælge imellem ved det valgte arrangement. Arrangementet bliver synligt for alle brugere
+
