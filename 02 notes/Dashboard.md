@@ -18,6 +18,9 @@
 
 ### UML
 [[Domænemodel]]
+[[Klassediagram]]
+[[Krav]]
+
 
 ## Diverse
 - [[obsidian guide]]
