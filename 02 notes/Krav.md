@@ -2,7 +2,7 @@
 
 MOSCOW
 **Must:**
-- [[Admin]] kan fjerne [[User]] fra systemet
+- [[Admin]] kan fjerne [[User]] fra systemet ^694f3c
 - [[Admin]] skal kan kunne se [[User]]profiler
 - [[Admin]] skal kunne tilføje [[Game]] og indstille min og maks [[Game]]lere.
 - [[Admin]] skal kunne tilføje datoer.

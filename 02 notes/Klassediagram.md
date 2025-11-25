@@ -1,3 +1,4 @@
+# Version 1
 ```mermaid
 classDiagram
 
@@ -31,3 +32,43 @@ GameSession <-- Event
 Event <-- Game
 GameSession <|-- GameMaster
 Event <-- User
+
+# Version 2
+
+```mermaid
+classDiagram
+
+%% Class definitions
+class Session {
+	game : Game
+	playerMinimum : int
+	playerMaximum : int
+}
+class User {
+roles : List<Role>
+}
+class Role {
+	<<enumeration>>
+    USER
+    GAMEMASTER
+    ADMIN
+}
+class Game {
+	title : string
+	playerMinimumDefault : int
+	playerMaximumDefault : int
+	inventoryCount : int
+}
+class UserProfile
+class Date {
+	date : DateTime
+}
+
+%% Class relationships
+Session "1" --> "1..*" User
+Session "1" --> "1" Game
+Session "1" --> "1" Date
+User "1" --> "1..3" Role
+User "1" --> "1" UserProfile
+
+```
