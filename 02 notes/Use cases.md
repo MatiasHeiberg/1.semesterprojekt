@@ -1,3 +1,4 @@
+
 Formater
 
 > [!example]- Brief
