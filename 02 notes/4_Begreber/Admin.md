@@ -1,5 +1,5 @@
 ---
 type: begreb
 ui: Administrator
-beskrivelse: Admin er systemadministrator
+beskrivelse: Admin er bruger med udvidet administratorrettigheder.
 ---

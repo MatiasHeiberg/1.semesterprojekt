@@ -26,7 +26,7 @@ Opgaven består af to dele:
 - Programmet skal laves i **C# med anvendelse af WPF**
 - Skal udformes efter relevante **objektorienterede principper**
 - Systemet skal være et **medlemsstyringssystem** til fx en forening eller et fitness-center
-- Systemet skal som minimum kunne håndtere:
+- Systemet skal som minimum kunne håndtere: ^aef656
   - Medlemskab
   - Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere
   - Tilmelding til aktiviteter

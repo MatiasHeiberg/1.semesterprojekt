@@ -1,5 +1,5 @@
 ---
 type: begreb
-ui: gamemaster
-beskrivelse: En person der opretter spil i vores app.
+ui: Gamemaster
+beskrivelse: En bruger der har oprettet en session i vores system.
 ---

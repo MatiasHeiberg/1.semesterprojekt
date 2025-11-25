@@ -7,3 +7,15 @@ Administrator opretter nyt arrangement
 
 Spiller tilmelder sig session
 ![[Pasted image 20251121103021.png]]
+
+Dato 1
+- spilsession 1 
+- spilsession 2 
+- spilsession 3 
+
+Dato 2
+- spilsession 4 
+- spilsession 5 
+
+Dato 3
+- spilsession 6 

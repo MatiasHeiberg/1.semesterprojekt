@@ -1,5 +1,5 @@
 ---
 type: begreb
-ui: Spiller
+ui: "-"
 beskrivelse: De personer der møder op og spiller til brætspilscafeen.
 ---

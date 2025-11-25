@@ -29,3 +29,17 @@ classDiagram
     Spilsession --> Tilmelding : har
 
 ```
+
+# Liste over alle elementer i domænet
+- Administrator
+- Bruger
+- Gamemaster
+- Spil
+- Bibliotek
+- Ansat
+- Medlem
+- Frivillig
+- Arrangement
+- Session
+- Deltager
+- Spiller

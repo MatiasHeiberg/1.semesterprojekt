@@ -1,19 +1,4 @@
 views:
-  - type: list
-    name: Listevisning
-    filters:
-      and:
-        - type == "begreb"
-        - file.folder != "3_Templates"
-    order:
-      - file.name
-      - beskrivelse
-    cardSize: 490
-    indentProperties: true
-    markers: none
-    separator: " | "
-    imageAspectRatio: 1
-    imageFit: contain
   - type: table
     name: Tabelvisning
     filters:
@@ -22,10 +7,19 @@ views:
         - file.folder != "3_Templates"
     order:
       - file.name
+      - ui
       - beskrivelse
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: beskrivelse
+        direction: DESC
     cardSize: 490
     indentProperties: true
     markers: none
     separator: " | "
     imageAspectRatio: 1
     imageFit: contain
+    columnSize:
+      note.ui: 125
+      note.beskrivelse: 817
