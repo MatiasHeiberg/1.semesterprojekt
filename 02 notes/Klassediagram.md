@@ -41,8 +41,12 @@ classDiagram
 %% Class definitions
 class Session {
 	game : Game
-	playerMinimum : int
+	playerMinimum : int 
 	playerMaximum : int
+	date : Date
+	description : string
+	
+	%% Skal have en constructor der tager default spiller count som standard værdi.
 }
 class User {
 roles : List<Role>
