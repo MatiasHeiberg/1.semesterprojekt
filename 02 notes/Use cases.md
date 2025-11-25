@@ -48,7 +48,7 @@ Formater
 **Casual:**
 * **Titel**: [[Admin]] fjerner bruger fra systemet.  
 * **Primær aktør:*** [[Admin]]  
-* **Successcenarie:** [[Admin]] går ind på brugerprofilen og sletter brugeren.
+* **Successcenarie:** [[Admin]] går ind på brugerprofilen og sletter brugeren. ^649c42
 
 %% Version 1 
 **2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere**
