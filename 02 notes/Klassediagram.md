@@ -52,7 +52,7 @@ class User {
 	-roles : List<Role>
 	+IsAdmin : bool
 	+IsGamemaster : bool
-	+AddR
+	+
 	
 }
 class Role {
@@ -70,6 +70,10 @@ class Game {
 class UserProfile
 class Date {
 	date : DateTime
+}
+class Permission {
+	+CanDeleteSession(User)
+	+CanSeeFullSessionList(User)
 }
 
 %% Class relationships
