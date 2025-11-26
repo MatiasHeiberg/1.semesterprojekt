@@ -149,39 +149,75 @@ Har fodret AI med en liste over domæneartefakter og deres generelle relationer.
 classDiagram
 
 class Bibliotek 
+
 class Ansat {
-	navn
+    navn
 }
-Ansat --> Bibliotek : ansat af
+Ansat --> Bibliotek : ansat_af
 
 class Brætspilscafe {
-	dato
-	sted
+    dato
+    sted
 }
+Brætspilscafe --> Bibliotek : afholdes_i
+Brætspilscafe --> Ansat : organiseres_af
+Brætspilscafe --> Session : består_af *
+
+class Spiller {
+    navn
+}
+Spiller --> Brætspilscafe : deltager_i
+
+class Gamemaster 
+Gamemaster --> Spiller : rolle_for
+
+class Session {
+    start
+    slut
+}
+Session --> Gamemaster : initieret_af
+Session --> Spiller : deltagere *
+Session --> Spil : spiller_med 1
+Session --> Bibliotek : afholdes_i
+
+class Spil {
+    titel
+}
+Spil <|-- BiblioteksSpil
+Spil <|-- MedbragtSpil
+
+class BiblioteksSpil 
+BiblioteksSpil --> Bibliotek : ejet_af
+
+class MedbragtSpil 
+MedbragtSpil --> Spiller : medbragt_af
+```
+
+```mermaid
+classDiagram
+
+class Bibliotek 
+class Ansat
+Ansat --> Bibliotek : ansat af
+
+class Brætspilscafe
 Brætspilscafe --> Bibliotek : afholdes i
 Brætspilscafe --> Ansat : organiseres af
 Brætspilscafe "1" --> "*" Session : består af
 
-class Spiller {
-	navn
-}
+class Spiller
 Spiller --> Brætspilscafe : deltager i
 
 class Gamemaster 
 Gamemaster --> Spiller : rolle for
 
-class Session {
-	start
-	slut
-}
+class Session 
 Session --> Gamemaster : initieret af
 Session --> "1..*" Spiller : deltagere
 Session --> "1" Spil : spiller med
 Session --> Bibliotek : afholdes i
 
-class Spil {
-    titel
-}
+class Spil
 Spil <|-- BiblioteksSpil
 Spil <|-- MedbragtSpil
 
