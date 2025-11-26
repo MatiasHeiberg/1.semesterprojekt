@@ -30,6 +30,9 @@ class Game{
 Game <-- GameSession
 GameSession <-- Event
 Event <-- Game
+
+
+
 GameSession <|-- GameMaster
 Event <-- User
 
