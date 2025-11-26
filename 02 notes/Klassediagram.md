@@ -49,7 +49,11 @@ class Session {
 	%% Skal have en constructor der tager default spiller count som standard værdi.
 }
 class User {
-roles : List<Role>
+	-roles : List<Role>
+	+IsAdmin : bool
+	+IsGamemaster : bool
+	+AddR
+	
 }
 class Role {
 	<<enumeration>>
