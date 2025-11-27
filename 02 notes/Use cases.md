@@ -41,11 +41,11 @@ Formater
 
 
 
-**1. Håndtere medlemskab**
-**Brief:**
+## 1. Håndtere medlemskab
+#### Brief:
 [[Admin]] fjerner bruger fra systemet.
 
-**Casual:**
+#### Casual:
 * **Titel**: [[Admin]] fjerner bruger fra systemet.  
 * **Primær aktør:*** [[Admin]]  
 * **Successcenarie:** [[Admin]] går ind på brugerprofilen og sletter brugeren. ^649c42
@@ -62,47 +62,47 @@ Bruger opretter ny spilsession
  %%
 
 %% Version 2 %%
-**2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere**
+## 2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere
 **Brief:**
 Bruger opretter ny spilsession
 
-**Casual:**
+#### Casual:
 **Titel:** Bruger opretter ny spilsession  
 **Primær aktør:** Bruger  
 **Successcenarie:** Bruger opretter spilsession, tilføjer beskrivelse, udvælger spil og dato .
 
-**3. Tilmelding til aktiviteter**
-**Brief:**
+## 3. Tilmelding til aktiviteter
+#### Brief:
 Bruger tilmelder sig spilsession
 
-**Casual:**
+#### Casual:
 **Titel:** Bruger tilmelder sig spilsession
 **Primær aktør:**  Bruger
 **Successcenarie:** Bruger vælger en spilsession, læser beskrivelse og tilmelder sig.
 
-**4. [[Admin]] ser information på tidligere [[Session]]s
-**Brief:**
+## 4. [[Admin]] ser information på tidligere [[Session]]s
+#### Brief:
 [[Admin]] åbner [[ListOfSession]] og ser de tidligere afholdte [[Session]]s.
 
-**Casual:**
+#### Casual:
 **Titel:** [[Admin]] ser [[ListOfSession]]  
 **Primær aktør:** [[Admin]]
 **Successcenarie:** [[Admin]] ser tidligere [[Session]]s og får overblik og historik over tidligere sessioner.
 
-**5. Oprettelse af [[Date]](s)**
-**Brief:**
+## 5. Oprettelse af [[Date]](s)
+#### Brief:
 [[Admin]] tilføjer datoer til listen over kommende [[Date]]s. 
 
-**Casual:** 
+#### Casual: 
 **Titel:** [[Admin]] tilføjer en [[Date]] til [[ListOfDate]].
 **Primær aktør:** [[Admin]]
 **Successcenarie:** [[Admin]] opretter nyt [[Date]]. [[Date]] bliver synligt for alle [[User]] i [[ListOfDate]].
 
-**6. Tilføjelse af [[Game]]**
-**Brief:**
+## 6. Tilføjelse af [[Game]]
+#### Brief:
 [[Admin]] tilføjer [[Game]] til listen over [[ListOfGame]]. 
 
-**Casual:** 
+#### Casual: 
 **Titel:** Tilføjelse af [[Game]].
 **Primær aktør:** [[Admin]]
 **Successcenarie:** [[Admin]] logger ind og tilføjer Ludo som et spil medlemmerne kan bruge. Administratoren skriver en beskrivelse af spillet, vælger deltagerbegrænsning og hvor mange fysiske eksemplar der er tilgængelig. 
