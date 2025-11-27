@@ -1,10 +1,10 @@
 ﻿using System;
 
-public class System
+public class State
 {
 	private User currentUser;
 
-    public CurrentUser
+    public User CurrentUser
     {
         get
         {
