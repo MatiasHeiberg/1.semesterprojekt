@@ -2,7 +2,7 @@
 
 public class Session
 {
-	private List<User> listOfParticipant = new List<User>;
+	private List<User> listOfParticipant = new List<User>();
 
     private int playerMinimum;
     private int playerMaximum;
