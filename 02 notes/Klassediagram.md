@@ -117,7 +117,7 @@ class Permission {
 	<<service>>
 }
 
-class View {
+class Activity {
 	-listOfSession : List<Session>
 }
 %% Class relationships
