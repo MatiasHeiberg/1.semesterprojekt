@@ -19,3 +19,5 @@ sequenceDiagram
 
 
 ```
+
+![[Pasted image 20251127130844.png|500]]
