@@ -98,37 +98,30 @@ classDiagram
 
 %% Class definitions
 class Session {
+    -listOfParticipant : List<User>
 	playerMinimum : int 
 	playerMaximum : int
 	description : string
+	date : DateTime
 	
 }
 class User {
-	-roles : List<Role>
 	+IsAdmin : bool
 	
 }
-class Game {
-	title : string
-	playerMinimumDefault : int
-	playerMaximumDefault : int
-	availableCopies : int
+class System {
+	currentUser : User
 }
-
-class Date {
-	date : list<DateTime>
-	availbleGames : list<Game>
-}
+%% Serviceklasse til at håndtere rettigheds kald i systemmet.
 class Permission {
 	<<service>>
 }
-%% Serviceklasse til at håndtere rettigheds kald i systemmet.
-class Admin 
 
+class View {
+	-listOfSession : List<Session>
+}
 %% Class relationships
 Session "1" --> "1..*" User
-Session "1" --> "1" Game
-Session "1" --> "1" Date
-Admin --|> User
+
 
 ```
