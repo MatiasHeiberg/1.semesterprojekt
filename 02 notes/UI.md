@@ -1,4 +1,4 @@
-
+![[Pasted image 20251127101748.png]]
 
 GROVE EKSEMPLER TIL FORKLARING:
 
