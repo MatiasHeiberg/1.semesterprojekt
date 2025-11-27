@@ -109,7 +109,7 @@ class User {
 	+IsAdmin : bool
 	
 }
-class System {
+class State {
 	currentUser : User
 }
 %% Serviceklasse til at håndtere rettigheds kald i systemmet.
