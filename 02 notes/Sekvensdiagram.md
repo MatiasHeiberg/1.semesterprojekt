@@ -1,9 +1,6 @@
 Guide: [[Sequence diagram]]
 
-# Version 1
-Er designet med udgangspunkt i [[Klassediagram#Version 3]] og [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
-
-
+#### Syntax eksempel
 ```mermaid
 sequenceDiagram
     actor B as Bruger
@@ -38,6 +35,8 @@ sequenceDiagram
 
 ```
 
+
+#### Flow ide
 ```mermaid
 classDiagram
 
@@ -64,5 +63,37 @@ classDiagram
 
 
 ```
+# Version 1
+Er designet med udgangspunkt i [[Klassediagram#Version 3]] og [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
+```mermaid
+sequenceDiagram
 
-![[Pasted image 20251127130844.png|500]]
+actor temp
+participant Session
+participant View
+participant State
+participant Activity
+
+temp->>Session: CreateSession()
+activate Session
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session: playerMin : int 
+deactivate View
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session:  playerMax : int 
+deactivate View
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session: description : string 
+deactivate View
+Session->>State: get_CurrentUser()
+activate State
+State-->>Session: CurrentUser : obj
+deactivate State
+Session->>Session: Session(int, int, string, obj)
+Session->>Activity: AddSession(obj)
+
+deactivate Session
+```
