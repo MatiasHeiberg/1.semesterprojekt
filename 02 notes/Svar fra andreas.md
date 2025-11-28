@@ -68,3 +68,61 @@ Taler om at lave brætspils festival og brætspils cafe for de mindre i dagtimer
 	- 
 - [x] Bliver der brugt meget tid på at komme igang (gruppedannelse og regel forklaring)?
 -  Det plejer at gå ret hurtigt, den sværeste del er at være sikker på at alle har et sted at sidde, så snart folk så sidder, så er det meget glidende, fordi der altid er 1 person der kan reglerne. Det tager som regel 10 minutter, maks 20 minutter.
+
+
+# AI MINDMAP
+
+![[mindmap-2025-11-28T11-56-21.png]]
+##  AI REF
+# Projekt Synk / Oversigt over statusopdatering
+
+## Domænemodel og Systemforståelse
+
+- **Bibliotekssystem**: Brætspilscaféen afholdes på biblioteket og organiseres af en ansat
+- **Spillestruktur**:
+- Brætspilscaféen består af flere spilsessioner
+- Spil kan være biblioteksejet eller medbragt af spillere
+- En spiller fungerer som Game Master for hver session
+- **Deltagelse**: Spillere deltager frivilligt i brætspilscaféen
+
+## Nuværende Status og Drift
+
+- **Selvkørende operation**: Arrangementet er nu selvkørende efter initial opstart af biblioteksansatte
+- **Markedsføring**: Promoveres via hjemmeside og Facebook med periodiske boost-kampagner
+- **Tilbagemeldingssystem**: 3-4 faste deltagere rapporterer tilbage om antal deltagere og nye spillere
+- **Kapacitet**: Maksimalt 25 deltagere fordelt på 5 borde (3 sorte borde + 2 høje A-borde)
+
+## Deltagerdemografi og Mønstre
+
+- **Aldersspredning**: Bred vifte fra teenagere til pensionister, cirka 50-50 kønsfordeling
+- **Deltagelsesmønster**:
+- 6-7 faste deltagere kommer mindst hver anden gang
+- Mange kommer alene og finder naturligt sammen i grupper
+- Familie-deltagelse: forældre med teenage børn ses ofte
+- **Sociale dynamikker**: Folk finder hinanden naturligt baseret på spilinteresser snarere end faste grupperinger
+
+## Spilvalg og Indkøbsstrategi
+
+- **Spillenes oprindelse**: 3 ud af 4 spil er medbragt af deltagere frem for biblioteksejet
+- **Indkøbskriterier for biblioteket**:
+- Danske regler og tekst for tilgængelighed
+- Maksimal kompleksitet på 3/5 på BoardGameGeek-skalaen
+- Spil der kan spilles på en aften (ikke over 3-4 timer)
+- **Populære spil**: Heat har vist sig særligt populært blandt deltagerne
+
+## Fremtidige Ambitioner og Udviklingsmuligheder
+
+- **Bredere målgruppe**: Ønske om at nå flere mennesker og introducere moderne brætspil til nye spillere
+- **Familie-arrangementer**: Planer om brætspilsfestival eller -dag der inkluderer både børn og voksne
+- **Generationsbrobyggende aktiviteter**: Arrangementer hvor bedsteforældre, forældre og børn kan deltage sammen
+- **Udvidelsesmuligheder**: Flere tidspunkter eller større lokaler hvis efterspørgslen stiger
+
+## Handlingspunkter
+
+Koordinere med faste deltagere om ønskeliste til nye spilindkøb inden årets udgang
+
+Overveje implementering af forhåndstilmelding til specifikke spil
+
+Undersøge muligheder for familie-orienterede brætspilsarrangementer
+
+Evaluere behov for udvidelse af kapacitet eller tidspunkter
