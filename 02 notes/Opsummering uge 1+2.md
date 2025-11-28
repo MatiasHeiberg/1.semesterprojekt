@@ -9,4 +9,7 @@
 	- daily session based process logs kilde: 1 Donald Schön’s _Reflective Practitioner_ framework (MIT Press)  
 	- descision log kilde: ADR (Architecture Decision Record) format
 # [[2025-11-19]]
+- Lave første problemformuleringer ud fra biblioteks tekst Kilde: ==Mangler==
+- Problemstillinger, Ordbog, Gantt, Første udkast til BMC,
+- **Administrator skal kunne sætte datoer samt definere spilbeholdning.**
 - 
