@@ -79,11 +79,11 @@ _->>Session: CreateSession()
 activate Session
 Session->>View: TakeUserInput(string)
 activate View
-View-->>Session: playerMin : int 
+View-->>Session: playerMin : string 
 deactivate View
 Session->>View: TakeUserInput(string)
 activate View
-View-->>Session:  playerMax : int 
+View-->>Session:  playerMax : string
 deactivate View
 	Session->>View: TakeUserInput(string)
 activate View

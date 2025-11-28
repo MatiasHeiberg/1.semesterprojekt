@@ -125,12 +125,14 @@ Session "1" --> "1..*" User
 
 
 # Version 4
+Hænger sammen med [[Sekvensdiagram#Version 1]]
 
 ```mermaid
 classDiagram
 
 %% Class definitions
 class Session {
+	<<entity>>
     -listOfParticipant : List<User>
 	-playerMin : int 
 	-playerMax : int
@@ -141,6 +143,7 @@ class Session {
 	
 }
 class User {
+	<<entity>>
 	-isAdmin : bool
 	
 }
@@ -153,9 +156,11 @@ class Permission {
 }
 
 class View {
+	<<boundary>> 
 	+TakeUserInput()
 }
 class Activity {
+	<<entity>>
 	+listOfSession : List<Session>
 }
 %% Class relationships
