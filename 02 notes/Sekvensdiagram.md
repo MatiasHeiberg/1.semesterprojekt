@@ -33,16 +33,16 @@ classDiagram
     }
 
     class Activity {
-        showActivit()
+        showActivity()
     }
 
     class View {
         printList(list, parameter)
     }
 
-    Activity --> Permission : uses
-    View --> Activity : calls
-    User --> View : calls
+    Activity --> View
+    View --> Permission
+    Permission --> User
 
 
 ```
