@@ -12,4 +12,38 @@
 - Lave første problemformuleringer ud fra biblioteks tekst Kilde: ==Mangler==
 - Problemstillinger, Ordbog, Gantt, Første udkast til BMC,
 - **Administrator skal kunne sætte datoer samt definere spilbeholdning.**
-- 
+```mermaid
+flowchart TD
+
+A[Start] --> B[Brainstorm og idefase]
+
+B --> C[Idé: DnD matchmaking]
+B --> D[Idé: Brætspilscafe tilmeldingssystem]
+
+C --> C1{Er scope realistisk}
+C1 -->|Nej| D
+C1 -->|Ja| C2[Fravalgt alligevel]
+
+D --> E[Valgt projekt: Brætspilscafe på Silkeborg Bibliotek]
+
+E --> F[Analyse: BMC, vision, krav]
+F --> G[Domænemodel version 1]
+G --> H{Bliver kravene for komplekse}
+H -->|Ja| I[Skar MUST-krav helt ned]
+H -->|Nej| J[Domænemodel fastholdes]
+
+I --> J[Domænemodel version 2 godkendt]
+
+J --> K[Klassediagram version 1]
+K --> L{Matcher klassediagrammet kravene}
+L -->|Nej| M[Revideret klassediagram]
+L -->|Ja| N[Grønt lys til implementering]
+
+M --> N
+
+N --> O[Console først, WPF senere]
+O --> P[Interview med Andreas]
+P --> Q[Sekvensdiagram, UI-skitser og kode]
+Q --> R[Implementering og dokumentation]
+
+```
