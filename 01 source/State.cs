@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// <summary>
+/// Klassen State fungerer som en container for den aktuelle bruger i systemet.
+/// </summary>
+/// <authors names = "Alle"/>
+/// 
+using System;
 
 public class State
 {
