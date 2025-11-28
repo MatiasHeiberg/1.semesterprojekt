@@ -132,8 +132,8 @@ classDiagram
 %% Class definitions
 class Session {
     -listOfParticipant : List<User>
-	playerMinimum : int 
-	playerMaximum : int
+	playerMin : int 
+	playerMax : int
 	description : string
 	date : DateTime
 	
