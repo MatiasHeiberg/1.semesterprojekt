@@ -20,4 +20,31 @@ sequenceDiagram
 
 ```
 
+```mermaid
+classDiagram
+
+    class Permission {
+        canSeeAll()
+    }
+
+    class User {
+        Role
+        IsAdmin
+    }
+
+    class Activity {
+        showActivit()
+    }
+
+    class View {
+        printList(list, parameter)
+    }
+
+    Activity --> Permission : uses
+    View --> Activity : calls
+    User --> View : calls
+
+
+```
+
 ![[Pasted image 20251127130844.png|500]]
