@@ -1,8 +1,11 @@
-﻿using System;
+﻿/// <summary>
+/// Permission-klassen repræsenterer et system til håndtering af brugerrettigheder.
+/// </summary>
+/// <authors names = "Alle"/>
+/// 
+using System;
 
-public class Class1
+public class Permission
 {
-	public Class1()
-	{
-	}
+	
 }

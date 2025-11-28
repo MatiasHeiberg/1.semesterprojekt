@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// <summary>
+/// Session-klassen repræsenterer en spilsession med deltagerliste, spillerbegrænsninger, beskrivelse og dato.
+/// </summary>
+/// <authors names = "Alle"/>
+/// 
+using System;
 
 public class Session
 {

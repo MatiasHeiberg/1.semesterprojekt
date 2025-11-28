@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// <summary>
+/// User-klassen repræsenterer en bruger i systemet og indeholder oplysninger om brugerens administrative rettigheder.
+/// </summary>
+/// <authors names = "Alle"/>
+/// 
+using System;
 
 public class User
 {
