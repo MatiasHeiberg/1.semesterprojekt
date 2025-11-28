@@ -117,6 +117,41 @@ class Permission {
 	<<service>>
 }
 
+%% Class relationships
+Session "1" --> "1..*" User
+
+
+```
+
+
+# Version 4
+
+```mermaid
+classDiagram
+
+%% Class definitions
+class Session {
+    -listOfParticipant : List<User>
+	playerMinimum : int 
+	playerMaximum : int
+	description : string
+	date : DateTime
+	
+}
+class User {
+	+IsAdmin : bool
+	
+}
+class State {
+	currentUser : User
+}
+%% Serviceklasse til at håndtere rettigheds kald i systemmet.
+class Permission {
+	<<service>>
+}
+
+class View
+
 class Activity {
 	-listOfSession : List<Session>
 }
