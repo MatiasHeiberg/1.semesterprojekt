@@ -68,13 +68,14 @@ Er designet med udgangspunkt i [[Klassediagram#Version 3]] og [[Use cases#2. Opr
 ```mermaid
 sequenceDiagram
 
-actor temp
+Actor _
+Note left of _: message found
 participant Session
 participant View
 participant State
 participant Activity
 
-temp->>Session: CreateSession()
+_->>Session: CreateSession()
 activate Session
 Session->>View: TakeUserInput(string)
 activate View
@@ -84,16 +85,16 @@ Session->>View: TakeUserInput(string)
 activate View
 View-->>Session:  playerMax : int 
 deactivate View
-Session->>View: TakeUserInput(string)
+	Session->>View: TakeUserInput(string)
 activate View
 View-->>Session: description : string 
 deactivate View
 Session->>State: get_CurrentUser()
 activate State
-State-->>Session: CurrentUser : obj
+State-->>Session: CurrentUser : User
 deactivate State
-Session->>Session: Session(int, int, string, obj)
-Session->>Activity: AddSession(obj)
+Session->>Session: Session(int, int, string, User)
+Session->>Activity: listOfSession.Add(Session)
 
 deactivate Session
 ```

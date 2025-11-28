@@ -132,31 +132,38 @@ classDiagram
 %% Class definitions
 class Session {
     -listOfParticipant : List<User>
-	playerMin : int 
-	playerMax : int
-	description : string
-	date : DateTime
+	-playerMin : int 
+	-playerMax : int
+	-description : string
+	-date : DateTime
+	
+	+CreateSession()
 	
 }
 class User {
-	+IsAdmin : bool
+	-isAdmin : bool
 	
 }
 class State {
-	currentUser : User
+	-currentUser : User
 }
 %% Serviceklasse til at håndtere rettigheds kald i systemmet.
 class Permission {
 	<<service>>
 }
 
-class View
-
+class View {
+	+TakeUserInput()
+}
 class Activity {
-	-listOfSession : List<Session>
+	+listOfSession : List<Session>
 }
 %% Class relationships
-Session "1" --> "1..*" User
+Session "1" -- "1..*" User
+Session -- View
+Session -- State
+Session -- Activity
+
 
 
 ```
