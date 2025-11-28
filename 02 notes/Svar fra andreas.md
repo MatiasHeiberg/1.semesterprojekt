@@ -1,0 +1,38 @@
+#### Open-ended spørgsmål:
+- [ ] Prøv at fortæl lidt om cafeen
+- 
+- [ ] Hvordan er cafeen blevet til?
+- 
+	- [ ] Hvor kommer initiativet fra?
+	- 
+- [ ] **Hvilke aktører er involveret?** 
+- 
+- [ ] **Som arrangør, hvad føler du er mangelfuldt?**
+- 
+- [ ] **Hvad kunne gøre brætspils cafeen bedre?**
+- 
+- [ ] Hvad har du af drømme for cafeen?
+- 
+- [ ] Opbygger deltagere nye relationer?
+- 
+- [ ] **Bliver folk i de spilgrupper de sad i ved sidste cafe?**
+- 
+- [ ] Hvordan opdager folk cafeen?
+- 
+#### Closed-ended spørgsmål:
+- [ ] Kommer der ofte nye deltagere? (eller er det mest gengangere)?
+- 
+- [ ] **Kommer folk mest alene eller i grupper?**
+- 
+- [ ] Kommer deltagere med egne spil?
+- 
+- [ ] Hvor mange deltagere har i 
+- 
+- [ ] **Holder i øje med hvilke spil der spilles mest?**
+- 
+- [ ] **Har i flere af samme spil?** 
+- 
+	- [ ] Hænger det sammen med hvilke spil der er populære?
+	- 
+- [ ] Bliver der brugt meget tid på at komme igang (gruppedannelse og regel forklaring)?
+- 
