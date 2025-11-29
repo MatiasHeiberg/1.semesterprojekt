@@ -64,7 +64,7 @@ classDiagram
 
 ```
 # Version 1
-Er designet med udgangspunkt i [[Klassediagram#Version 3]] og [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
+Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] og [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
 ```mermaid
 sequenceDiagram
 
@@ -79,11 +79,11 @@ _->>Session: CreateSession()
 activate Session
 Session->>View: TakeUserInput(string)
 activate View
-View-->>Session: playerMin : int 
+View-->>Session: playerMin : string 
 deactivate View
 Session->>View: TakeUserInput(string)
 activate View
-View-->>Session:  playerMax : int 
+View-->>Session:  playerMax : string
 deactivate View
 	Session->>View: TakeUserInput(string)
 activate View

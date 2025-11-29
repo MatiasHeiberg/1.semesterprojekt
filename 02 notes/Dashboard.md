@@ -22,6 +22,8 @@
 [[Krav]]
 [[Sekvensdiagram]]
 
+### Rapportskrivning
+[[Opsummering uge 1+2]]
 
 ## Diverse
 - [[obsidian guide]]
