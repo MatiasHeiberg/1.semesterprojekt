@@ -4,6 +4,7 @@
 /// <authors names = "Alle"/>
 /// 
 using System;
+using System.Reflection.Metadata.Ecma335;
 namespace semesterprøve
 {
     public class Session
@@ -20,7 +21,7 @@ namespace semesterprøve
         {
             string instruction;
             int playerMinimum;
-            
+
             instruction = "Indtast dit ønskede minimum antal spillere";
             playerMinimum = Convert.ToInt32(View.TakeUserInput(instruction));
 
@@ -48,10 +49,19 @@ namespace semesterprøve
             this.description = description;
 
         }
-        public void AddParticipant(User currentUser)
+        //Metode til at tilføje nye spillere til eksisterende eller nye sessioner.
+        public bool AddParticipant(User currentUser)
         {
+            //Spørger Permission-klassen om der er plads til en ny deltager
+            //Sender antal deltagere og max som argumenter.
+            if (!Permission.CanJoinSession(listOfParticipant.Count, playerMaximum))
+            {
+                return false; // Hvis der ikke er plads, stop og returner false.
+            }
+            //Hvis der er plads, tilføjes brugeren til deltagerlisten.
             listOfParticipant.Add(currentUser);
-        }
+            return true; //Bekræfter at brugeren er blevet tilføjet.
+        } 
     }
 
 }
