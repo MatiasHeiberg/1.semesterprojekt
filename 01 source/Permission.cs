@@ -5,7 +5,11 @@
 /// 
 using System;
 
-public class Permission
+namespace semesterprøve
 {
-	
+    public class Permission
+    {
+    }
+
 }
+

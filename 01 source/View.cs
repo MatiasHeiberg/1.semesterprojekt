@@ -5,8 +5,11 @@
 /// <authors names = "Alle"/>
 /// 
 using System;
-
-public class View
+namespace semesterprøve
 {
+    public class View
+    {
+
+    }
 
 }

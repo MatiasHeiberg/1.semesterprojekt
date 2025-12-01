@@ -127,13 +127,13 @@ _->>CreateSessionHandler: new()
 %% SetPlayerMin
 activate CreateSessionHandler
 CreateSessionHandler->>CreateSessionHandler: CreateSession()
+CreateSessionHandler->>Session: new()
 CreateSessionHandler->>Session: SetPlayerMin()
 activate Session
 Session->>View: TakeUserInput(string)
 activate View
 View-->>Session: string
 deactivate View
-Session-->>CreateSessionHandler: int
 deactivate Session
 
 %% SetPlayerMax
@@ -143,7 +143,6 @@ Session->>View: TakeUserInput(string)
 activate View
 View-->>Session: string
 deactivate View
-Session-->>CreateSessionHandler: int
 deactivate Session
 
 %% SetDescription
@@ -153,7 +152,6 @@ Session->>View: TakeUserInput(string)
 activate View
 View-->>Session: string
 deactivate View
-Session-->>CreateSessionHandler: string
 deactivate Session
 
 %% getCurrentUser
@@ -163,13 +161,9 @@ State-->>CreateSessionHandler: User
 deactivate State
 
 %% Session Constructor
-CreateSessionHandler->>Session: new(int, int, string, User)
-activate Session
-Session->>Session: AddParticipant(User)
-Session-->>CreateSessionHandler: Session
-deactivate Session
+CreateSessionHandler->>Session: AddParticipant(User)
 
 %% listOfSessions.add()
-CreateSessionHandler->>Activity: add Session
+CreateSessionHandler->>Activity: AddSession(Session)
 deactivate CreateSessionHandler
 ```

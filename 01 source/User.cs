@@ -4,22 +4,25 @@
 /// <authors names = "Alle"/>
 /// 
 using System;
-
-public class User
+namespace semesterprøve
 {
-    private bool isAdmin = false; 
-    public bool IsAdmin 
+    public class User
     {
-        get
+        private bool isAdmin = false;
+        public bool IsAdmin
         {
-            return isAdmin;
+            get
+            {
+                return isAdmin;
+            }
+            set
+            {
+                isAdmin = value;
+            }
         }
-        set
-        {
-            isAdmin = value;
-        }
-    }
-    
 
+
+
+    }
 
 }

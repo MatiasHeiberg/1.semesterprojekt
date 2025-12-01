@@ -4,20 +4,23 @@
 /// <authors names = "Alle"/>
 /// 
 using System;
-
-public class State
+namespace semesterprøve
 {
-	private User currentUser;
-
-    public User CurrentUser
+    public class State
     {
-        get
+        private User currentUser;
+
+        public User CurrentUser
         {
-            return currentUser;
-        }
-        set
-        {
-            currentUser = value;
+            get
+            {
+                return currentUser;
+            }
+            set
+            {
+                currentUser = value;
+            }
         }
     }
+
 }

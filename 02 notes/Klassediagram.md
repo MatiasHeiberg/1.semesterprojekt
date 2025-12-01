@@ -142,7 +142,7 @@ class Session {
 	+SetPlayerMin()
 	+SetPlayerMax()
 	+SetDescription()
-	-AddParticipant()
+	-AddParticipant(User)
 	
 	
 }
@@ -166,7 +166,9 @@ class View {
 }
 class Activity {
 	<<domain>>
-	+listOfSession : List<Session>
+	-listOfSession : List<Session>
+	
+	+AddSession(Session)
 }
 class CreateSessionHandler{
 	<<application>>
