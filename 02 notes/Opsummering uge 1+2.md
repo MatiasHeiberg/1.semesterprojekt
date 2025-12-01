@@ -12,6 +12,8 @@
 - Lave første problemformuleringer ud fra biblioteks tekst Kilde: ==Mangler==
 - Problemstillinger, Ordbog, Gantt, Første udkast til BMC,
 - **Administrator skal kunne sætte datoer samt definere spilbeholdning.**
+
+- 
 ```mermaid
 flowchart TD
 
@@ -47,3 +49,15 @@ P --> Q[Sekvensdiagram, UI-skitser og kode]
 Q --> R[Implementering og dokumentation]
 
 ```
+
+#  [[2025-11-20]]
+- Vi blev enige om [[Command-Query]] og [[DRY]] principperne.
+- Beslutter console first then WPF
+- Skal vi bygge et system der passer godt til vores afgrænsning (silkeborg bibliotek), eller til et generelt community brugsscenarie?
+	- Vi arbejder ud af problemstillinger genereret specifikt ud fra silkeborgbib.
+	- Vi genererer use cases specifikt til brætspilscafeen på silkeborgbib.
+	- Derfor er vores problemdomæne vores afgrænsede case på silkeborgbib.
+	- Vi vil ikke kunne begynde at modellere et problemdomæne udenfor silkeborgbib da det ville være baseret på antagelser.
+- Kilder 
+	- OsterWalder-Business Model Generation i forhold til BMC  
+	- Kilde til The Planning Model i forhold til vores Problemstillinger (Purpose, Principles)
