@@ -37,6 +37,7 @@ sequenceDiagram
 
 
 #### Flow ide
+Vi bruger [[OO layers]]
 ```mermaid
 classDiagram
 
@@ -63,8 +64,9 @@ classDiagram
 
 
 ```
-# Version 1
-Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] og [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
+# [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere|Use case 2]]
+## Version 1
+Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] 
 ```mermaid
 sequenceDiagram
 
@@ -97,4 +99,74 @@ Session->>Session: Session(int, int, string, User)
 Session->>Activity: listOfSession.Add(Session)
 
 deactivate Session
+```
+
+## Version 2
+Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] 
+```mermaid
+sequenceDiagram
+
+Actor _
+Note left of _: message found
+box 1 Presentation
+participant View
+end
+box 2 Application
+participant CreateSessionHandler 
+participant State
+end
+box 3 Domain
+participant Session
+participant Activity
+end
+
+
+%% Message found
+_->>CreateSessionHandler: new()
+
+%% SetPlayerMin
+activate CreateSessionHandler
+CreateSessionHandler->>CreateSessionHandler: CreateSession()
+CreateSessionHandler->>Session: SetPlayerMin()
+activate Session
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session: string
+deactivate View
+Session-->>CreateSessionHandler: int
+deactivate Session
+
+%% SetPlayerMax
+CreateSessionHandler->>Session: SetPlayerMax()
+activate Session
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session: string
+deactivate View
+Session-->>CreateSessionHandler: int
+deactivate Session
+
+%% SetDescription
+CreateSessionHandler->>Session: SetDescription()
+activate Session
+Session->>View: TakeUserInput(string)
+activate View
+View-->>Session: string
+deactivate View
+Session-->>CreateSessionHandler: string
+deactivate Session
+
+%% getCurrentUser
+CreateSessionHandler->>State: getCurrentUser
+activate State
+State-->>CreateSessionHandler: User
+deactivate State
+
+%% Session Constructor
+CreateSessionHandler->>Session: new(int, int, string, User)
+Session-->>CreateSessionHandler: Session
+
+%% listOfSessions.add()
+CreateSessionHandler->>Activity: add(Session)
+deactivate CreateSessionHandler
 ```
