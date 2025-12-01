@@ -93,5 +93,23 @@ Løbende med hans gennemgang blev arbejdet itereret over (se [[#Hvilke beslutnin
 Se [[Vejledning med Niels 26-11]]
 Dertil er det vigtigste vi udrettede at skære vores krav ind til benet.
 #  [[2025-11-27]]
+Vi blev opmærksomme på, at vi skulle gense vores 'must' krav - det resulterede i, at vi kunne simplificere vores klassediagram. Vi skærer først helt ind til benet og bygger på med 'should'-ideer alt efter overskud.  
+- Vi fik aftale på plads med Andreas
+- Vi fik opdateret krav 
+- Færdiggjort domænemodel
 
+Vi skal være obs på at få skrevet nogle gode overvejelser og refleksioner i processen fra i går - hvad SKAL vi have lavet, hvad vil vi gerne have med. 
+Det gik op for os, at vores kravspecifikation er vokset i kompleksitet p.ga. af vores egne valg. Den kompleksitet har presset os op af naturel planning model-trappen, hvilket har gjort, at vores arbejde har handlet om at afklare vores projekt fremfor at producere vores projekt.
+
+Derfor har vi valgt at skære vores 'must' helt ind til benet og det samme med klassediagrammet. 
+- ![[Pasted image 20251128091649.png|250]]
+- Vi har valgt at bruge service klasser til at genbruge ikke domæne specifik logik i vores program. Dette er en måde at følge indkapslings princippet. Det følger [[DRY]] princippet, hvilket siger at der skal være en "single source of truth". Det gør det nemt at ændre i business logic og generelt at vedligeholde source koden.  
+
+- Vi færdiggjorde det første klassediagram, der opfylder minimumskrav - gør os klar til implementering
+- Skitse til det nuværende UI
+- Vi fik lavet et grov skitse af et sekvensflow 
 #  [[2025-11-28]]
+ Vi har besluttet arkitekturen af vores første version af softwaren. Altså den dynamiske sekvens model.
+- Vi har oprettet activity klassen
+- Vi har besluttet at vores UML diagrammer viser variabler ikke properties da de er implicit når variablerne er sat til private.
+Vi lavede [[Sekvensdiagram#Version 1]] baseret på [[Klassediagram#Version 3]] og i den process opdagede vi mangler i klassediagrammet sådan at det udviklede sig til [[Klassediagram#version 4|version 4]].
