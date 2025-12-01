@@ -14,18 +14,10 @@ namespace semesterprøve
     public class Activity 
     {
         private List<Session> listOfSession = new List<Session>();
-        public List<Session> ListOfSession
+
+        public void AddSession(Session session)
         {
-            get
-
-            {
-                return listOfSession;
-            }
-            set
-            {
-                listOfSession = value;
-            }
+            listOfSession.Add(session);
         }
-
     }
 }

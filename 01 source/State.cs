@@ -16,10 +16,6 @@ namespace semesterprøve
             {
                 return currentUser;
             }
-            set
-            {
-                currentUser = value;
-            }
         }
     }
 

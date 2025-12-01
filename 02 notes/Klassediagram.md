@@ -173,6 +173,8 @@ class Activity {
 class CreateSessionHandler{
 	<<application>>
 	-CreateSession()
+	-GetCurrentUser()
+	-SetSessionData(Session)
 }
 %% Class relationships
 Session "1" -- "1..*" User

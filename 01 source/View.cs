@@ -7,9 +7,17 @@
 using System;
 namespace semesterprøve
 {
-    public class View
+    public static class View
     {
+        internal static string? TakeUserInput(string instruction)
+        {
+            string userInput;
+            
+            Console.WriteLine(instruction);
+            userInput = Console.ReadLine();
 
+            return userInput;
+        }
     }
 
 }
