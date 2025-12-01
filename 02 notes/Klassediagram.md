@@ -142,7 +142,7 @@ class Session {
 	+SetPlayerMin()
 	+SetPlayerMax()
 	+SetDescription()
-	-AddParticipant(User)
+	+AddParticipant(User)
 	
 	
 }
@@ -158,6 +158,7 @@ class State {
 %% Serviceklasse til at håndtere rettigheds kald i systemmet.
 class Permission {
 	<<application>>
+	+CanJoinSession(int, int)
 }
 
 class View {
@@ -179,8 +180,8 @@ class CreateSessionHandler{
 %% Class relationships
 Session "1" -- "1..*" User
 Session -- View
-Session -- State
 Session -- Activity
+Session -- Permission
 CreateSessionHandler -- View
 CreateSessionHandler -- Session
 CreateSessionHandler -- State
