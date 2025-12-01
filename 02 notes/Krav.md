@@ -12,6 +12,7 @@ aliases:
 	- [[User]] kan tilmelde sig en [[Session]]
 	- [[Admin]] skal have mulighed for at se tidligere og kommende [[Session]]er.
 	- [[User]] skal have overblik over kommende [[Session]].
+	- Kunne læse [[User]] fra en json fil.
 
 - **Should:**
 	- [[Admin]] kan se aktivitetshistorik for den enkelte [[User]]

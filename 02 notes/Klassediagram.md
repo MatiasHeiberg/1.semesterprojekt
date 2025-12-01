@@ -190,3 +190,80 @@ CreateSessionHandler -- Activity
 
 
 ```
+
+# Version 5
+
+```mermaid
+classDiagram
+
+%% Class definitions
+class Session {
+	<<domain>>
+    -listOfParticipant : List<User>
+	-playerMin : int 
+	-playerMax : int
+	-description : string
+	-date : DateTime
+	
+	+SetPlayerMin()
+	+SetPlayerMax()
+	+SetDescription()
+	+AddParticipant(User)
+	
+	
+}
+class User {
+	<<domain>>
+	-isAdmin : bool
+	
+}
+class State {
+	<<application>>
+	-currentUser : User
+}
+%% Serviceklasse til at håndtere rettigheds kald i systemmet.
+class Permission {
+	<<application>>
+	+CanJoinSession(int, int)
+	+CanSeeFullListOfSession()
+}
+
+class View {
+	<<presentation>> 
+	+TakeUserInput()
+}
+class Activity {
+	<<domain>>
+	-listOfSession : List<Session>
+	
+	+AddSession(Session)
+}
+class CreateSessionHandler{
+	<<application>>
+	-CreateSession()
+	-GetCurrentUser()
+	-SetSessionData(Session)
+}
+class JoinSessionHandler {
+	<<application>>
+	
+}
+class ShowSessionListHandler {
+<<application>>
+	-ShowListOfSession()
+}
+%% Class relationships
+Session "1" -- "1..*" User
+Session -- View
+Session -- Activity
+Session -- Permission
+CreateSessionHandler -- View
+CreateSessionHandler -- Session
+CreateSessionHandler -- State
+CreateSessionHandler -- Activity
+ShowSessionListHandler -- Permission
+Permission -- User
+
+
+
+```

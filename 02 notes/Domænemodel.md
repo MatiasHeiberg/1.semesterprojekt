@@ -145,53 +145,7 @@ Har fodret AI med en liste over domæneartefakter og deres generelle relationer.
 > MedbragtSpil --> Spiller : medbragt_af
 > ```
 
-```mermaid
-classDiagram
 
-class Bibliotek 
-
-class Ansat {
-    navn
-}
-Ansat --> Bibliotek : ansat_af
-
-class Brætspilscafe {
-    dato
-    sted
-}
-Brætspilscafe --> Bibliotek : afholdes_i
-Brætspilscafe --> Ansat : organiseres_af
-Brætspilscafe --> Session : består_af *
-
-class Spiller {
-    navn
-}
-Spiller --> Brætspilscafe : deltager_i
-
-class Gamemaster 
-Gamemaster --> Spiller : rolle_for
-
-class Session {
-    start
-    slut
-}
-Session --> Gamemaster : initieret_af
-Session --> Spiller : deltagere *
-Session --> Spil : spiller_med 1
-Session --> Bibliotek : afholdes_i
-
-class Spil {
-    titel
-}
-Spil <|-- BiblioteksSpil
-Spil <|-- MedbragtSpil
-
-class BiblioteksSpil 
-BiblioteksSpil --> Bibliotek : ejet_af
-
-class MedbragtSpil 
-MedbragtSpil --> Spiller : medbragt_af
-```
 
 ```mermaid
 classDiagram

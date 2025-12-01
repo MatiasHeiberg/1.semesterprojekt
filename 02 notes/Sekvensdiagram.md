@@ -64,7 +64,7 @@ classDiagram
 
 
 ```
-# [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere|Use case 2]]
+# [[Use cases#2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere]]
 ## Version 1
 Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] 
 ```mermaid
@@ -103,6 +103,91 @@ deactivate Session
 
 ## Version 2
 Er designet med udgangspunkt i [[Klassediagram#Version 3]], men er ajour med [[Klassediagram#Version 4|version 4]] 
+```mermaid
+sequenceDiagram
+
+actor _
+box 1 Presentation
+participant View
+end
+box 2 Application
+participant CreateSessionHandler 
+participant State
+participant Permission
+end
+box 3 Domain
+participant Session
+participant Activity
+end
+
+
+%% Message found
+_->>CreateSessionHandler: new()
+activate CreateSessionHandler
+Note right of _: message found
+
+	CreateSessionHandler->>CreateSessionHandler: CreateSession()
+	activate CreateSessionHandler
+		
+		%% SetSessionData
+		CreateSessionHandler->>Session: new()
+		CreateSessionHandler->>CreateSessionHandler: SetSessionData()
+		activate CreateSessionHandler
+		
+			%% SetPlayerMin
+			CreateSessionHandler->>Session: SetPlayerMin()
+			activate Session
+			Session->>View: TakeUserInput(string)
+			activate View
+			View-->>Session: string
+			deactivate View
+			deactivate Session
+			
+			%% SetPlayerMax
+			CreateSessionHandler->>Session: SetPlayerMax()
+			activate Session
+			Session->>View: TakeUserInput(string)
+			activate View
+			View-->>Session: string
+			deactivate View
+			deactivate Session
+			
+			%% SetDescription
+			CreateSessionHandler->>Session: SetDescription()
+			activate Session
+			Session->>View: TakeUserInput(string)
+			activate View
+			View-->>Session: string
+			deactivate View
+			deactivate Session		
+		
+			%% getCurrentUser
+			CreateSessionHandler->>CreateSessionHandler: GetCurrentUser()
+			activate CreateSessionHandler
+				CreateSessionHandler->>State: getCurrentUser
+				activate State
+				State-->>CreateSessionHandler: User
+				deactivate State
+			deactivate CreateSessionHandler
+			
+			%% AddParticipant
+			CreateSessionHandler->>Session: AddParticipant(User)
+			activate Session
+				Session->>Permission: CanJoinSession(int, int)
+				Permission->>Session: bool
+				Session-->>CreateSessionHandler: bool
+			deactivate Session
+		deactivate CreateSessionHandler
+		
+		%% listOfSessions.add()
+		CreateSessionHandler->>Activity: AddSession(Session)
+	deactivate CreateSessionHandler
+deactivate CreateSessionHandler
+```
+
+
+# [[Use cases#3. Tilmelding til aktiviteter]]
+Er designet med udgangspunkt i [[Klassediagram#Version 5]].
 ```mermaid
 sequenceDiagram
 
