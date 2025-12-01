@@ -165,10 +165,11 @@ deactivate State
 %% Session Constructor
 CreateSessionHandler->>Session: new(int, int, string, User)
 activate Session
+Session->>Session: AddParticipant(User)
 Session-->>CreateSessionHandler: Session
 deactivate Session
 
 %% listOfSessions.add()
-CreateSessionHandler->>Activity: add(Session)
+CreateSessionHandler->>Activity: add Session
 deactivate CreateSessionHandler
 ```

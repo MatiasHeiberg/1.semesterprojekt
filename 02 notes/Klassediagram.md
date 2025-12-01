@@ -132,42 +132,55 @@ classDiagram
 
 %% Class definitions
 class Session {
-	<<entity>>
+	<<domain>>
     -listOfParticipant : List<User>
 	-playerMin : int 
 	-playerMax : int
 	-description : string
 	-date : DateTime
 	
-	+CreateSession()
+	+SetPlayerMin()
+	+SetPlayerMax()
+	+SetDescription()
+	-AddParticipant()
+	
 	
 }
 class User {
-	<<entity>>
+	<<domain>>
 	-isAdmin : bool
 	
 }
 class State {
+	<<application>>
 	-currentUser : User
 }
 %% Serviceklasse til at håndtere rettigheds kald i systemmet.
 class Permission {
-	<<service>>
+	<<application>>
 }
 
 class View {
-	<<boundary>> 
+	<<presentation>> 
 	+TakeUserInput()
 }
 class Activity {
-	<<entity>>
+	<<domain>>
 	+listOfSession : List<Session>
+}
+class CreateSessionHandler{
+	<<application>>
+	-CreateSession()
 }
 %% Class relationships
 Session "1" -- "1..*" User
 Session -- View
 Session -- State
 Session -- Activity
+CreateSessionHandler -- View
+CreateSessionHandler -- Session
+CreateSessionHandler -- State
+CreateSessionHandler -- Activity
 
 
 
