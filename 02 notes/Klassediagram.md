@@ -196,7 +196,7 @@ CreateSessionHandler -- Activity
 ```mermaid
 classDiagram
 
-%% Class definitions
+%% CLASS DEFINITIONS
 class Session {
 	<<domain>>
     -listOfParticipant : List<User>
@@ -221,16 +221,17 @@ class State {
 	<<application>>
 	-currentUser : User
 }
-%% Serviceklasse til at håndtere rettigheds kald i systemmet.
 class Permission {
 	<<application>>
 	+CanJoinSession(int, int)
-	+CanSeeFullListOfSession()
+	+CanSeeAllSessions()
 }
 
 class View {
 	<<presentation>> 
 	+TakeUserInput()
+	+PrintSessions()
+	-SessionFormatter()
 }
 class Activity {
 	<<domain>>
@@ -248,22 +249,26 @@ class JoinSessionHandler {
 	<<application>>
 	
 }
-class ShowSessionListHandler {
-<<application>>
-	-ShowListOfSession()
+class ListSessionsHandler {
+	<<application>>
+	-ListSessions()
 }
-%% Class relationships
-Session "1" -- "1..*" User
+
+%% CLASS RELATIONSHIPS
+%% Use case 2
 Session -- View
-Session -- Activity
 Session -- Permission
 CreateSessionHandler -- View
 CreateSessionHandler -- Session
 CreateSessionHandler -- State
 CreateSessionHandler -- Activity
-ShowSessionListHandler -- Permission
+State -- User
+
+%% Use case 3
+ListSessionsHandler -- Activity
+ListSessionsHandler -- View
 Permission -- User
-
-
-
+ListSessionsHandler -- JoinSessionHandler
+Activity -- Permission
+Permission -- State
 ```

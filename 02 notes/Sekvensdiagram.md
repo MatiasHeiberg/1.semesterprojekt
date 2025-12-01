@@ -187,6 +187,7 @@ deactivate CreateSessionHandler
 
 
 # [[Use cases#3. Tilmelding til aktiviteter]]
+## Use case 3: List Sessions Version 1
 Er designet med udgangspunkt i [[Klassediagram#Version 5]].
 ```mermaid
 sequenceDiagram
@@ -196,76 +197,66 @@ box 1 Presentation
 participant View
 end
 box 2 Application
-participant CreateSessionHandler 
+participant ListSessionsHandler 
+participant JoinSessionHandler 
 participant State
 participant Permission
 end
 box 3 Domain
-participant Session
+participant User 
 participant Activity
+
 end
 
 
 %% Message found
-_->>CreateSessionHandler: new()
-activate CreateSessionHandler
+_->>ListSessionsHandler: new()
+activate ListSessionsHandler
 Note right of _: message found
+	
+	ListSessionsHandler->>ListSessionsHandler: ListSessions()
+	activate ListSessionsHandler
+		
+		%% getListOfSessions
+		ListSessionsHandler->>Activity: new()
+		ListSessionsHandler->>Activity: getListOfSession()
+		activate Activity
+			
+			%% FilterByPermission
+			Activity->>Permission: CanSeeAllSessions()
+			Permission->>State: getCurrentUser
+			activate State
+				
+				State-->>Permission: User
+				
+			deactivate State
+			Permission->>User: getIsAdmin
+			activate User
+				
+				User-->>Permission: bool
+				
+			deactivate User
+			Permission-->>Activity: bool
+			Activity-->>ListSessionsHandler: List<Session>
+			
+		deactivate Activity
+		
+		%% Print
+		ListSessionsHandler->>View: PrintSessions(List<Session>)
+		activate View
+			
+		
+			View->>View: SessionFormatter()
+		deactivate View
+		
+		ListSessionsHandler->>JoinSessionHandler: new()
+		
+	deactivate ListSessionsHandler
+	
+deactivate ListSessionsHandler
+```
 
-	CreateSessionHandler->>CreateSessionHandler: CreateSession()
-	activate CreateSessionHandler
-		
-		%% SetSessionData
-		CreateSessionHandler->>Session: new()
-		CreateSessionHandler->>CreateSessionHandler: SetSessionData()
-		activate CreateSessionHandler
-		
-			%% SetPlayerMin
-			CreateSessionHandler->>Session: SetPlayerMin()
-			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
-			deactivate Session
-			
-			%% SetPlayerMax
-			CreateSessionHandler->>Session: SetPlayerMax()
-			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
-			deactivate Session
-			
-			%% SetDescription
-			CreateSessionHandler->>Session: SetDescription()
-			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
-			deactivate Session		
-		
-			%% getCurrentUser
-			CreateSessionHandler->>CreateSessionHandler: GetCurrentUser()
-			activate CreateSessionHandler
-				CreateSessionHandler->>State: getCurrentUser
-				activate State
-				State-->>CreateSessionHandler: User
-				deactivate State
-			deactivate CreateSessionHandler
-			
-			%% AddParticipant
-			CreateSessionHandler->>Session: AddParticipant(User)
-			activate Session
-				Session->>Permission: CanJoinSession(int, int)
-				Permission->>Session: bool
-				Session-->>CreateSessionHandler: bool
-			deactivate Session
-		deactivate CreateSessionHandler
-		
-		%% listOfSessions.add()
-		CreateSessionHandler->>Activity: AddSession(Session)
-	deactivate CreateSessionHandler
-deactivate CreateSessionHandler
+## Use case 3: Join Session Version 1
+```
+
 ```
