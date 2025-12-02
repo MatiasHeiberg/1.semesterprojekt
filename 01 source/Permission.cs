@@ -9,16 +9,20 @@ namespace semesterprøve
 {
     public class Permission
     {
+        //Sammenligner antal nuværende spillere med max tilladt.
+        //Hvis nuværende antal >= max er sessionen fuld.
         public static bool CanJoinSession(int participantCount, int playerMaximum)
         {
-            //Sammenligner antal nuværende spillere med max tilladt.
-            //Hvis nuværende antal >= max er sessionen fuld.
             if (participantCount >= playerMaximum)
             {
                 Console.WriteLine("Du kan ikke tilmelde dig, da sessionen er fuld");
                 return false; // tilmelding afvises.
             }
             return true; // Der er plads, tillad tilmelding.
+        }
+        public static bool CanSeeAllSessions(State state)
+        {
+            return state.CurrentUser.IsAdmin;
         }
     }
 }
