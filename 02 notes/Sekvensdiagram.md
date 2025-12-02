@@ -111,7 +111,7 @@ box 1 Presentation
 participant View
 end
 box 2 Application
-participant CreateSessionHandler 
+participant CreateSessionHandler
 participant State
 participant Permission
 end
@@ -119,7 +119,6 @@ box 3 Domain
 participant Session
 participant Activity
 end
-
 
 %% Message found
 _->>CreateSessionHandler: new()
@@ -137,51 +136,76 @@ Note right of _: message found
 			%% SetPlayerMin
 			CreateSessionHandler->>Session: SetPlayerMin()
 			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+					
+					View-->>Session: string
+					
+				deactivate View
+				
 			deactivate Session
 			
 			%% SetPlayerMax
 			CreateSessionHandler->>Session: SetPlayerMax()
 			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+				
+					View-->>Session: string
+					
+				deactivate View
+			
 			deactivate Session
 			
 			%% SetDescription
 			CreateSessionHandler->>Session: SetDescription()
 			activate Session
-			Session->>View: TakeUserInput(string)
-			activate View
-			View-->>Session: string
-			deactivate View
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+					
+					View-->>Session: string
+					
+				deactivate View
+				
 			deactivate Session		
 		
 			%% getCurrentUser
 			CreateSessionHandler->>CreateSessionHandler: GetCurrentUser()
 			activate CreateSessionHandler
+				
 				CreateSessionHandler->>State: getCurrentUser
 				activate State
+					
 				State-->>CreateSessionHandler: User
+					
 				deactivate State
+				
 			deactivate CreateSessionHandler
 			
 			%% AddParticipant
 			CreateSessionHandler->>Session: AddParticipant(User)
 			activate Session
+				
 				Session->>Permission: CanJoinSession(int, int)
-				Permission->>Session: bool
+				activate Permission
+					
+					Permission->>Session: bool
+					
+				deactivate Permission
 				Session-->>CreateSessionHandler: bool
+					
 			deactivate Session
+			
 		deactivate CreateSessionHandler
 		
 		%% listOfSessions.add()
 		CreateSessionHandler->>Activity: AddSession(Session)
+		
 	deactivate CreateSessionHandler
+	
 deactivate CreateSessionHandler
 ```
 
@@ -205,7 +229,7 @@ end
 box 3 Domain
 participant User 
 participant Activity
-
+participant Session
 end
 
 
@@ -219,11 +243,12 @@ Note right of _: message found
 		
 		%% getListOfSessions
 		ListSessionsHandler->>Activity: new()
-		ListSessionsHandler->>Activity: getListOfSession()
+		ListSessionsHandler->>Activity: getListOfSession
 		activate Activity
 			
 			%% FilterByPermission
 			Activity->>Permission: CanSeeAllSessions()
+			activate Permission
 			Permission->>State: getCurrentUser
 			activate State
 				
@@ -237,6 +262,7 @@ Note right of _: message found
 				
 			deactivate User
 			Permission-->>Activity: bool
+			deactivate Permission
 			Activity-->>ListSessionsHandler: List<Session>
 			
 		deactivate Activity
@@ -245,13 +271,49 @@ Note right of _: message found
 		ListSessionsHandler->>View: PrintSessions(List<Session>)
 		activate View
 			
-		
+			loop
 			View->>View: SessionFormatter()
+			end
 		deactivate View
 		
 		ListSessionsHandler->>JoinSessionHandler: new()
 		
 	deactivate ListSessionsHandler
+	activate JoinSessionHandler
+		
+		JoinSessionHandler->>JoinSessionHandler: JoinSession()
+		activate JoinSessionHandler
+			
+			JoinSessionHandler->>View: TakeUserInput(string)
+			activate View
+				
+				View-->>JoinSessionHandler: string
+				
+			deactivate View
+			
+			JoinSessionHandler->>State: getCurrentUser
+			activate State
+				
+				State-->>JoinSessionHandler: User
+				
+			deactivate State
+			JoinSessionHandler->>Session: AddParticipant(User)
+			activate Session
+				
+				Session->>Permission: CanJoinSession(int, int)
+				activate Permission
+					
+					Permission->>Session: bool
+					
+				deactivate Permission
+				Session-->>JoinSessionHandler: bool
+				
+			deactivate Session
+			JoinSessionHandler->>ListSessionsHandler: ListSession()
+			
+		deactivate JoinSessionHandler
+		
+	deactivate JoinSessionHandler
 	
 deactivate ListSessionsHandler
 ```
