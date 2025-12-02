@@ -15,6 +15,11 @@ namespace semesterprøve
     {
         private List<Session> listOfSession = new List<Session>();
 
+        public List<Session> ListOfSession
+        {
+            get { return listOfSession; }
+        }
+
         public void AddSession(Session session)
         {
             listOfSession.Add(session);
