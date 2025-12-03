@@ -275,7 +275,7 @@ Note right of _: message found
 			View->>View: SessionFormatter()
 			end
 		deactivate View
-		
+critical Use case 3 - tilmelding til aktiviteter
 		ListSessionsHandler->>JoinSessionHandler: new()
 		
 	deactivate ListSessionsHandler
@@ -316,6 +316,7 @@ Note right of _: message found
 	deactivate JoinSessionHandler
 	
 deactivate ListSessionsHandler
+end
 ```
 
 ## Use case 3: Join Session Version 1
