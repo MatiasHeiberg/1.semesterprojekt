@@ -9,6 +9,14 @@ namespace semesterprøve
     public class User
     {
         private bool isAdmin = false;
+        private string name;
+
+        public User(string name, bool isAdmin = false)
+        {
+            this.isAdmin = isAdmin;
+            this.name = name;
+        }
+
         public bool IsAdmin
         {
             get
