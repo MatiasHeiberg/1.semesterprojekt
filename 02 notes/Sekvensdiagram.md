@@ -227,8 +227,6 @@ participant State
 participant Permission
 end
 box 3 Domain
-participant User 
-participant Activity
 participant Session
 end
 
@@ -283,14 +281,12 @@ participant View
 end
 box 2 Application
 participant ListSessionsHandler 
-participant JoinSessionHandler 
 participant State
 participant Permission
 end
 box 3 Domain
 participant User 
 participant Activity
-participant Session
 end
 
 
@@ -336,9 +332,7 @@ Note right of _: message found
 			View->>View: SessionFormatter()
 			end
 		deactivate View
-		
-		ListSessionsHandler->>JoinSessionHandler: new()
-		
+				
 	deactivate ListSessionsHandler
 	
 deactivate ListSessionsHandler
