@@ -16,7 +16,32 @@ namespace semesterprøve
         private string description;
         private DateTime date = new DateTime(2025, 12, 24);
 
+        public Session(List<User> listOfParticipant, int playerMinimum, int playerMaximum, string description, DateTime date)
+        {
+            this.listOfParticipant = listOfParticipant;
+            this.playerMinimum = playerMinimum;
+            this.playerMaximum = playerMaximum;
+            this.description = description;
+            this.date = date;
+        }
 
+        public Session(int playerMinimum, int playerMaximum, string description, DateTime date)
+        {
+          
+            this.playerMinimum = playerMinimum;
+            this.playerMaximum = playerMaximum;
+            this.description = description;
+            this.date = date;
+        }
+
+        public Session(int playerMinimum, int playerMaximum, string description)
+        {
+
+            this.playerMinimum = playerMinimum;
+            this.playerMaximum = playerMaximum;
+            this.description = description;
+           
+        }
         public void SetPlayerMin()
         {
             string instruction;
@@ -55,7 +80,7 @@ namespace semesterprøve
             //Spørger Permission-klassen om der er plads til en ny deltager
             //Sender antal deltagere og max som argumenter.
             if (!Permission.CanJoinSession(listOfParticipant.Count, playerMaximum))
-            {
+            {æ
                 return false; // Hvis der ikke er plads, stop og returner false.
             }
             //Hvis der er plads, tilføjes brugeren til deltagerlisten.
