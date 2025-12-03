@@ -247,7 +247,7 @@ class CreateSessionHandler{
 }
 class JoinSessionHandler {
 	<<application>>
-	
+	-JoinSession()
 }
 class ListSessionsHandler {
 	<<application>>
@@ -271,4 +271,7 @@ Permission -- User
 ListSessionsHandler -- JoinSessionHandler
 Activity -- Permission
 Permission -- State
+View -- JoinSessionHandler
+JoinSessionHandler -- State
+JoinSessionHandler -- Session
 ```
