@@ -18,3 +18,11 @@ Videre arbejde af [[Problemstillinger v1]]
 - Det skal være sikkert at oprette sig som bruger og arrangere nye aktiviteter (Datasikkerhed).
 - Programmet skal være med til at skabe mere inklusion og styrke fællesskab (Inklusion).
 - Projektarbejdet skal følge retningslinjerne beskrevet i [[Gruppekontrakt|gruppekontrakten]].
+
+
+
+
+
+
+
+
