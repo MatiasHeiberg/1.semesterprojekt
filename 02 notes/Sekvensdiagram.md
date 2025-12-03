@@ -211,8 +211,69 @@ deactivate CreateSessionHandler
 
 
 # [[Use cases#3. Tilmelding til aktiviteter]]
-## Use case 3: List Sessions Version 1
+## Use case 3: Join Session Version 1
 Er designet med udgangspunkt i [[Klassediagram#Version 5]].
+```mermaid
+sequenceDiagram
+
+actor _
+box 1 Presentation
+participant View
+end
+box 2 Application
+participant ListSessionsHandler 
+participant JoinSessionHandler 
+participant State
+participant Permission
+end
+box 3 Domain
+participant User 
+participant Activity
+participant Session
+end
+
+
+%% Message found
+_->>JoinSessionHandler: new()
+activate JoinSessionHandler
+Note right of _: message found
+	
+	JoinSessionHandler->>JoinSessionHandler: JoinSession()
+	activate JoinSessionHandler
+		
+		JoinSessionHandler->>View: TakeUserInput(string)
+		activate View
+			
+			View-->>JoinSessionHandler: string
+			
+		deactivate View
+		
+		JoinSessionHandler->>State: getCurrentUser
+		activate State
+			
+			State-->>JoinSessionHandler: User
+			
+		deactivate State
+		JoinSessionHandler->>Session: AddParticipant(User)
+		activate Session
+			
+			Session->>Permission: CanJoinSession(int, int)
+			activate Permission
+				
+				Permission->>Session: bool
+				
+			deactivate Permission
+			Session-->>JoinSessionHandler: bool
+			
+		deactivate Session
+		JoinSessionHandler->>ListSessionsHandler: ListSession()
+		
+	deactivate JoinSessionHandler
+	
+deactivate JoinSessionHandler
+```
+
+# Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 1
 ```mermaid
 sequenceDiagram
 
@@ -279,46 +340,7 @@ Note right of _: message found
 		ListSessionsHandler->>JoinSessionHandler: new()
 		
 	deactivate ListSessionsHandler
-	activate JoinSessionHandler
-		
-		JoinSessionHandler->>JoinSessionHandler: JoinSession()
-		activate JoinSessionHandler
-			
-			JoinSessionHandler->>View: TakeUserInput(string)
-			activate View
-				
-				View-->>JoinSessionHandler: string
-				
-			deactivate View
-			
-			JoinSessionHandler->>State: getCurrentUser
-			activate State
-				
-				State-->>JoinSessionHandler: User
-				
-			deactivate State
-			JoinSessionHandler->>Session: AddParticipant(User)
-			activate Session
-				
-				Session->>Permission: CanJoinSession(int, int)
-				activate Permission
-					
-					Permission->>Session: bool
-					
-				deactivate Permission
-				Session-->>JoinSessionHandler: bool
-				
-			deactivate Session
-			JoinSessionHandler->>ListSessionsHandler: ListSession()
-			
-		deactivate JoinSessionHandler
-		
-	deactivate JoinSessionHandler
 	
 deactivate ListSessionsHandler
 ```
 
-## Use case 3: Join Session Version 1
-```
-
-```
