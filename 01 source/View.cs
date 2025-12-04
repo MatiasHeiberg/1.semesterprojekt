@@ -6,6 +6,7 @@
 /// 
 using System;
 namespace semesterprøve
+
 {
     public static class View
     {

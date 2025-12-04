@@ -332,7 +332,7 @@ Note right of _: message found
 			View->>View: SessionFormatter()
 			end
 		deactivate View
-				
+
 	deactivate ListSessionsHandler
 	
 deactivate ListSessionsHandler

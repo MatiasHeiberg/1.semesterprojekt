@@ -8,13 +8,20 @@ namespace semesterprøve
 {
     public class State
     {
+        //Gemmer den bruger der er logget ind nu.
         private User currentUser;
+        priate Activity currentList;
 
+        //Læser den nuværende bruger
         public User CurrentUser
         {
             get
             {
                 return currentUser;
+            }
+            set
+            {
+                currentUser = value;
             }
         }
     }
