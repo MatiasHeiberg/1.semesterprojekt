@@ -15,22 +15,33 @@ namespace semesterprøve
     public class Activity 
     {
         private List<Session> listOfSession = new List<Session>();
+
+        public Activity()
+        {
+            listOfSession.Add(new Session(/*new List<User>(),*/2, 6, "Ludo", new DateTime(2025, 11, 24)));
+            listOfSession.Add(new Session(2, 6, "Matador", new DateTime(2025, 11, 24)));
+            listOfSession.Add(new Session(2, 6, "Settlers of Catan"));
+            listOfSession.Add(new Session(2, 2, "Skak"));
+            listOfSession.Add(new Session(2, 4, "Kingdom Death: Monster"));
+        }
+
         public List<Session> ListOfSession
         {
             get {
                 bool isAdmin = Permission.CanSeeAllSessions();
-                FilterListData(isAdmin);
-                return listOfSession;
+                List<Session> returnList = FilterListData(isAdmin);
+                return returnList;
             }
         }
         private List<Session> FilterListData(bool isAdmin)
         {
-            List<Session> modifiedList; 
-            modifiedList = new List<Session>();
+            List<Session> modifiedList;
 
+            modifiedList = new List<Session>();
+            
             if (isAdmin)
             {
-                return ListOfSession;
+                return listOfSession;
             }
 
 

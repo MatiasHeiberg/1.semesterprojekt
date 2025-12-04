@@ -19,7 +19,7 @@ namespace semesterprøve
         // Properties
         public DateTime Date { get => date; set => date = value; }
         public string Description { get => description; set => description = value; }
-        public List<User> ListOfParticipant { get => listOfParticipant; /*set => listOfParticipant = value; */}
+        public List<User> ListOfParticipant { get => listOfParticipant; set => listOfParticipant = value; }
         public int PlayerMaximum { get => playerMaximum; set => playerMaximum = value; }
 
         // Constructors

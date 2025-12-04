@@ -19,10 +19,13 @@ namespace semesterprøve
             List<User> allUsers = IOFile.LoadUsers("Users.csv");
 
             //Sætter currentUser i state
-            state.CurrentUser = allUsers[0];
+            state.CurrentUser = allUsers[3];
 
             //test
             Console.WriteLine($"Logged in som {state.CurrentUser.Name} Admin: {state.CurrentUser.IsAdmin}");
+
+            ListSessionHandler sessionHandler = new ListSessionHandler();
+            
         }
     }
 }

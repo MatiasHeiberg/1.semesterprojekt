@@ -17,8 +17,7 @@ namespace semesterprøve
         private void ListSessions()
         {
             List<Session> session = Application.activity.ListOfSession;
-            View view = new View();
-            view.
+            View.PrintSessions(session);
         }
     }
 }
