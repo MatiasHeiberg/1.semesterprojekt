@@ -10,7 +10,7 @@ namespace semesterprøve
     {
         //boolean der angiver om brugeren er adminstrator,
         //standard værdi er sat til false.
-        private bool isAdmin = false;
+        private bool isAdmin;
 
         //Holder selve navnet på brugeren,
         //den er privat da vi kun vil gøre den tilgængelig via en property.

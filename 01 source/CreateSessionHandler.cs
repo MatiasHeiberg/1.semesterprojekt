@@ -21,7 +21,7 @@ namespace semesterprøve
 
             session = new Session();
             SetSessionData(session);
-            activity.AddSession(session);
+            Application.activity.AddSession(session);
         }
         private void SetSessionData(Session session)
         {
@@ -37,7 +37,7 @@ namespace semesterprøve
         {
             User user;
 
-            user = state.CurrentUser;
+            user = Application.state.CurrentUser;
 
             return user;
         }

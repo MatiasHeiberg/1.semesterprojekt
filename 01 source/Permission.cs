@@ -20,9 +20,9 @@ namespace semesterprøve
             }
             return true; // Der er plads, tillad tilmelding.
         }
-        public static bool CanSeeAllSessions(State state)
+        public static bool CanSeeAllSessions()
         {
-            return state.CurrentUser.IsAdmin;
+            return Application.state.CurrentUser.IsAdmin;
         }
     }
 }

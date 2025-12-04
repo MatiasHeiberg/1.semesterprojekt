@@ -75,7 +75,7 @@ namespace semesterprøve
 
         }
         //Metode til at tilføje nye spillere til eksisterende eller nye sessioner.
-        public bool AddParticipant(User currentUser)
+        public bool AddParticipant()
         {
             //Spørger Permission-klassen om der er plads til en ny deltager
             //Sender antal deltagere og max som argumenter.
@@ -84,7 +84,7 @@ namespace semesterprøve
                 return false; // Hvis der ikke er plads, stop og returner false.
             }
             //Hvis der er plads, tilføjes brugeren til deltagerlisten.
-            listOfParticipant.Add(currentUser);
+            listOfParticipant.Add(Application.state.CurrentUser);
             return true; //Bekræfter at brugeren er blevet tilføjet.
         } 
     }
