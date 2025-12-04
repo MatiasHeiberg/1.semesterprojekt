@@ -7,7 +7,7 @@ using System;
 
 namespace semesterprøve
 {
-    public class Permission
+    public static class Permission
     {
         //Sammenligner antal nuværende spillere med max tilladt.
         //Hvis nuværende antal >= max er sessionen fuld.

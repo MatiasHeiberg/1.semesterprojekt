@@ -30,7 +30,7 @@ namespace semesterprøve
         private void JoinSession()
         {
             User currentUser = Application.state.CurrentUser;
-            session.AddParticipant(currentUser);
+            session.AddParticipant();
         }
     }
 }

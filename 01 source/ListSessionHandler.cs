@@ -16,16 +16,8 @@ namespace semesterprøve
 
         private void ListSessions()
         {
-            Permission permission;
-            permission = new Permission();  
-
             List<Session> session = Application.activity.ListOfSession;
-            permission.CanSeeAllSessions();
-
-           
-
-
-
+            Permission.CanSeeAllSessions();
 
         }
     }

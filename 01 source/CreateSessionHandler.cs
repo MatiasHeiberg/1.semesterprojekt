@@ -17,9 +17,7 @@ namespace semesterprøve
 
         private void CreateSession()
         {
-            Session session;
-
-            session = new Session();
+            Session session = new Session();
             SetSessionData(session);
             Application.activity.AddSession(session);
         }
@@ -31,7 +29,7 @@ namespace semesterprøve
             session.SetPlayerMax();
             session.SetDescription();
             currentUser = GetCurrentUser();
-            session.AddParticipant(currentUser);
+            session.AddParticipant();
         }
         private User GetCurrentUser()
         {

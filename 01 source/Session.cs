@@ -16,13 +16,15 @@ namespace semesterprøve
         private string description;
         private DateTime date = new DateTime(2025, 12, 24);
 
+        public DateTime Date { get => date; set => date = value; }
+
         public Session(List<User> listOfParticipant, int playerMinimum, int playerMaximum, string description, DateTime date)
         {
             this.listOfParticipant = listOfParticipant;
             this.playerMinimum = playerMinimum;
             this.playerMaximum = playerMaximum;
             this.description = description;
-            this.date = date;
+            this.Date = date;
         }
 
         public Session(int playerMinimum, int playerMaximum, string description, DateTime date)
@@ -31,7 +33,7 @@ namespace semesterprøve
             this.playerMinimum = playerMinimum;
             this.playerMaximum = playerMaximum;
             this.description = description;
-            this.date = date;
+            this.Date = date;
         }
 
         public Session(int playerMinimum, int playerMaximum, string description)
@@ -42,6 +44,11 @@ namespace semesterprøve
             this.description = description;
            
         }
+
+        public Session()
+        {
+        }
+
         public void SetPlayerMin()
         {
             string instruction;
