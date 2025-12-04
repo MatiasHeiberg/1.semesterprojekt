@@ -23,23 +23,10 @@ namespace semesterprøve
         }
         private void SetSessionData(Session session)
         {
-            User currentUser;
-
             session.SetPlayerMin();
             session.SetPlayerMax();
             session.SetDescription();
-            currentUser = GetCurrentUser();
             session.AddParticipant();
         }
-        private User GetCurrentUser()
-        {
-            User user;
-
-            user = Application.state.CurrentUser;
-
-            return user;
-        }
-
-
     }
 }

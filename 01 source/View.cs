@@ -19,6 +19,25 @@ namespace semesterprøve
 
             return userInput;
         }
+
+        public static void PrintSessions(List<Session> list)
+        {
+            foreach (Session session in list)
+            {
+                Console.WriteLine(SessionFormatter(session));
+            }
+        }
+
+        private static string SessionFormatter(Session session)
+        {
+            string formatThis;
+            formatThis = $"""
+            {session.Date} - {session.Description}
+            ({session.ListOfParticipant.Count}/{session.PlayerMaximum})
+            """;
+
+            return formatThis;
+        } 
     }
 
 }
