@@ -10,7 +10,7 @@ namespace semesterprøve
     {
         //Gemmer den bruger der er logget ind nu.
         private User currentUser;
-        priate Activity currentList;
+        private Activity currentList;
 
         //Læser den nuværende bruger
         public User CurrentUser
