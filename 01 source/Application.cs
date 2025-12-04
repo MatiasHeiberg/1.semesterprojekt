@@ -12,20 +12,77 @@ namespace semesterprøve
         // Opretter statiske singleton objekter der skal persistere igennem hele programmets levetid.
         public static State state = new State();
         public static Activity activity = new Activity();
+        public static List<User> AllUsers;
 
         public void Run()
         {
             //indlæs brugere fra CSV
-            List<User> allUsers = IOFile.LoadUsers("Users.csv");
+            AllUsers = IOFile.LoadUsers("Users.csv");
 
             //Sætter currentUser i state
-            state.CurrentUser = allUsers[3];
+            state.CurrentUser = AllUsers[3];
 
             //test
             Console.WriteLine($"Logged in som {state.CurrentUser.Name} Admin: {state.CurrentUser.IsAdmin}");
 
-            ListSessionHandler sessionHandler = new ListSessionHandler();
-            
+            activity.CreateDemoSessions();
+
+            ShowMainMenu();
+        }
+
+        private void ShowMainMenu()
+        {
+            bool running = true;
+
+            while (running)
+            {
+                Console.Clear();
+                new ListSessionHandler();
+
+                Console.WriteLine();
+                Console.WriteLine("[tal] = tilmeld dig en session");
+                Console.WriteLine("[n] = opret en ny session");
+                Console.WriteLine("[q] = afslut programmet");
+
+                string input = View.TakeUserInput("\n indtast dit valg:");
+
+                switch (input)
+                {
+                    case "q":
+                        running = false; 
+                        break;
+                    case "n":
+                        new CreateSessionHandler();
+                        break;
+                //    default:
+                //        if (int.TryParse(input, out int index))
+                //        {
+                //            List<Session> sessions = activity.ListOfSession;
+
+                //            if (index >= 1 && index <= sessions.Count)
+                //            {
+                //                Session chosen = sessions[index - 1];
+
+                //                new JoinSessionHandler(chosen);
+                //            }
+                //            else
+                //            {
+                //                Console.WriteLine("Ugyldigt sessionsnummer.");
+                //            }
+                //        }
+                //        else
+                //        {
+                //            Console.WriteLine("Ugyldigt input.");
+                //        }
+                //        break;
+                //}
+
+                //if (running)
+                //{
+                //    View.TakeUserInput("\nTryk Enter for at fortsætte...");
+                }
+            }
+            }
         }
     }
-}
+

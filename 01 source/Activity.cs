@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace semesterprøve
 {
@@ -18,11 +19,15 @@ namespace semesterprøve
 
         public Activity()
         {
-            listOfSession.Add(new Session(/*new List<User>(),*/2, 6, "Ludo", new DateTime(2025, 11, 24)));
-            listOfSession.Add(new Session(2, 6, "Matador", new DateTime(2025, 11, 24)));
-            listOfSession.Add(new Session(2, 6, "Settlers of Catan"));
-            listOfSession.Add(new Session(2, 2, "Skak"));
-            listOfSession.Add(new Session(2, 4, "Kingdom Death: Monster"));
+
+        }
+        public void CreateDemoSessions()
+        {
+                listOfSession.Add(new Session(new List<User> { Application.AllUsers[0], Application.AllUsers[1], Application.AllUsers[2] }, 2, 4, "Ludo", new DateTime(2025, 11, 24)));
+                listOfSession.Add(new Session(new List<User> { Application.AllUsers[3], Application.AllUsers[4] }, 2, 6, "Matador", new DateTime(2025, 11, 24)));
+                listOfSession.Add(new Session(new List<User> { Application.AllUsers[5] }, 2, 6, "Settlers of Catan", new DateTime(2025, 12, 24)));
+                listOfSession.Add(new Session(new List<User> { Application.AllUsers[6], Application.AllUsers[7] }, 2, 2, "Skak", new DateTime(2025, 12, 24)));
+                listOfSession.Add(new Session(new List<User> { Application.AllUsers[8] }, 2, 4, "Kingdom Death: Monster", new DateTime(2025, 12, 24)));
         }
 
         public List<Session> ListOfSession

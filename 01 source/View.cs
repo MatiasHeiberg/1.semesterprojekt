@@ -10,7 +10,7 @@ namespace semesterprøve
 {
     public static class View
     {
-        internal static string? TakeUserInput(string instruction)
+        internal static string TakeUserInput(string instruction)
         {
             string userInput;
             
@@ -20,11 +20,12 @@ namespace semesterprøve
             return userInput;
         }
 
-        public static void PrintSessions(List<Session> list)
+        public static void PrintSessionsWithIndex(List<Session> list)
         {
-            foreach (Session session in list)
+            for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(SessionFormatter(session));
+                Session session = list[i];
+                Console.WriteLine($"{i+1}.{SessionFormatter(session)}");
             }
         }
 
