@@ -80,7 +80,7 @@ namespace semesterprøve
             //Spørger Permission-klassen om der er plads til en ny deltager
             //Sender antal deltagere og max som argumenter.
             if (!Permission.CanJoinSession(listOfParticipant.Count, playerMaximum))
-            {æ
+            {
                 return false; // Hvis der ikke er plads, stop og returner false.
             }
             //Hvis der er plads, tilføjes brugeren til deltagerlisten.
