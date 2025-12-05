@@ -33,7 +33,7 @@ namespace semesterprøve
         }
         public Session(int playerMinimum, int playerMaximum, string description, DateTime date)
         {
-          
+
             this.playerMinimum = playerMinimum;
             this.PlayerMaximum = playerMaximum;
             this.Description = description;
@@ -45,13 +45,13 @@ namespace semesterprøve
             this.playerMinimum = playerMinimum;
             this.PlayerMaximum = playerMaximum;
             this.Description = description;
-           
+
         }
         public Session()
         {
         }
 
-        // Methods
+        //Methods
         public void SetPlayerMin()
         {
             string instruction;

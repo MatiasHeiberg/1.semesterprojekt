@@ -20,10 +20,9 @@ namespace semesterprøve
             AllUsers = IOFile.LoadUsers("Users.csv");
 
             //Sætter currentUser i state
-            state.CurrentUser = AllUsers[3];
+            state.CurrentUser = AllUsers[1];
 
-            //test
-            Console.WriteLine($"Logged in som {state.CurrentUser.Name} Admin: {state.CurrentUser.IsAdmin}");
+            
 
             activity.CreateDemoSessions();
 
@@ -37,6 +36,8 @@ namespace semesterprøve
             while (running)
             {
                 Console.Clear();
+                //test
+                Console.WriteLine($"Logged in som {state.CurrentUser.Name} Admin: {state.CurrentUser.IsAdmin}");
                 new ListSessionHandler();
 
                 Console.WriteLine();
@@ -54,32 +55,32 @@ namespace semesterprøve
                     case "n":
                         new CreateSessionHandler();
                         break;
-                //    default:
-                //        if (int.TryParse(input, out int index))
-                //        {
-                //            List<Session> sessions = activity.ListOfSession;
+                    default:
+                        if (int.TryParse(input, out int index))
+                        {
+                            List<Session> sessions = activity.ListOfSession;
 
-                //            if (index >= 1 && index <= sessions.Count)
-                //            {
-                //                Session chosen = sessions[index - 1];
+                            if (index >= 1 && index <= sessions.Count)
+                            {
+                                Session chosen = sessions[index - 1];
 
-                //                new JoinSessionHandler(chosen);
-                //            }
-                //            else
-                //            {
-                //                Console.WriteLine("Ugyldigt sessionsnummer.");
-                //            }
-                //        }
-                //        else
-                //        {
-                //            Console.WriteLine("Ugyldigt input.");
-                //        }
-                //        break;
-                //}
+                                new JoinSessionHandler(chosen);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ugyldigt sessionsnummer.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ugyldigt input.");
+                        }
+                        break;
+                }
 
-                //if (running)
-                //{
-                //    View.TakeUserInput("\nTryk Enter for at fortsætte...");
+                if (running)
+                {
+                    View.TakeUserInput("\nTryk Enter for at fortsætte...");
                 }
             }
             }
