@@ -10,8 +10,6 @@ namespace semesterprøve
     internal class Application
     {
         // Opretter statiske singleton objekter der skal persistere igennem hele programmets levetid.
-        public static State state = new State();
-        public static Activity activity = new Activity();
         public static List<User> AllUsers;
 
         public void Run()
@@ -20,11 +18,13 @@ namespace semesterprøve
             AllUsers = IOFile.LoadUsers("Users.csv");
 
             //Sætter currentUser i state
-            state.CurrentUser = AllUsers[1];
+            State.SetCurrentUser(AllUsers[8]);
 
+            //Læser nuværende bruger fra fil
+            State.GetCurrentUser();
 
-
-            activity.CreateDemoSessions();
+            //Kører demo data oprettelse
+            Activity.CreateDemoSessions();
 
             ShowMainMenu();
         }
@@ -37,7 +37,7 @@ namespace semesterprøve
             {
                 Console.Clear();
                 //test
-                Console.WriteLine($"Logged in som {state.CurrentUser.Name} Admin: {state.CurrentUser.IsAdmin}");
+                Console.WriteLine($"Logged in som {State.GetCurrentUser().Name} Admin: {State.GetCurrentUser().IsAdmin}");
                 new ListSessionHandler();
 
                 Console.WriteLine();
@@ -67,7 +67,7 @@ namespace semesterprøve
                 default:
                     if (int.TryParse(input, out int index))
                     {
-                        List<Session> sessions = activity.ListOfSession;
+                        List<Session> sessions = Activity.ListOfSession;
 
                         if (index >= 1 && index <= sessions.Count)
                         {

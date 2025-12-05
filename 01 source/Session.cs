@@ -94,7 +94,7 @@ namespace semesterprøve
                 return false; // Hvis der ikke er plads, stop og returner false.
             }
             //Hvis der er plads, tilføjes brugeren til deltagerlisten.
-            ListOfParticipant.Add(Application.state.CurrentUser);
+            ListOfParticipant.Add(State.GetCurrentUser());
             return true; //Bekræfter at brugeren er blevet tilføjet.
         } 
     }

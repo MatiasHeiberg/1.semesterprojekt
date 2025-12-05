@@ -4,11 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace semesterprøve
 {
     public class IOFile
     {
+
+
+        public static User ReadCurrentUser()
+        {
+            User currentUser = new User();
+            string line = File.ReadAllText("CurrentUser.csv");
+            currentUser = ExtractUser(line);
+            return currentUser;
+        }
+
+        private static User ExtractUser(string line)
+        {
+            string[] parts = line.Split(',');
+            string name = parts[0];
+            bool isAdmin = bool.Parse(parts[1]);
+            return new User(name, isAdmin);
+        }
+
+        public static void WriteCurrentUser(User currentUser)
+        {
+            {
+                var line = $"{currentUser.Name},{currentUser.IsAdmin}";
+
+                // Overskriver hele filen
+                File.WriteAllText("CurrentUser.csv", line);
+            }
+        }
 
         public static List<User> LoadUsers(string csvPath)
         {
@@ -25,19 +53,13 @@ namespace semesterprøve
             {
 
                 string line = lines[i];
-                
-                //Vi splitter hver linje med line.Split ved hvert komma, så "Andreas,true"
-                //bliver til "parts = ["Andreas", "true"] i endnu en array af strenge.
-                string[] parts = line.Split(',');
 
-                //navnm, f.eks. "Andreas".
-                string name = parts[0];
+                User user = new User();
 
-                //adminstatus, f.eks. "true".
-                bool isAdmin = bool.Parse(parts[1]);
+                user = ExtractUser(line);
 
                 //opretter User objekt og tilføjer det til listen.
-                allUsers.Add(new User(name, isAdmin));
+                allUsers.Add(user);
 
             }
             //Returnerer listen allUsers.

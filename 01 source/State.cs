@@ -8,20 +8,13 @@ namespace semesterprøve
 {
     public class State
     {
-        //Gemmer den bruger der er logget ind nu.
-        private User currentUser;
-
-        //Læser den nuværende bruger
-        public User CurrentUser
+        public static User GetCurrentUser()
+        { 
+            return IOFile.ReadCurrentUser();
+        }
+        public static void SetCurrentUser(User user)
         {
-            get
-            {
-                return currentUser;
-            }
-            set
-            {
-                currentUser = value;
-            }
+            IOFile.WriteCurrentUser(user);
         }
     }
 

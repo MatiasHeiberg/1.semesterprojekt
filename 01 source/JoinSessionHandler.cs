@@ -29,7 +29,7 @@ namespace semesterprøve
         //til session.AddParticipant() som selv kalder Permission.CanJoinSession.
         private void JoinSession()
         {
-            User currentUser = Application.state.CurrentUser;
+            User currentUser = State.GetCurrentUser();
             session.AddParticipant();
         }
     }

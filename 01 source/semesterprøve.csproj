@@ -9,10 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CurrentUser – genvej.lnk" />
+    <None Remove="CurrentUser.csv" />
     <None Remove="Users.csv" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="CurrentUser.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Users.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

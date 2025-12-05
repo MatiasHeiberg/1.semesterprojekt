@@ -19,7 +19,7 @@ namespace semesterprøve
         {
             Session session = new Session();
             SetSessionData(session);
-            Application.activity.AddSession(session);
+            Activity.AddSession(session);
         }
         private void SetSessionData(Session session)
         {

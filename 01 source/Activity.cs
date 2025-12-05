@@ -15,13 +15,13 @@ namespace semesterprøve
 {
     public class Activity 
     {
-        private List<Session> listOfSession = new List<Session>();
+        private static List<Session> listOfSession = new List<Session>();
 
         public Activity()
         {
 
         }
-        public void CreateDemoSessions()
+        public static void CreateDemoSessions()
         {
                 listOfSession.Add(new Session(new List<User> { Application.AllUsers[0], Application.AllUsers[1], Application.AllUsers[2] }, 2, 4, "Ludo", new DateTime(2025, 11, 24, 19, 00, 00)));
                 listOfSession.Add(new Session(new List<User> { Application.AllUsers[3], Application.AllUsers[4] }, 2, 6, "Matador", new DateTime(2025, 11, 24, 19, 00, 00)));
@@ -30,7 +30,7 @@ namespace semesterprøve
                 listOfSession.Add(new Session(new List<User> { Application.AllUsers[8] }, 2, 4, "Kingdom Death: Monster", new DateTime(2025, 12, 24, 19, 00, 00)));
         }
 
-        public List<Session> ListOfSession
+        public static List<Session> ListOfSession
         {
             get {
                 bool isAdmin = Permission.CanSeeAllSessions();
@@ -38,7 +38,7 @@ namespace semesterprøve
                 return returnList;
             }
         }
-        private List<Session> FilterListData(bool isAdmin)
+        private static List<Session> FilterListData(bool isAdmin)
         {
             List<Session> modifiedList;
 
@@ -61,7 +61,7 @@ namespace semesterprøve
             return modifiedList;
         }
 
-        public void AddSession(Session session)
+        public static void AddSession(Session session)
         {
             listOfSession.Add(session);
         }

@@ -22,7 +22,7 @@ namespace semesterprøve
         }
         public static bool CanSeeAllSessions()
         {
-            return Application.state.CurrentUser.IsAdmin;
+            return State.GetCurrentUser().IsAdmin;
         }
     }
 }

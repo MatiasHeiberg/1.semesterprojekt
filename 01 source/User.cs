@@ -16,6 +16,10 @@ namespace semesterprøve
         //den er privat da vi kun vil gøre den tilgængelig via en property.
         private string name;
 
+        public User()
+        {
+        }
+
         //constructoren til oprettelse af bruger, skal have navn
         //men isAdmin er sat til false som standard.
         public User(string name, bool isAdmin = false)
