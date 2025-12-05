@@ -212,11 +212,11 @@ deactivate CreateSessionHandler
 ```mermaid
 sequenceDiagram
 
-actor _
 box 1 Presentation
 participant View
 end
 box 2 Application
+participant Application
 participant CreateSessionHandler
 participant State
 participant Permission
@@ -230,9 +230,9 @@ participant IOFile
 end
 
 %% Message found
-_->>CreateSessionHandler: new()
+Application->>CreateSessionHandler: new()
 activate CreateSessionHandler
-Note right of _: message found
+Note right of Application: message found
 
 	CreateSessionHandler->>CreateSessionHandler: CreateSession()
 	activate CreateSessionHandler
@@ -324,11 +324,11 @@ Er designet med udgangspunkt i [[Klassediagram#Version 5]].
 ```mermaid
 sequenceDiagram
 
-actor _
 box 1 Presentation
 participant View
 end
 box 2 Application
+participant Application
 participant ListSessionsHandler 
 participant JoinSessionHandler 
 participant State
@@ -340,9 +340,9 @@ end
 
 
 %% Message found
-_->>JoinSessionHandler: new()
+Application->>JoinSessionHandler: new()
 activate JoinSessionHandler
-Note right of _: message found
+Note right of Application: message found
 	
 	JoinSessionHandler->>JoinSessionHandler: JoinSession()
 	activate JoinSessionHandler
@@ -383,11 +383,11 @@ deactivate JoinSessionHandler
 ```mermaid
 sequenceDiagram
 
-actor _
 box 1 Presentation
 participant View
 end
 box 2 Application
+participant Application
 participant ListSessionsHandler 
 participant State
 participant Permission
@@ -399,9 +399,9 @@ end
 
 
 %% Message found
-_->>ListSessionsHandler: new()
+Application->>ListSessionsHandler: new()
 activate ListSessionsHandler
-Note right of _: message found
+Note right of Application: message found
 	
 	ListSessionsHandler->>ListSessionsHandler: ListSessions()
 	activate ListSessionsHandler
@@ -445,4 +445,74 @@ Note right of _: message found
 	
 deactivate ListSessionsHandler
 ```
+# Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 2
+```mermaid
+sequenceDiagram
 
+box 1 Presentation
+    participant View
+end
+box 2 Application
+    participant Application
+    participant ListSessionHandler 
+    participant State
+    participant Permission
+end
+box 3 Domain
+    participant User 
+    participant Activity
+end
+box 4 Data
+    participant IOFile
+end
+
+%% Message found
+Application->>ListSessionHandler: new()
+activate ListSessionHandler
+Note right of Application: message found
+
+activate ListSessionHandler	
+ListSessionHandler->>ListSessionHandler: ListSessions()
+		
+    %% get ListOfSessions
+    ListSessionHandler->>Activity: get ListOfSession
+    activate Activity
+			
+        %% FilterByPermission
+        Activity->>Permission: CanSeeAllSessions()
+        activate Permission
+
+        Permission->>State: GetCurrentUser()
+        activate State
+				
+        State->>IOFile: ReadCurrentUser()
+        activate IOFile
+        IOFile-->>State: User
+        deactivate IOFile
+
+        State-->>Permission: User
+        deactivate State
+
+        Permission->>User: IsAdmin
+        activate User
+        User-->>Permission: true
+        deactivate User
+
+        Permission-->>Activity: true
+        deactivate Permission
+
+    Activity-->>ListSessionHandler: List<Session> (alle sessions)
+    deactivate Activity
+
+%% Print
+ListSessionHandler->>View: PrintSessionsWithIndex(List<Session>)
+activate View
+
+loop for hver session
+    View->>View: SessionFormatter(session)
+end
+deactivate View
+
+deactivate ListSessionHandler
+
+```
