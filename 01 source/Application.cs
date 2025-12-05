@@ -13,6 +13,7 @@ namespace semesterprøve
     {
         // Opretter statiske singleton objekter der skal persistere igennem hele programmets levetid.
         public static List<User> AllUsers;
+        private bool running = true;
 
         public void Run()
         {
@@ -33,12 +34,10 @@ namespace semesterprøve
 
         private void ShowMainMenu()
         {
-            bool running = true;
 
             while (running)
             {
                 Console.Clear();
-                //test
                 Console.WriteLine($"Logged in som {State.GetCurrentUser().Name} Admin: {State.GetCurrentUser().IsAdmin}");
                 new ListSessionHandler();
 
@@ -46,27 +45,30 @@ namespace semesterprøve
                 Console.WriteLine("[tal] = tilmeld dig en session");
                 Console.WriteLine("[n] = opret en ny session");
                 Console.WriteLine("[q] = afslut programmet");
-                MenuSelecter(running);
+                MenuSelecter();
 
                 if (running)
                 {
                     View.TakeUserInput("\nTryk Enter for at fortsætte...");
-
+                    continue;
                 }
+
+                break;
             }
         }
-        private void MenuSelecter(bool running)
+        private void MenuSelecter( )
         {
             string input = View.TakeUserInput("\nindtast dit valg:");
 
             switch (input)
             {
-                case "q": 
+                case "q":
                     running = false;
+                    Console.WriteLine("Shutting down...");
                     break;
                 case "n":
                     new CreateSessionHandler();
-                    MenuSelecter(running);
+                    MenuSelecter();
                     break;
                 default:
                     MenuItem(input);
@@ -88,13 +90,13 @@ namespace semesterprøve
                 else
                 {
                     Console.WriteLine("Ugyldigt sessionsnummer.");
-                    MenuSelecter(true);
+                    MenuSelecter();
                 }
             }
             else
             {
                 Console.WriteLine("Ugyldigt input.");
-                MenuSelecter(true);
+                MenuSelecter();
             }
         }
     }
