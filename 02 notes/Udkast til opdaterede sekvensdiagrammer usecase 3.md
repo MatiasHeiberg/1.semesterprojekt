@@ -67,7 +67,7 @@ deactivate Session
 deactivate JoinSessionHandler
 
 ```
-
+## Eksempel (blackbox)
 ```mermaid
 sequenceDiagram
     actor User

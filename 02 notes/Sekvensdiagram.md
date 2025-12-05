@@ -379,7 +379,7 @@ Note right of Application: message found
 deactivate JoinSessionHandler
 ```
 
-# Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 1
+## Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 1
 ```mermaid
 sequenceDiagram
 
@@ -445,7 +445,7 @@ Note right of Application: message found
 	
 deactivate ListSessionsHandler
 ```
-# Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 2
+## Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 2
 ```mermaid
 sequenceDiagram
 
