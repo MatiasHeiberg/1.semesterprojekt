@@ -68,7 +68,7 @@ namespace semesterprøve
                     break;
                 case "n":
                     new CreateSessionHandler();
-                    MenuSelecter();
+                    ShowMainMenu();
                     break;
                 default:
                     MenuItem(input);
