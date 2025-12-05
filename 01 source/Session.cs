@@ -14,7 +14,7 @@ namespace semesterprøve
         private int playerMinimum;
         private int playerMaximum;
         private string description;
-        private DateTime date = new DateTime(2025, 12, 24);
+        private DateTime date = new DateTime(2025, 12, 24, 19, 00, 00);
 
         // Properties
         public DateTime Date { get => date; set => date = value; }

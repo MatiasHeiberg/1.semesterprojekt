@@ -22,7 +22,7 @@ namespace semesterprøve
             //Sætter currentUser i state
             state.CurrentUser = AllUsers[1];
 
-            
+
 
             activity.CreateDemoSessions();
 
@@ -44,46 +44,52 @@ namespace semesterprøve
                 Console.WriteLine("[tal] = tilmeld dig en session");
                 Console.WriteLine("[n] = opret en ny session");
                 Console.WriteLine("[q] = afslut programmet");
-
-                string input = View.TakeUserInput("\n indtast dit valg:");
-
-                switch (input)
-                {
-                    case "q":
-                        running = false; 
-                        break;
-                    case "n":
-                        new CreateSessionHandler();
-                        break;
-                    default:
-                        if (int.TryParse(input, out int index))
-                        {
-                            List<Session> sessions = activity.ListOfSession;
-
-                            if (index >= 1 && index <= sessions.Count)
-                            {
-                                Session chosen = sessions[index - 1];
-
-                                new JoinSessionHandler(chosen);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Ugyldigt sessionsnummer.");
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ugyldigt input.");
-                        }
-                        break;
-                }
+                MenuSelecter(running);
 
                 if (running)
                 {
                     View.TakeUserInput("\nTryk Enter for at fortsætte...");
+
                 }
             }
+        }
+        private void MenuSelecter(bool running)
+        {
+            string input = View.TakeUserInput("\nindtast dit valg:");
+
+            switch (input)
+            {
+                case "q":
+                    break;
+                case "n":
+                    new CreateSessionHandler();
+                    break;
+                default:
+                    if (int.TryParse(input, out int index))
+                    {
+                        List<Session> sessions = activity.ListOfSession;
+
+                        if (index >= 1 && index <= sessions.Count)
+                        {
+                            Session chosen = sessions[index - 1];
+
+                            new JoinSessionHandler(chosen);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ugyldigt sessionsnummer.");
+                            MenuSelecter(true);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ugyldigt input.");
+                        MenuSelecter(true);
+                    }
+                    break;
             }
+
         }
     }
+}
 
