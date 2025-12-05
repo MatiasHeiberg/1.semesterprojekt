@@ -208,7 +208,115 @@ Note right of _: message found
 	
 deactivate CreateSessionHandler
 ```
+## Version 3
+```mermaid
+sequenceDiagram
 
+actor _
+box 1 Presentation
+participant View
+end
+box 2 Application
+participant CreateSessionHandler
+participant State
+participant Permission
+end
+box 3 Domain
+participant Session
+participant Activity
+end
+box 4 Data
+participant IOFile
+end
+
+%% Message found
+_->>CreateSessionHandler: new()
+activate CreateSessionHandler
+Note right of _: message found
+
+	CreateSessionHandler->>CreateSessionHandler: CreateSession()
+	activate CreateSessionHandler
+		
+		%% SetSessionData
+		CreateSessionHandler->>Session: new()
+		CreateSessionHandler->>CreateSessionHandler: SetSessionData()
+		activate CreateSessionHandler
+		
+			%% SetPlayerMin
+			CreateSessionHandler->>Session: SetPlayerMin()
+			activate Session
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+					
+					View-->>Session: string
+					
+				deactivate View
+				
+			deactivate Session
+			
+			%% SetPlayerMax
+			CreateSessionHandler->>Session: SetPlayerMax()
+			activate Session
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+				
+					View-->>Session: string
+					
+				deactivate View
+			
+			deactivate Session
+			
+			%% SetDescription
+			CreateSessionHandler->>Session: SetDescription()
+			activate Session
+			
+				Session->>View: TakeUserInput(string)
+				activate View
+					
+					View-->>Session: string
+					
+				deactivate View
+				
+			deactivate Session		
+			
+			%% AddParticipant
+			CreateSessionHandler->>Session: AddParticipant(User)
+			activate Session
+				
+				Session->>Permission: CanJoinSession(int, int)
+				activate Permission
+					
+					Permission->>Session: bool
+					
+				deactivate Permission
+				Session->>State: GetCurrentUser()
+				activate State
+					
+					State->>IOFile: ReadCurrentUser()
+					activate IOFile
+						
+						IOFile-->>State: User
+						
+					deactivate IOFile
+					State-->>Session: User
+				
+				deactivate State
+				
+				Session-->>CreateSessionHandler: bool
+					
+			deactivate Session
+			
+		deactivate CreateSessionHandler
+		
+		%% listOfSessions.add()
+		CreateSessionHandler->>Activity: AddSession(Session)
+		
+	deactivate CreateSessionHandler
+	
+deactivate CreateSessionHandler
+```
 
 # [[Use cases#3. Tilmelding til aktiviteter]]
 ## Use case 3: Join Session Version 1

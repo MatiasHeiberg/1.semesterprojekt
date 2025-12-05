@@ -31,22 +31,7 @@ namespace semesterprøve
             this.Description = description;
             this.Date = date;
         }
-        public Session(int playerMinimum, int playerMaximum, string description, DateTime date)
-        {
 
-            this.playerMinimum = playerMinimum;
-            this.PlayerMaximum = playerMaximum;
-            this.Description = description;
-            this.Date = date;
-        }
-        public Session(int playerMinimum, int playerMaximum, string description)
-        {
-
-            this.playerMinimum = playerMinimum;
-            this.PlayerMaximum = playerMaximum;
-            this.Description = description;
-
-        }
         public Session()
         {
         }
