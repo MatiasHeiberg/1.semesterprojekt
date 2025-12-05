@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,36 +61,41 @@ namespace semesterprøve
 
             switch (input)
             {
-                case "q":
+                case "q": 
+                    running = false;
                     break;
                 case "n":
                     new CreateSessionHandler();
+                    MenuSelecter(running);
                     break;
                 default:
-                    if (int.TryParse(input, out int index))
-                    {
-                        List<Session> sessions = Activity.ListOfSession;
-
-                        if (index >= 1 && index <= sessions.Count)
-                        {
-                            Session chosen = sessions[index - 1];
-
-                            new JoinSessionHandler(chosen);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ugyldigt sessionsnummer.");
-                            MenuSelecter(true);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ugyldigt input.");
-                        MenuSelecter(true);
-                    }
+                    MenuItem(input);
                     break;
             }
+        }
+        private void MenuItem(string input)
+        {
+            if (int.TryParse(input, out int index))
+            {
+                List<Session> sessions = Activity.ListOfSession;
 
+                if (index >= 1 && index <= sessions.Count)
+                {
+                    Session chosen = sessions[index - 1];
+
+                    new JoinSessionHandler(chosen);
+                }
+                else
+                {
+                    Console.WriteLine("Ugyldigt sessionsnummer.");
+                    MenuSelecter(true);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Ugyldigt input.");
+                MenuSelecter(true);
+            }
         }
     }
 }
