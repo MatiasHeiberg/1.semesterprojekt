@@ -10,7 +10,7 @@ namespace semesterprøve
     //JoinSessionHandler håndtere tilmelding til af den aktualle bruger fra state til
     //en konkret session.
 
-    internal class JoinSessionHandler
+    public class JoinSessionHandler
     {
 
         private Session session; //Den session som brugeren skal tilmeldes.
@@ -27,7 +27,7 @@ namespace semesterprøve
 
         //Henter currentUser fra GetCurrentUser(som henter den fra state) og sender brugeren videre
         //til session.AddParticipant() som selv kalder Permission.CanJoinSession.
-        private void JoinSession()
+        public void JoinSession()
         {
             User currentUser = State.GetCurrentUser();
             session.AddParticipant();
