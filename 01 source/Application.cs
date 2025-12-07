@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace semesterprøve
 {
-    internal class Application
+    public class Application
     {
         // Opretter statiske singleton objekter der skal persistere igennem hele programmets levetid.
         public static List<User> AllUsers;
