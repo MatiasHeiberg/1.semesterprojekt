@@ -8,9 +8,7 @@ namespace semesterprøve
     {
         static void Main(string[] args)
         {
-            //Opretter ny application og kører Run()
-            Application application = new Application();
-            application.Run();
+            new Application();
         }
     }
 }

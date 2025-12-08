@@ -15,7 +15,12 @@ namespace semesterprøve
         public static List<User> AllUsers;
         private bool running = true;
 
-        public void Run()
+        public Application()
+        {
+            Run();
+        }
+
+        private void Run()
         {
             //indlæs brugere fra CSV
             AllUsers = IOFile.LoadUsers("Users.csv");
