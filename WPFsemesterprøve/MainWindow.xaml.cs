@@ -67,12 +67,11 @@ namespace WPFsemesterprøve
                 MessageBox.Show("Vælg venligst en session først."); //Vis besked til brugeren.
                 return;
             }
+            SelectedSessionListBox.ItemsSource = null; //Ændrer referencen på listen - så den opdateres efter en joined session
             JoinSessionHandler handler = new JoinSessionHandler(selectedSession); //Opretter en ny JoinSessionHandler med den valgte session.
+            SelectedSessionListBox.ItemsSource = selectedSession.ListOfParticipant;
+
         }
-        //Eventhandler der kører når LoggedInUserTextBlock er loaded. Formålet er at opdatere teksten med nuværende bruger information.
-        private void LoggedInUserTextBlock_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoggedInAsTextBlock.Text = $"Logged in som {State.GetCurrentUser().Name} Admin: {State.GetCurrentUser().IsAdmin}";
-        }
+
     }
 }
