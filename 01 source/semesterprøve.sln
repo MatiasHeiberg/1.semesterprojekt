@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "semesterprøve", "semesterprøve.csproj", "{BA1CD548-035E-4829-BA6F-AA6688F5EB11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFsemesterprøve", "..\WPFsemesterprøve\WPFsemesterprøve.csproj", "{C68EE806-3E70-4252-87F0-8776164869B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BA1CD548-035E-4829-BA6F-AA6688F5EB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA1CD548-035E-4829-BA6F-AA6688F5EB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA1CD548-035E-4829-BA6F-AA6688F5EB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68EE806-3E70-4252-87F0-8776164869B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68EE806-3E70-4252-87F0-8776164869B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68EE806-3E70-4252-87F0-8776164869B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68EE806-3E70-4252-87F0-8776164869B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
