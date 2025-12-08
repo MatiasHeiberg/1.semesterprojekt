@@ -22,6 +22,8 @@ namespace semesterprøve
         public List<User> ListOfParticipant { get => listOfParticipant; set => listOfParticipant = value; }
         public int PlayerMaximum { get => playerMaximum; set => playerMaximum = value; }
 
+        public int PlayerMinimum { get => playerMinimum; set => playerMinimum = value; }
+
         // Constructors
         public Session(List<User> listOfParticipant, int playerMinimum, int playerMaximum, string description, DateTime date)
         {
