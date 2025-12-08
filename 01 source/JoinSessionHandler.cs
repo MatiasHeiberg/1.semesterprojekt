@@ -13,21 +13,17 @@ namespace semesterprøve
     internal class JoinSessionHandler
     {
 
-        private Session session; //Den session som brugeren skal tilmeldes.
 
         //Constructor som modtager den valgte session og nuværende state (bruger).
         //Kalder JoinSession() med det samme.
         public JoinSessionHandler(Session session)
         {
-
-            this.session = session;
-
-            JoinSession();
+            JoinSession(session);
         }
 
         //Henter currentUser fra GetCurrentUser(som henter den fra state) og sender brugeren videre
         //til session.AddParticipant() som selv kalder Permission.CanJoinSession.
-        private void JoinSession()
+        private void JoinSession(Session session)
         {
             User currentUser = State.GetCurrentUser();
             session.AddParticipant();

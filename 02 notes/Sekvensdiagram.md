@@ -319,7 +319,7 @@ deactivate CreateSessionHandler
 ```
 
 # [[Use cases#3. Tilmelding til aktiviteter]]
-## Use case 3: Join Session Version 1
+## Version 1
 Er designet med udgangspunkt i [[Klassediagram#Version 5]].
 ```mermaid
 sequenceDiagram
@@ -379,7 +379,59 @@ Note right of Application: message found
 deactivate JoinSessionHandler
 ```
 
-## Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 1
+## Version 2
+```mermaid
+sequenceDiagram
+
+actor _
+box 2 Application
+    participant Application
+    participant JoinSessionHandler 
+    participant State
+    participant Permission
+end
+box 3 Domain
+    participant Session
+end
+box 4 Data
+    participant IOFile
+end
+
+_->>Application: user selection
+activate Application
+	Note right of _: message found
+	Application->>Application:MenuItem()
+Application->>JoinSessionHandler: new(selection)
+activate JoinSessionHandler
+JoinSessionHandler->>JoinSessionHandler: JoinSession()
+
+%% Hent nuværende bruger (via State/IOFile)
+JoinSessionHandler->>State: GetCurrentUser()
+activate State
+State->>IOFile: ReadCurrentUser()
+activate IOFile
+IOFile-->>State: User
+deactivate IOFile
+State-->>JoinSessionHandler: User
+deactivate State
+
+%% Forsøg at tilføje bruger til Session
+JoinSessionHandler->>Session: AddParticipant()
+activate Session
+
+Session->>Permission: CanJoinSession()
+activate Permission
+Permission-->>Session: canJoin
+deactivate Permission
+deactivate Session
+
+deactivate JoinSessionHandler
+deactivate Application
+
+
+```
+# Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s 
+## Version 1
 ```mermaid
 sequenceDiagram
 
@@ -445,7 +497,7 @@ Note right of Application: message found
 	
 deactivate ListSessionsHandler
 ```
-## Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s Version 2
+## Version 2
 ```mermaid
 sequenceDiagram
 
@@ -469,7 +521,6 @@ end
 %% Message found
 Application->>ListSessionHandler: new()
 activate ListSessionHandler
-Note right of Application: message found
 
 activate ListSessionHandler	
 ListSessionHandler->>ListSessionHandler: ListSessions()
@@ -500,8 +551,9 @@ ListSessionHandler->>ListSessionHandler: ListSessions()
 
         Permission-->>Activity: true
         deactivate Permission
+        Activity->>Activity: FilterListData()
 
-    Activity-->>ListSessionHandler: List<Session> (alle sessions)
+    Activity-->>ListSessionHandler: List<Session>
     deactivate Activity
 
 %% Print
