@@ -1,0 +1,39 @@
+Forside
+Indholdsfortegnelse
+Indledning
+
+# Inception (Uge 1)
+Kravspecifikationer fra opgaveformulering
+Valg af case/afgrænsning (Artikel fra Silkeborg Bibliotek)
+Arbejdsproces (Obsidian, ordbog, git og github, mermaid, gruppekontrakt, log)
+Projektstyring (UP, Gantt, The Natural Planning Model)
+Problemstillinger
+Manglende Persona 
+Forretningsanalyse (BMC som skabelon)
+Vision Board
+Kravspecifikation
+Use Cases
+Domænemodel
+UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)
+
+# Elaboration
+Implementeringsprincipper
+Ordanalyse (Ordbog - Vi kom til at erstatte system-ord i domæne)
+Klassediagram
+Sekvensdiagram
+Interview med Andreas (Hører egentlig til i inception-refleksion - Manglende user stories)
+
+# Construction
+Feedback (Test - Larman kap 2. 2,3 The need for feedback and adaptation) 
+UI/UX
+
+Afsluttende refleksion
+Konklusion
+Litteraturliste
+Bilag
+
+ 
+
+
+
+
