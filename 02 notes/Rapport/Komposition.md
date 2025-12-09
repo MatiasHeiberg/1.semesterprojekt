@@ -30,7 +30,7 @@
 - [ ] [[UIUX]]
 - [ ] Nedslag i den kreative process (afsnits konklusion/reflektion/discussion)
 ---
-- [ ] **Afsluttende refleksion**
+- [ ] **[[Afsluttende refleksion]]**
 - [ ] **Konklusion**
 - [ ] **Litteraturliste**
 - [ ] **[[Bilag]]**
