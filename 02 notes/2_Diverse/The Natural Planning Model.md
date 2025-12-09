@@ -4,12 +4,3 @@
 4. Organising
 5. Next Action
 
-### Purpose and principles
-
-### Outcome **Vision**ing
-
-### Brainstorm
-
-### Organising
-
-### Next Action

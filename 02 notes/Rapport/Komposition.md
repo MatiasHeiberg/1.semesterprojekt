@@ -6,7 +6,7 @@
 - [ ] Kravspecifikationer fra opgaveformulering
 - [ ] [[Valg af case/afgrænsning (Artikel fra Silkeborg Bibliotek)]]
 - [ ] [[Arbejdsproces (Obsidian, ordbog, git og github, mermaid, gruppekontrakt, log)]]
-- [ ] Projektstyring (UP, Gantt, The Natural Planning Model)
+- [ ] [[Projektstyring (UP, Gantt, The Natural Planning Model)]]
 - [ ] [[Problemstillinger]]
 - [ ] Manglende Persona 
 - [ ] [[Forretningsanalyse (BMC som skabelon)]]
@@ -27,7 +27,7 @@
 
 # Construction - del 3
 - [ ] Feedback (Test - Larman kap 2. 2,3 The need for feedback and adaptation) 
-- [ ] UI/UX
+- [ ] [[UIUX]]
 - [ ] Nedslag i den kreative process (afsnits konklusion/reflektion/discussion)
 ---
 - [ ] **Afsluttende refleksion**

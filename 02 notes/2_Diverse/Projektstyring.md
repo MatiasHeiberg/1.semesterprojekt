@@ -37,8 +37,6 @@ gantt
     AdminOverblik           :e5, 2025-11-27, 3d
     DataIndlæsningFraFil :e6, 2025-11-27, 3d
     FunktionelleTests       :e7, 2025-11-27, 5d
-    EkstraFeature1           :e8, 2025-12-27, 3d
-    EkstraFeature2           :e9, 2025-12-27, 3d
 
     section Rapport
     Forside                  :f1, 2025-12-03, 1d
