@@ -1,3 +1,7 @@
+I opgaven arbejder vi med Business Model Canvas som en overordnet skabelon for hele vores forretningsanalyse. Med modellens ni byggesten har vi vurderet, at vi kommer omkring de relevante elementer for vores specifikke case ved inddragelse af relevante værktøjer og modeller. Med udgangspunkt i de ovennævnte problemstillinger illustrerer vi med BMC-modellen, hvordan vi i udviklingen af vores software skaber og leverer værdi til bibliotekets arrangement. Vi har taget udgangspunkt i, hvordan vi forstår sammenhængen mellem de forskellige relationer i vores case. Vi har altså udfyldt BMC’en ud fra egne antagelser, da ingen konkrete kilder eller data, udover bibliotekets hjemmeside, har været tilgængelige på dette tidspunkt i projektet. Det betyder naturligvis også, at BMC’en har fungeret som et værktøj til at skabe overblik over, hvordan vores forretningside eventuelt kunne struktureres, og hvad der kunne være relevant for et fremtidigt system. Vi vurderede, at med projektets begrænsede tidsperiode og det større fokus, der lå på implementeringen og de dertilhørende designdiagrammer, at det vigtigste var at skabe et godt overblik og reflektere over centrale elementer, fremfor at indsamle mere data.
+
+
+
 ### Business Model Canvas
 
 **1. Customer Segment**

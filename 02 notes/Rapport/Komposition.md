@@ -8,7 +8,7 @@
 - [ ] [[Arbejdsproces (Obsidian, ordbog, git og github, mermaid, gruppekontrakt, log)]]
 - [ ] [[Projektstyring (UP, Gantt, The Natural Planning Model)]]
 - [ ] [[Problemstillinger]]
-- [ ] Manglende Persona 
+- [ ] [[Manglende Persona-argument]] 
 - [ ] [[Forretningsanalyse (BMC som skabelon)]]
 - [ ] [[Product Vision Board]]
 - [ ] [[Kravspecifikation]]
