@@ -11,7 +11,7 @@ sequenceDiagram
     participant U as User
     participant S as State
     
-    _->>P: Log in
+    _->>P: Program starts
     Note right of _: message found
     P->>A: New() Application
     Activate A 
@@ -20,14 +20,13 @@ sequenceDiagram
 	A->>I: LoadUsers(Users.csv)
     Activate I
 	I->>F: ReadAllLines()
-	I->>A: New() List
+	F-->>I: return all lines
 	loop 
     I->>U: New() User
 	I->>I: ExtractUser()
-	I-->>I: return new() User split
+	I-->>I: return new() User (split)
 	end
 	I-->>A: return AllUser()
-	Deactivate A
 	Deactivate I
 	A->>S: SetCurrentUser()
 	Activate S
@@ -35,7 +34,6 @@ sequenceDiagram
 	Activate I
 	I->>F: WriteAllText()
 	Deactivate I
-	S-->>A: return 
 	Deactivate S
 	
 	A->>S: GetCurrentUser()
@@ -45,11 +43,13 @@ sequenceDiagram
 	Activate I
 	I->>U: New() User
 	I->>F: ReadAllText()
+	F-->>I: return CurrentUser
 	I->>I: ExtractUser()
 	I-->>S: return
 	Deactivate I
 	S-->>A: return 
 	Deactivate S
+	Deactivate A
 	Deactivate A
 	
 	
