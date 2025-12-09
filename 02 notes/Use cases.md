@@ -51,6 +51,7 @@ Formater
 * **Primær aktør:*** [[Admin]]  
 * **Successcenarie:** [[Admin]] går ind på brugerprofilen og sletter brugeren. ^649c42
 ## 2. Oprettelse af aktiviteter med mulighed for begrænsning af antal deltagere
+
 **Brief:**
 Bruger opretter ny spilsession
 
