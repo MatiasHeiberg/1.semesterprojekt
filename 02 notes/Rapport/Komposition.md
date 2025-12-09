@@ -10,8 +10,8 @@
 - [ ] [[Problemstillinger]]
 - [ ] Manglende Persona 
 - [ ] [[Forretningsanalyse (BMC som skabelon)]]
-- [ ] Vision Board
-- [ ] Kravspecifikation
+- [ ] [[Product Vision Board]]
+- [ ] [[Kravspecifikation]]
 - [ ] Use Cases
 - [ ] Domænemodel
 - [ ] UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)
