@@ -3,12 +3,10 @@
 - [ ] **Indledning**
 ---
 # Inception (Uge 1)
-- [ ] Kravspecifikationer fra opgaveformulering
 - [ ] [[Valg af case/afgrænsning (Artikel fra Silkeborg Bibliotek)]] (+ Kravspecifikationer)
 - [ ] [[Arbejdsproces (Obsidian, ordbog, git og github, mermaid, gruppekontrakt, log)]]
-- [ ] [[Projektstyring (UP, Gantt, The Natural Planning Model)]]
+- [ ] [[Projektstyring (UP, Gantt, The Natural Planning Model)]] (+ afsluttende afsnit om log og rapportskabelon)
 - [ ] [[Problemstillinger]]
-- [ ] [[Manglende Persona-argument]] 
 - [ ] [[Forretningsanalyse (BMC som skabelon)]]
 - [ ] [[Product Vision Board]]
 - [ ] [[Kravspecifikation]]
