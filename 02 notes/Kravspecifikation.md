@@ -1,14 +1,6 @@
+For at få en relevant oversigt over, hvilke krav vi skulle fokusere på først i forhold til vores specifikke case, men også ifølge prøvens opgaveformulering, har vi valgt at benytte os af MoSCoW-modellen. Vi har vurderet, at den giver os det bedste overblik over kravene i dette projekt, hvor tid og ressourcer spiller en væsentlig rolle. Den fokuserer på det allervigtigste først, hvorefter den oplister kravene efter vigtighed og prioritet. Da projekt skal forene interne og eksterne krav har det i løbet af arbejdet været svært at holde fokus på det vigtigste. Det uddybes i (INDSÆT REFERENCE)
 
-
-
-
-
-
-
-
-
-
-# MOSCOW
+# MoSCoW
 -  **Must:** ^9cb3e5
 	- [[User]] skal kunne oprette [[Session]] og bestemme [[Spiller]] antal, samt skrive hvilket spil der spilles.
 	- [[User]] kan tilmelde sig en [[Session]]
