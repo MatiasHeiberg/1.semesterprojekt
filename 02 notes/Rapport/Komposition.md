@@ -18,12 +18,12 @@
 - [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]]
 
 # Elaboration - del 2
-- [ ] Implementeringsprincipper
+- [ ] [[Implementeringsprincipper]]
 - [ ] Ordanalyse (Ordbog - Vi kom til at erstatte system-ord i domæne)
 - [ ] Klassediagram
 - [ ] Sekvensdiagram
 - [ ] Interview med Andreas (Hører egentlig til i inception-refleksion - Manglende user stories)
-- [ ] Nedslag i den kreative process (afsnits konklusion/reflektion/discussion)
+- [ ] [[Elaboration - Nedslag i den kreative process (afsnits konklusion)]]
 
 # Construction - del 3
 - [ ] Feedback (Test - Larman kap 2. 2,3 The need for feedback and adaptation) 
