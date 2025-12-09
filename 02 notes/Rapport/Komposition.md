@@ -12,7 +12,7 @@
 - [ ] [[Kravspecifikation]]
 - [ ] [[Use Cases til rapport]]
 - [ ] Domænemodel
-- [ ] UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)
+- [ ] [[UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)]]
 - [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]]
 
 # Elaboration - del 2
