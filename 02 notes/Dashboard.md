@@ -24,6 +24,7 @@
 
 ### Rapportskrivning
 [[Opsummering uge 1+2]]
+[[Komposition]]
 
 ## Diverse
 - [[obsidian guide]]

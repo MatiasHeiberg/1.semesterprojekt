@@ -497,7 +497,7 @@ Note right of Application: message found
 	
 deactivate ListSessionsHandler
 ```
-## Version 2
+## [[Version 2]]
 ```mermaid
 sequenceDiagram
 
