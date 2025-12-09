@@ -4,7 +4,7 @@
 ---
 # Inception (Uge 1)
 - [ ] Kravspecifikationer fra opgaveformulering
-- [ ] [[Valg af case/afgrænsning (Artikel fra Silkeborg Bibliotek)]]
+- [ ] [[Valg af case/afgrænsning (Artikel fra Silkeborg Bibliotek)]] (+ Kravspecifikationer)
 - [ ] [[Arbejdsproces (Obsidian, ordbog, git og github, mermaid, gruppekontrakt, log)]]
 - [ ] [[Projektstyring (UP, Gantt, The Natural Planning Model)]]
 - [ ] [[Problemstillinger]]
