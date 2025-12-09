@@ -1,4 +1,48 @@
 ```mermaid
+   gantt
+      dateFormat  YYYY-MM-DD
+      title Projektoversigt (Hvad skete der)
+
+      section Forberedelse
+      RepoOpsætning          :done, a1, 2025-11-18, 1d
+      LæsOpgaveformulering   :done, a2, 2025-11-18, 1d
+      ObsidianOpsætning      :done, a3, 2025-11-18, 1d
+      Projektplanlægning     :done, a4, 2025-11-18, 1d
+      Gruppekontrakt         :done, a5, 2025-11-18, 1d
+      GanttPlan              :done, a6, 2025-11-19, 1d
+
+      section Ideudvikling
+      Problemformulering       :done, b1, 2025-11-18, 3d
+      Ordbog                   :done, b3, 2025-11-19, 2d
+
+      section Forretning
+      BusinessModelCanves     :done, c1, 2025-11-19, 2d
+
+      section UML_Design
+      VisionBoard             :done, d1, 2025-11-21, 1d
+      Domænemodel             :done, d2, 2025-11-21, 6d
+      UseCases                :done, d5, 2025-11-21, 7d
+      MOSCOW                  :done, d6, 2025-11-21, 6d
+      VejledningNiels         :milestone, done, m1, 2025-11-26, 0d
+      KravNedskæring          :crit, done, d6b, 2025-11-26, 2d
+      InterviewAndreas        :milestone, done, m2, 2025-11-27, 0d
+      Klassediagram           :done, d8, 2025-11-25, 9d
+      Sekvensdiagrammer       :done, d7, 2025-11-28, 6d
+      VejledningJakub         :milestone, done, m3, 2025-12-03, 0d
+      UXUIskitser             :done, d10, 2025-11-27, 2d
+
+      section Implementering
+      UseCase2OpretSession    :done, e1, 2025-12-01, 3d
+      UseCase3TilmeldSession  :done, e2, 2025-12-02, 2d
+      UseCase4AdminOverblik   :done, e3, 2025-12-03, 2d
+      DataIndlæsningFraFil    :done, e4, 2025-12-05, 1d
+      FunktionelleTests       :done, e5, 2025-12-06, 3d
+
+      section Rapport
+      Rapportskrivning        :active, f1, 2025-12-08, 4d
+```
+
+```mermaid
 gantt
     dateFormat  YYYY-MM-DD
     title Projektoversigt v2
