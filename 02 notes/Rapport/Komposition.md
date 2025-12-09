@@ -12,7 +12,7 @@
 - [ ] [[Forretningsanalyse (BMC som skabelon)]]
 - [ ] [[Product Vision Board]]
 - [ ] [[Kravspecifikation]]
-- [ ] Use Cases
+- [ ] [[Use Cases til rapport]]
 - [ ] Domænemodel
 - [ ] UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)
 - [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]]
