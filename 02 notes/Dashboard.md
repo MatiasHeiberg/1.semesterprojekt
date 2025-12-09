@@ -9,7 +9,7 @@
 ## Projektstyring
 - [[Projektstyring]]
 - [[The Natural Planning Model]]
-- [[Vision Board]]
+- [[Product Vision Board]]
 
 ## Forretningsanalyse
 - [[BMC v2]]
