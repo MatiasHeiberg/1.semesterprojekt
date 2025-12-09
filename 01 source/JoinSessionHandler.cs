@@ -10,7 +10,7 @@ namespace semesterprøve
     //JoinSessionHandler håndtere tilmelding til af den aktualle bruger fra state til
     //en konkret session.
 
-    internal class JoinSessionHandler
+    public  class JoinSessionHandler
     {
 
 
