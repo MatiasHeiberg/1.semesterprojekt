@@ -28,16 +28,13 @@ aliases:
 	- Systemmet skal have en [[ListOfGame]] med x antal spil.
 	- [[User]]profiler skal have et [[User]]navn.
 
-
-
 - **Could:**
 	 - [[Admin]] skal kunne vælge tilgængelige [[Game]] til hver dato/arrangement.
-
 
 - **Would:** 
 	- [[User]]en kan optjene points for at oprette sig som gamemaster eller for at deltage i fysiske arrangementer via systemet
 
 
-FURPS+
+
 
 
