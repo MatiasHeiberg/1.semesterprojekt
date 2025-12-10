@@ -13,7 +13,7 @@
 > Små bygge klodser der kan genbruges flere steder i koden
 > TakeUserInput
 > ##### Command-Query
-> - Måske
+> - Måske...
 > ##### Logical Architecture 
 > - Hvis med sekvens diagram at koden er opdelt i lag
 > ##### Distributed Contorl
@@ -37,3 +37,5 @@ private void SetSessionData(Session session)
     session.AddParticipant();
 }
 ```
+
+# Indkapsling
