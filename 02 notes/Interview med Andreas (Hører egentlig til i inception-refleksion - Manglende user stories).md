@@ -1,0 +1,1 @@
+Undervejs i vores elaboration-fase fik vi mulighed for at tage   
