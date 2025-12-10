@@ -14,3 +14,4 @@
 # [[Bilag 3 - Gantt diagram (original)]]
 # [[Bilag 4 - Gantt diagram (opdateret)]]
 # [[Bilag 5 - UI-Mockup]]
+# [[Bilag 6 - Domænemodel version 2]]
