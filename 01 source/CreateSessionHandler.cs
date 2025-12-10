@@ -8,7 +8,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace semesterprøve
 {
-    internal class CreateSessionHandler
+    public class CreateSessionHandler
     {
         public CreateSessionHandler()
         {
