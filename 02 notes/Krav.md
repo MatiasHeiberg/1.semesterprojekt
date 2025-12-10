@@ -8,7 +8,8 @@ aliases:
 
 # MOSCOW
 -  **Must:** ^9cb3e5
-	- [[User]] skal kunne oprette [[Session]] og bestemme [[Spiller]] antal, samt skrive hvilket spil der spilles.
+	- [[User]] skal kunne oprette [[Session]] og bestemme [[Spiller]] antal, samt skrive hvilket spil 
+	- der spilles.
 	- [[User]] kan tilmelde sig en [[Session]]
 	- [[Admin]] skal have mulighed for at se tidligere og kommende [[Session]]er.
 	- [[User]] skal have overblik over kommende [[Session]].
