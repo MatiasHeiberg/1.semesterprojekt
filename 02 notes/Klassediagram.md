@@ -275,3 +275,108 @@ View -- JoinSessionHandler
 JoinSessionHandler -- State
 JoinSessionHandler -- Session
 ```
+# Version 6
+```mermaid
+classDiagram
+
+class Session {
+	<<domain>>
+    +ListOfParticipant : List<User>
+	+PlayerMin : int 
+	+PlayerMax : int
+	+Description : string
+	+Date : DateTime
+	
+	+SetPlayerMin()
+	+SetPlayerMax()
+	+SetDescription()
+	+AddParticipant(User)
+}
+class User {
+	<<domain>>
+	+IsAdmin : bool
+	+Name : string
+	
+}
+class State {
+	<<application>>
+	+GetCurrentUser()
+	+SetCurrentUser(user)
+}
+class Permission {
+	<<application>>
+	+CanJoinSession(int, int)
+	+CanSeeAllSessions()
+}
+
+class View {
+	<<presentation>> 
+	+TakeUserInput(string)
+	+PrintSessionsWithIndex()
+	-SessionFormatter()
+}
+class Activity {
+	<<domain>>
+	+ListOfSession : List<Session>
+	+AddSession(Session)
+	+CreateDemoSession()
+	-FilterListData()
+}
+class CreateSessionHandler{
+	<<application>>
+	-CreateSession()
+	-SetSessionData(Session)
+}
+class JoinSessionHandler {
+	<<application>>
+	-JoinSession()
+}
+class ListSessionsHandler {
+	<<application>>
+	-ListSessions()
+}
+class IOFile {
+	<<data>>
+	+ReadCurrentUser()
+	+WriteCurrentUser()
+	+LoadUsers()
+	-ExtractUser()
+}
+class Application {
+	<<application>>
+	+AllUsers : List<User>
+	-running : bool
+	-Run()
+	-ShowMainMenu()
+	-MenuSelecter()
+	-MenuItem()
+
+}
+
+
+Session -- View
+Session -- Permission
+Session -- State
+
+Activity -- Permission
+
+Application -- IOFile
+Application -- State
+Application -- Activity
+Application -- View
+Application -- JoinSessionHandler
+
+CreateSessionHandler -- Session
+CreateSessionHandler -- Activity
+
+JoinSessionHandler -- State
+JoinSessionHandler -- Session
+
+ListSessionsHandler -- Activity
+ListSessionsHandler -- View
+
+Permission -- State
+
+State -- User
+State -- IOFile
+```

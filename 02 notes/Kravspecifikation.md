@@ -6,7 +6,7 @@ For at få en relevant oversigt over, hvilke krav vi skulle fokusere på først 
 	- [[User]] kan tilmelde sig en [[Session]]
 	- [[Admin]] skal have mulighed for at se tidligere og kommende [[Session]]er.
 	- [[User]] skal have overblik over kommende [[Session]].
-	- Kunne læse [[User]] fra en json fil.
+	- Kunne læse [[User]] fra en fil.
 
 - **Should:**
 	- [[Admin]] kan se aktivitetshistorik for den enkelte [[User]]
