@@ -1,1 +1,1 @@
-Undervejs i vores elaboration-fase fik vi mulighed for at tage   
+Undervejs i vores elaboration-fase fik vi mulighed for at lave et interview med den medarbejder, der har opstartet brætspilscafeen på Silkeborg Bibliotek. Interviewet blev lavet sent i processen, og vi er bevidste om, at  
