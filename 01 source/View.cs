@@ -10,7 +10,7 @@ namespace semesterprøve
 {
     public static class View
     {
-        internal static string TakeUserInput(string instruction)
+        public static string TakeUserInput(string instruction)
         {
             string userInput;
             
