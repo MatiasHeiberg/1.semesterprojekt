@@ -18,8 +18,7 @@
 
 # Elaboration - del 2
 - [ ] [[Implementeringsprincipper]]
-- [ ] Klassediagram
-- [ ] Sekvensdiagram
+- [ ] [[Design og implementering]]
 - [ ] [[Elaboration - Nedslag i den kreative process (afsnits konklusion)]]
 
 # Construction - del 3
