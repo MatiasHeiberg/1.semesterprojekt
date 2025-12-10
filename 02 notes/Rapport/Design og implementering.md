@@ -50,4 +50,6 @@ Vores program har data på den nuværende bruger (i `State` klassen) og på alle
 	}
 ```
 
-Vi overvejede også at bruge *injection* til at de to singleton objekter rundt i vores program som argumenter fra metode til metode, men dette virkede uoverskueligt og vi var i tvivl om det ville løse indkapslings problemet hvis store dele af programmets metoder alligevel fik adgang til objekterne igennem dens metode parameter. Derfor gik vi med at bruge en ekstern fil. En anden løsning vi har diskuteret efterfølgende, var at oprette to variabler. En `private static` og en som instans variabel der kopiere dataen gemt i den statiske. Hver gang programmet skal have adgang til dataen, oprettes der et nyt objekt som der kan skrives ny data til via instans variablen. Den data kan så persisteres ved at gemme den 
+Vi overvejede også at bruge *injection* til at de to singleton objekter rundt i vores program som argumenter fra metode til metode, men dette virkede uoverskueligt og vi var i tvivl om det ville løse indkapslings problemet hvis store dele af programmets metoder alligevel fik adgang til objekterne igennem dens metode parameter. Derfor gik vi med at bruge en ekstern fil. 
+
+%% En anden løsning vi har diskuteret efterfølgende, var at oprette to variabler. En `private static` og en som instans variabel der kopiere dataen gemt i den statiske. Hver gang programmet skal have adgang til dataen, oprettes der et nyt objekt som der kan skrives ny data til via instans variablen. Den data kan så persisteres ved at gemme den  %%
