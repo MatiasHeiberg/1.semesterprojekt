@@ -14,11 +14,10 @@
 - [ ] [[Domænemodel til rapport]]
 - [ ] [[UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)]]
 - [ ] [[Interview med Andreas (Hører egentlig til i inception-refleksion - Manglende user stories)]]
-- [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]]
+- [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]] + ordbog - Vi opdaterede systemtekniske ord i use case og og moscow
 
 # Elaboration - del 2
 - [ ] [[Implementeringsprincipper]]
-- [ ] Ordanalyse (Ordbog - Vi kom til at erstatte system-ord i domæne)
 - [ ] Klassediagram
 - [ ] Sekvensdiagram
 - [ ] [[Elaboration - Nedslag i den kreative process (afsnits konklusion)]]
