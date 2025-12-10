@@ -23,7 +23,7 @@
 
 # Construction - del 3
 - [ ] Feedback (Test - Larman kap 2. 2,3 The need for feedback and adaptation) 
-- [ ] [[UIUX]]
+- [ ] [[UIUX]] (Flyt til afsluttende refleksion)
 - [ ] Nedslag i den kreative process (afsnits konklusion/reflektion/discussion)
 ---
 - [ ] **[[Afsluttende refleksion]]**
