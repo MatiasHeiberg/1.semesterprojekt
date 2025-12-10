@@ -47,7 +47,7 @@ namespace semesterprøve
             instruction = "Indtast dit ønskede minimum antal spillere";
             playerMinimum = Convert.ToInt32(View.TakeUserInput(instruction));
 
-            this.playerMinimum = playerMinimum;
+            this.PlayerMinimum = playerMinimum;
 
         }
         public void SetPlayerMax()

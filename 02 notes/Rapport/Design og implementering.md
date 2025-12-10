@@ -19,3 +19,21 @@
 > ##### Distributed Contorl
 > - Hvis tidlig sekvensdiagram hvor alle metodekald går ind og ud af en central klasse (*centralized control*) og et nyt diagram hvor pilene går ind og ud af en masse forskellige klasser.
 
+# Abstraktion
+I klassen `CreateSessionHandler` er der metoden `CreateSession()` som opretter et objekt og kalder en masse *Set* metoder for at tilføje data til det. Her har vi abstraheret disse metode kald ud af metoden for at gøre den mere enkel og forståelig. I stedet er de placeret i hjælpemetoden `SetSessionData()`, hvilket har nok information i navnet til at det er forståeligt hvad `CreateSession()` gør. 
+
+```csharp
+private void CreateSession()
+{
+    Session session = new Session();
+    SetSessionData(session);
+    Activity.AddSession(session);
+}
+private void SetSessionData(Session session)
+{
+    session.SetPlayerMin();
+    session.SetPlayerMax();
+    session.SetDescription();
+    session.AddParticipant();
+}
+```
