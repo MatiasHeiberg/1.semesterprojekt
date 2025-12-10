@@ -568,3 +568,39 @@ deactivate View
 deactivate ListSessionHandler
 
 ```
+
+# System flow sekvensdiagram 
+## Version 1
+```mermaid
+sequenceDiagram
+    actor User
+    participant Application
+    participant View
+    participant ListSessionHandler
+    participant JoinSessionHandler
+    participant CreateSessionHandler
+
+    User->>Application: Starter program (Main)
+    activate Application
+
+	Application->>Application: ShowMainMenu()
+
+    loop hovedmenu kører
+        Application->>ListSessionHandler: print sessioner
+        View-->>Application: bruger input
+			
+        alt valg == "n"
+            Application->>CreateSessionHandler: opret session
+
+        else valg == "q"
+            Application->>Application: afslut program
+        else andet input
+			Application->>Application: vælg session
+			Application->>JoinSessionHandler: tilmeld session
+            
+        end
+    end
+
+    deactivate Application
+
+```
