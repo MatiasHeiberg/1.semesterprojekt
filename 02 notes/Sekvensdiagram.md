@@ -430,6 +430,51 @@ deactivate Application
 
 
 ```
+# Version 3
+```mermaid
+sequenceDiagram
+
+box 2 Application
+    participant Application
+    participant JoinSessionHandler 
+    participant State
+    participant Permission
+end
+box 3 Domain
+    participant Session
+end
+box 4 Data
+    participant IOFile
+end
+
+%% Opret handler til tilmelding
+Application->>JoinSessionHandler: new()
+activate JoinSessionHandler
+JoinSessionHandler->>JoinSessionHandler: JoinSession()
+
+%% Hent nuværende bruger (via State/IOFile)
+JoinSessionHandler->>State: GetCurrentUser()
+activate State
+State->>IOFile: ReadCurrentUser()
+activate IOFile
+IOFile-->>State: User
+deactivate IOFile
+State-->>JoinSessionHandler: User
+deactivate State
+
+%% Forsøg at tilføje bruger til Session
+JoinSessionHandler->>Session: AddParticipant()
+activate Session
+
+Session->>Permission: CanJoinSession()
+activate Permission
+Permission-->>Session: canJoin
+deactivate Permission
+deactivate Session
+
+deactivate JoinSessionHandler
+
+```
 # Use case 4: ## [Admin](app://obsidian.md/Admin) ser information på tidligere [Session](app://obsidian.md/Session)s 
 ## Version 1
 ```mermaid

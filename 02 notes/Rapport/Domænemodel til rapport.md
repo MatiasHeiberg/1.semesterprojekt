@@ -9,10 +9,10 @@ I løbet af processen har vi udviklet domænemodellen fra version 1(INDSÆT [[Bi
 ![[Domænemodel version 2.png|800]]
 
 I domænemodel version 2 har vi identificeret følgende:
-**Bibliotek:** det fysiske sted hvor arrangementet afholdes - de ejer endvidere de spil der udlånes til sessioner.
-**Brætspilscafe:** det konkrete arrangement der organiseres af ansatte og består af flere Sessioner.
-**Ansat:** fungerer som organisator af brætspilscafeen og er ansat af biblioteket. Denne rolle er vigtig ifm. Use Case 4, der beskriver en administrator der har overblik over tidligere sessioner.
-**Session**: er en spilsession hvori der spilles med enten medbragt eller biblioteksspil. Use case 2 (oprettelse) og Use case 3 tager begge udgangspunkt i Sessioner. Sessionen kan desuden bestå af 1 til flere spillere men kun ét spil.
-**Spillere**: de personer der deltager i brætspilscafeen og sessionerne.
-**Gamemaster**: en rolle som en spiller kan have denne tager initiativ til en session.
-**Spil**: de brætspil der benyttes under sessionerne.  Opdelt i to undertyper, Biblioteks Spil og Medbragte Spil. Dette er vigtigt for senere implementering af COULD-krav i MOSCOW hvori vi gerne vil have inventarstyring og overblik over hvilke spil der er tilgængelige.
+**Bibliotek:** Det fysiske sted hvor arrangementet afholdes - de ejer endvidere de spil der udlånes til sessioner.
+**Brætspilscafe:** Det konkrete arrangement der organiseres af ansatte og består af flere Sessioner.
+**Ansat:** Fungerer som organisator af brætspilscafeen og er ansat af biblioteket. Denne rolle er vigtig ifm. Use Case 4, der beskriver en administrator der har overblik over tidligere sessioner.
+**Session:** Den spilsession hvori der spilles med enten medbragt eller biblioteksspil. Use case 2 (oprettelse) og Use case 3 tager begge udgangspunkt i Sessioner. Sessionen kan desuden bestå af 1 til flere spillere men kun ét spil.
+**Spillere:** De personer der deltager i brætspilscafeen og sessionerne.
+**Gamemaster:** En rolle som en spiller kan have denne tager initiativ til en session.
+**Spil**: De brætspil der benyttes under sessionerne.  Opdelt i to undertyper, Biblioteks Spil og Medbragte Spil. Denne differentiering er vigtig for senere udvidelser af systemet hvor vi ønsker at implementere COULD-krav fra MOSCOW hvori vi gerne vil have inventarstyring og overblik over hvilke spil der er tilgængelige.
