@@ -17,7 +17,7 @@
 - [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]] + ordbog - Vi opdaterede systemtekniske ord i use case og og moscow
 
 # Elaboration - del 2
-- [ ] [[Implementeringsprincipper]]
+- [x] [[Implementeringsprincipper]]
 - [ ] [[Design og implementering]]
 - [ ] [[Elaboration - Nedslag i den kreative process (afsnits konklusion)]]
 
