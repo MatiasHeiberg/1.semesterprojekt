@@ -6,6 +6,7 @@
 >>[[Klassediagram version 3.png]]
 >>[[Klassediagram version 4.png]]
 >>[[Klassediagram version 5.png]]
+>>[[Klassediagram version 6.png]]
 >Sekvensdiagrammer:
 
 # [[Bilag 1 - problemstillinger vs. natural planning model]]
