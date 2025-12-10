@@ -13,7 +13,7 @@
 - [ ] [[Use Cases til rapport]]
 - [ ] [[Domænemodel til rapport]]
 - [ ] [[UI-mock up (Et forståelsesværktøj i forbindelse med domæneanalyse)]]
-- [ ] [[Interview med Andreas (Hører egentlig til i inception-refleksion - Manglende user stories)]]
+- [ ] [[Interview med Andreas]]
 - [ ] [[Inception - Nedslag i den kreative process (afsnits konklusion)]] + ordbog - Vi opdaterede systemtekniske ord i use case og og moscow
 
 # Elaboration - del 2
