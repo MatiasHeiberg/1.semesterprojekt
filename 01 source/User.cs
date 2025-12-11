@@ -1,47 +1,24 @@
-﻿/// <summary>
-/// User-klassen repræsenterer en bruger i systemet og indeholder oplysninger om brugerens administrative rettigheder.
-/// </summary>
-/// <authors names = "Alle"/>
-/// 
-using System;
-namespace semesterprøve
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// User-klassen repræsenterer en bruger i systemet og indeholder oplysninger om brugerens administrative rettigheder.
+    /// </summary>
+    /// <authors names = "Alle"/>
     public class User
     {
-        //boolean der angiver om brugeren er adminstrator,
-        //standard værdi er sat til false.
-        private bool isAdmin;
-
-        //Holder selve navnet på brugeren,
-        //den er privat da vi kun vil gøre den tilgængelig via en property.
+        private bool isAdmin; // boolean der angiver om brugeren er adminstrator,
         private string name;
 
-        public User()
+        public bool IsAdmin { get => isAdmin; }
+        public string Name { get => name; }
+
+        public User() // Har en eksplicit tom constructor fordi vi opretter tomme objekter 
         {
         }
-
-        //constructoren til oprettelse af bruger, skal have navn
-        //men isAdmin er sat til false som standard.
-        public User(string name, bool isAdmin = false)
+        public User(string name, bool isAdmin = false) // bemærk at isAdmin har en standard værdi, false, som giver begrænset rettigheder
         {
             this.isAdmin = isAdmin;
             this.name = name;
-        }
-
-        public bool IsAdmin
-        {
-            get
-            {
-                return isAdmin;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
         }
     }
 }

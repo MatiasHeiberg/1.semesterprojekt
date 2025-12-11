@@ -33,29 +33,18 @@
         }
         public static List<User> LoadUsers(string csvPath)
         {
-            //Læser hele filen på én gang. Resultatet er et array af strings.
-            //Hver element i arrayet er en linje i filen.
-            string[] lines = File.ReadAllLines(csvPath);
-
-            //Vi opretter en tom liste som skal fyldes med User objekter.
+            string[] lines = File.ReadAllLines(csvPath); // Opretter et array med alle linjer som indicer
             List<User> allUsers = new List<User>();
 
-            //Vi gennemløber hver linje i filen. eks. "Andreas,true".
-            //Vi springer første linje over, ved at sætte i=1, da den består af overskrifter.
-            for (int i = 1; i < lines.Length; i++) 
+            for (int i = 1; i < lines.Length; i++) // Laver alle linjer om til brugerobjekter
             {
-
                 string line = lines[i];
-
                 User user = new User();
 
-                user = ExtractUser(line);
-
-                //opretter User objekt og tilføjer det til listen.
+                user = ExtractUser(line); // Gemmer tekst-objektet som et User objekt
                 allUsers.Add(user);
 
             }
-            //Returnerer listen allUsers.
             return allUsers;
         }
     }
