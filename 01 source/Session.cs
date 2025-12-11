@@ -1,12 +1,11 @@
-﻿/// <summary>
-/// Session-klassen repræsenterer en spilsession med deltagerliste, spillerbegrænsninger, beskrivelse og dato.
-/// </summary>
-/// <authors names = "Alle"/>
-/// 
-using System;
-using System.Reflection.Metadata.Ecma335;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace semesterprøve
 {
+    /// <summary>
+    /// Session-klassen repræsenterer en spilsession med deltagerliste, spillerbegrænsninger, beskrivelse og dato.
+    /// </summary>
+    /// <authors names = "Alle"/>
     public class Session
     {
         // Fields
@@ -17,72 +16,63 @@ namespace semesterprøve
         private DateTime date = new DateTime(2025, 12, 24, 19, 00, 00);
 
         // Properties
-        public DateTime Date { get => date; set => date = value; }
-        public string Description { get => description; set => description = value; }
-        public List<User> ListOfParticipant { get => listOfParticipant; set => listOfParticipant = value; }
-        public int PlayerMaximum { get => playerMaximum; set => playerMaximum = value; }
+        public DateTime Date { get => date; private set => date = value; }
+        public string Description { get => description; private set => description = value; }
+        public List<User> ListOfParticipant { get => listOfParticipant; private set => listOfParticipant = value; }
+        public int PlayerMaximum { get => playerMaximum; private set => playerMaximum = value; }
 
-        public int PlayerMinimum { get => playerMinimum; set => playerMinimum = value; }
+        public int PlayerMinimum { get => playerMinimum; private set => playerMinimum = value; }
 
-        // Constructors
+        // Constructor
         public Session(List<User> listOfParticipant, int playerMinimum, int playerMaximum, string description, DateTime date)
         {
-            this.ListOfParticipant = listOfParticipant;
-            this.playerMinimum = playerMinimum;
-            this.PlayerMaximum = playerMaximum;
-            this.Description = description;
-            this.Date = date;
+            Date = date;
+            Description = description;
+            ListOfParticipant = listOfParticipant;
+            PlayerMaximum = playerMaximum;
+            PlayerMinimum = playerMinimum;
         }
 
-        public Session()
+        public Session() 
         {
         }
 
-        //Methods
+        // Methods
         public void SetPlayerMin()
         {
             string instruction;
-            int playerMinimum;
-
-            instruction = "Indtast dit ønskede minimum antal spillere";
-            playerMinimum = Convert.ToInt32(View.TakeUserInput(instruction));
-
-            this.PlayerMinimum = playerMinimum;
+            
+            instruction = "Indtast dit ønskede minimum antal spillere"; 
+            PlayerMinimum = Convert.ToInt32(View.TakeUserInput(instruction)); // Gemmer bruger input som minimum antal spillere
 
         }
         public void SetPlayerMax()
         {
             string instruction;
-            int playerMaximum;
 
             instruction = "Indtast dit ønskede maximum antal spillere";
-            playerMaximum = Convert.ToInt32(View.TakeUserInput(instruction));
-
-            this.PlayerMaximum = playerMaximum;
+            PlayerMaximum = Convert.ToInt32(View.TakeUserInput(instruction)); // Gemmer bruger input som maximum antal spillere
         }
         public void SetDescription()
         {
             string instruction;
-            string description;
 
             instruction = "Indtast en kort beskrivelse af spillet";
-            description = View.TakeUserInput(instruction);
-
-            this.Description = description;
-
+            Description = View.TakeUserInput(instruction); // Gemmer bruger input som beskrivelse af sessionen og det spil der spilles
         }
-        //Metode til at tilføje nye spillere til eksisterende eller nye sessioner.
+        /// <summary>
+        /// Metode til at tilføje et user objekt til en session.
+        /// Den bruges både ed oprettelse af en session, til at tilføje "gamemasteren" til sessionen 
+        /// samt når andre brugere efterfølgende tilmelder sig.
+        /// </summary>
         public bool AddParticipant()
         {
-            //Spørger Permission-klassen om der er plads til en ny deltager
-            //Sender antal deltagere og max som argumenter.
-            if (!Permission.CanJoinSession(ListOfParticipant.Count, PlayerMaximum))
+            if (!Permission.CanJoinSession(ListOfParticipant.Count, PlayerMaximum)) // Spørger Permission-klassen om der er plads til en ny deltager
             {
-                return false; // Hvis der ikke er plads, stop og returner false.
+                return false; // Hvis der ikke er plads, stop og returner false
             }
-            //Hvis der er plads, tilføjes brugeren til deltagerlisten.
-            ListOfParticipant.Add(State.GetCurrentUser());
-            return true; //Bekræfter at brugeren er blevet tilføjet.
+            ListOfParticipant.Add(State.GetCurrentUser()); // Hvis der er plads, tilføjes brugeren til deltagerlisten.
+            return true; // Indtil nu ubrugt boolean (kunne bruge den til at bekræfte tilmelding)
         } 
     }
 

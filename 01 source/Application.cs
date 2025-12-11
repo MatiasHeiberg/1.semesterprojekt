@@ -18,14 +18,17 @@
         private void Run()
         {
             AllUsers = IOFile.LoadUsers("Users.csv"); // Indlæs brugere fra CSV fil
-            State.SetCurrentUser(AllUsers[8]); // Hardcoder den nuværende bruger, index 0-3 og 9 har administrator rettigheder
-
-            //Kører demo data oprettelse
-            Activity.CreateDemoSessions();
+            State.SetCurrentUser(AllUsers[8]); // Hardcoder den nuværende bruger, index 0-3 og 9 har administrator 
+            Activity.CreateDemoSessions(); // Opretter demo data
 
             ShowMainMenu();
         }
-
+        /// <summary>
+        /// Metoden har ansvaret for programmets hovedmenu. 
+        /// Den printer menuen og beder brugeren om et input som injektes til hjælpemetoden MenuSelecter().
+        /// Metoden holder programmet igang, med en while-løkke, der bliver kontrolleret af running variablen.
+        /// </summary>
+        /// <authors names = "Alle"/>
         private void ShowMainMenu()
         {
 
@@ -33,7 +36,7 @@
             {
                 Console.Clear();
                 Console.WriteLine($"Logged in som {State.GetCurrentUser().Name} Admin: {State.GetCurrentUser().IsAdmin}");
-                new ListSessionHandler();
+                new ListSessionHandler(); // Returnere en liste efter brugerrettigheder. Se evt. sekvensdiagram 4 - use case 4. 
 
                 Console.WriteLine();
                 Console.WriteLine("[tal] = tilmeld dig en session");
@@ -50,6 +53,9 @@
                 break;
             }
         }
+        /// <summary>
+        /// Indeholder en switch der håndtere bruger input.
+        /// </summary>
         private void MenuSelecter( )
         {
             string input = View.TakeUserInput("\nindtast dit valg:");
@@ -57,12 +63,12 @@
             switch (input)
             {
                 case "q":
-                    running = false;
+                    running = false; 
                     Console.WriteLine("Shutting down...");
                     break;
                 case "n":
-                    new CreateSessionHandler();
-                    ShowMainMenu();
+                    new CreateSessionHandler(); // Starter oprettelsen af ny session. Se evt. sekvensdiagram 2 - use case 2
+                    ShowMainMenu(); // 
                     break;
                 default:
                     MenuItem(input);

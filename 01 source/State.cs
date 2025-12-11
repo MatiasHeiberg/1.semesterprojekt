@@ -1,11 +1,9 @@
-﻿/// <summary>
-/// Klassen State fungerer som en container for den aktuelle bruger i systemet.
-/// </summary>
-/// <authors names = "Alle"/>
-/// 
-using System;
-namespace semesterprøve
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// Klassen State fungerer som en container for den aktuelle bruger i systemet.
+    /// </summary>
+    /// <authors names = "Alle"/>
     public class State
     {
         public static User GetCurrentUser()
