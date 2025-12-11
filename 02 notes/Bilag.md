@@ -20,3 +20,4 @@
 # [[Bilag 9 - Sekvensdiagram - Use case 2 version 3]]
 # [[Bilag 10 - Sekvensdiagram - Use case 3 version 3]]
 # [[Bilag 11 - Sekvensdiagram - Use case 4 version 2]]
+# [[Bilag 12 - Sekvensdiagram  - Use Case 2 version 1]]
