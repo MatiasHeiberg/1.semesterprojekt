@@ -1,35 +1,24 @@
-﻿using semesterprøve;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace semesterprøve
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// Dette er den primære kontrol klasse, som orkestrerer flowet i programmet. 
+    /// Se evt. sekvensdiagram 1 - System Flow.
+    /// </summary>
+    /// <authors names = "Alle"/>
     public class Application
     {
-        // Opretter statiske singleton objekter der skal persistere igennem hele programmets levetid.
-        public static List<User> AllUsers;
-        private bool running = true;
+        public static List<User> AllUsers; // En variabel til at holde alle bruger objekter
+        private bool running = true; // Kontrol variabel der stopper while løkken i ShowMainMenu()
 
         public Application()
         {
-            Run();
+            Run(); // Kalder automatisk Run() når applicationen instantieres.
         }
 
         private void Run()
         {
-            //indlæs brugere fra CSV
-            AllUsers = IOFile.LoadUsers("Users.csv");
-
-            //Sætter currentUser i state
-            State.SetCurrentUser(AllUsers[8]);
-
-            //Læser nuværende bruger fra fil
-            State.GetCurrentUser();
+            AllUsers = IOFile.LoadUsers("Users.csv"); // Indlæs brugere fra CSV fil
+            State.SetCurrentUser(AllUsers[8]); // Hardcoder den nuværende bruger, index 0-3 og 9 har administrator rettigheder
 
             //Kører demo data oprettelse
             Activity.CreateDemoSessions();
