@@ -3,3 +3,4 @@
 - Fowler, M. (red.) (2010) _UML distilled: a brief guide to the standard object modeling language_. 3. ed, 16. printing. Boston, Mass.: Addison-Wesley (The Addison-Wesley object technology series).
 - Osterwalder, A. (2014) _Value proposition design: how to create products and services customers want_. Hoboken: John Wiley & Sons (Strategyzer series).
 - Thomas, D. og Hunt, A. (2020) _The pragmatic programmer: your journey to mastery_. Second edition, 20th anniversary edtion. Boston: Addison-Wesley.
+- Allen, D. (2015) _Getting Things Done: the Art of Stress-free Productivity_. Revised edition. London: Piatkus.
