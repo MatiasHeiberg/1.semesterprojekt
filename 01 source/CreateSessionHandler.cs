@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Collections.Specialized.BitVector32;
-
-namespace semesterprøve
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// Handler der opretter og gemmer ny sessionsobjekt.
+    /// Sekvensen sættes automatisk i gang når konstruktoren modtager et metodekald.
+    /// </summary>
     public class CreateSessionHandler
     {
         public CreateSessionHandler()
@@ -19,7 +15,7 @@ namespace semesterprøve
         {
             Session session = new Session();
             SetSessionData(session);
-            Activity.AddSession(session);
+            Activity.AddSession(session); // Gemmer den ny oprettede session
         }
         private void SetSessionData(Session session)
         {

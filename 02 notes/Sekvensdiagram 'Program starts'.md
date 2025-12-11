@@ -36,19 +36,6 @@ sequenceDiagram
 	Deactivate I
 	Deactivate S
 	
-	A->>S: GetCurrentUser()
-	Activate S 
-	
-	S->>I: ReadCurrentUser()
-	Activate I
-	I->>U: New() User
-	I->>F: ReadAllText()
-	F-->>I: return CurrentUser
-	I->>I: ExtractUser()
-	I-->>S: return
-	Deactivate I
-	S-->>A: return 
-	Deactivate S
 	Deactivate A
 	Deactivate A
 	

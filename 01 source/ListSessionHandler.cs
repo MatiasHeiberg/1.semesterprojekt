@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace semesterprøve
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// Handler der returnere den liste der skal printes ud.
+    /// Sekvensen sættes automatisk i gang når konstruktoren modtager et metodekald.
+    /// </summary>
+    /// <authors names = "Alle"/>
     internal class ListSessionHandler
     {
         public ListSessionHandler()
@@ -16,8 +14,8 @@ namespace semesterprøve
 
         private void ListSessions()
         {
-            List<Session> session = Activity.ListOfSession;
-            View.PrintSessionsWithIndex(session);
+            List<Session> session = Activity.ListOfSession; // Gemmer listen over sessioner der skal printes
+            View.PrintSessionsWithIndex(session); // Metodekald til presentation laget der printer listen 
         }
     }
 }

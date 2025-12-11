@@ -1,13 +1,8 @@
-﻿/// <summary>
-/// View fungerer som en klasse, der er ansvarlig for at printe indhold ud til konsollen.
-
-/// </summary>
-/// <authors names = "Alle"/>
-/// 
-using System;
-namespace semesterprøve
-
+﻿namespace semesterprøve
 {
+    /// <summary>
+    /// View fungerer som en klasse, der er ansvarlig for at printe indhold ud til konsollen.
+    /// </summary>
     public static class View
     {
         public static string TakeUserInput(string instruction)
@@ -25,10 +20,12 @@ namespace semesterprøve
             for (int i = 0; i < list.Count; i++)
             {
                 Session session = list[i];
-                Console.WriteLine($"{i+1}.{SessionFormatter(session)}");
+                Console.WriteLine($"{i+1}.{SessionFormatter(session)}"); // Printer den nuværende session
             }
         }
-
+        /// <summary>
+        /// Formaterer et sessionsobjekt til en multi-line string.
+        /// </summary>
         private static string SessionFormatter(Session session)
         {
             string formatThis;
