@@ -50,6 +50,31 @@ Vores program har data på den nuværende bruger (i `State` klassen) og på alle
 	}
 ```
 
-Vi overvejede også at bruge *injection* til at de to singleton objekter rundt i vores program som argumenter fra metode til metode, men dette virkede uoverskueligt og vi var i tvivl om det ville løse indkapslings problemet hvis store dele af programmets metoder alligevel fik adgang til objekterne igennem dens metode parameter. Derfor gik vi med at bruge en ekstern fil. 
+Vi overvejede også at bruge *injection* til at få de to singleton objekter rundt i vores program som argumenter fra metode til metode, men dette virkede uoverskueligt og vi var i tvivl om det ville løse indkapslings problemet hvis store dele af programmets metoder alligevel havde en parameter der giver dem adgang til objekterne. Derfor gik vi med at bruge en ekstern fil som løsning.
 
-%% En anden løsning vi har diskuteret efterfølgende, var at oprette to variabler. En `private static` og en som instans variabel der kopiere dataen gemt i den statiske. Hver gang programmet skal have adgang til dataen, oprettes der et nyt objekt som der kan skrives ny data til via instans variablen. Den data kan så persisteres ved at gemme den  %%
+I takt med at vi skriver dette afsnit (den sidste dag af rapportskrivningen) går det op for os at der er en anden mere simpel løsning. Problemet er at programmet skal kunne tage imod ændringer til data fra brugeren, og huske disse ændringer i løbet af programmets levetid, uden at bruge global data der bryder indkapslings princippet og uden at miste adgang til tidligere ændringer hver gang et nyt objekt oprettes. 
+*Løsningen er at* gøre dataen `private static` og tilføje en public property alle objekterne kan tilgå, præcis der og kun der, hvor dataen er relevant. Dataen bliver ikke nulstillet ved kald af constructor, da den tilhører klassen. Dataen er ikke global da den private access modifier indkapsler den. Adgang til dataen kan præciseres ved kun at oprette nye objekter i de lokale scopes hvor det er relevant.
+```csharp
+class Application
+{
+	Activity activity = new Activity();
+	Session session = new Session();
+	activity.AddSession(session);
+}
+
+class Activity
+{
+	private static List<Session> listOfSessions; 
+
+	public AddSession(Session)
+	{
+		listOfSessions.Add(Session);
+	}
+}
+```
+
+# DRY
+I programmets klasse `View` er der en metode `TakeUserInput(string)`, som bliver brugt flere steder i koden til at tage forskellige slags input. Den har en string parameter der indeholder den instruks der skal forklare brugeren hvilket slags input programmet forventer af vedkommende. Ved at gøre argumentet til et parameter, og ikke en lokal variabel i metoden, kan metoden, og dens logik, genbruges til mange forskellige slags input. Det gør at vi undgår at skulle gentage Console.ReadLine(); i mange forskellige, men ens, metoder. 
+
+# Distributed Control
+I vores tidlige sekvensdiagram ses det hvordan 
