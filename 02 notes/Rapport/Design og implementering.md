@@ -1,5 +1,5 @@
 
-> [!NOTE] 
+> [!NOTE]-
 > ![[Implementeringsprincipper#^139892]]
 > - Vi opnår DRY med abstraktion.
 > #### Eksempler på principperne
@@ -77,4 +77,4 @@ class Activity
 I programmets klasse `View` er der en metode `TakeUserInput(string)`, som bliver brugt flere steder i koden til at tage forskellige slags input. Den har en string parameter der indeholder den instruks der skal forklare brugeren hvilket slags input programmet forventer af vedkommende. Ved at gøre argumentet til et parameter, og ikke en lokal variabel i metoden, kan metoden, og dens logik, genbruges til mange forskellige slags input. Det gør at vi undgår at skulle gentage Console.ReadLine(); i mange forskellige, men ens, metoder. 
 
 # Distributed Control og Logical Architecture
-I vores tidlige sekvensdiagram (INDSÆT REFERENCE TIL USE CASE 2 SEKVENSDIAGRAM VERSION 1) ses det hvordan en enkel klasse har ejerskab over hele sekvensen. Alt logik ligger inde i denne ene klasse og alle metodekald går ud, og returnere direkte tilbage til den. Denne tidlige arkitektur, kaldet *Centralized Control* (INDSÆT KILDE: Fowler), sammenfiltrer kildekoden og gør koden svær at forstå og vedligeholde. Vi opdagede ideen om lag, Larman kalder dem *Logical Architecture*, i *Applying UML and Patterns* midt i projektet, og ændrede efterfølgende vores arkitektur. Vores seneste version af samme sekvens kan ses (INDSÆT REFERENCE TIL USE CASE 2 SEKVENSDIAGRAM VERSION NYESTE) som viser hvordan arkitekturen har ændret programmet til *Distributed Control*
+I vores tidlige sekvensdiagram (INDSÆT REFERENCE TIL USE CASE 2 SEKVENSDIAGRAM VERSION 1) ses det hvordan en enkel klasse har ejerskab over hele sekvensen. Alt logik ligger inde i denne ene klasse og alle metodekald går ud, og returnere direkte tilbage til den. Denne tidlige arkitektur, kaldet *Centralized Control* (INDSÆT KILDE: Fowler), sammenfiltrer kildekoden og gør koden svær at forstå og vedligeholde. Vi opdagede ideen om lag, Larman kalder dem *Logical Architecture*, i *Applying UML and Patterns* midt i projektet, og ændrede efterfølgende vores arkitektur. Vores seneste version af samme sekvens kan ses (INDSÆT REFERENCE TIL USE CASE 2 SEKVENSDIAGRAM VERSION NYESTE) som viser hvordan arkitekturen har ændret programmet til det Fowler kalder for *Distributed Control* (INDSÆT KILDE: Fowler).
