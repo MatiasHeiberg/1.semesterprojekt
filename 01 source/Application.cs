@@ -63,29 +63,31 @@
             switch (input)
             {
                 case "q":
-                    running = false; 
+                    running = false; // Lukker programmet ned
                     Console.WriteLine("Shutting down...");
                     break;
                 case "n":
                     new CreateSessionHandler(); // Starter oprettelsen af ny session. Se evt. sekvensdiagram 2 - use case 2
-                    ShowMainMenu(); // 
+                    ShowMainMenu(); // Opdatere menuen med den nye session
                     break;
                 default:
-                    MenuItem(input);
+                    MenuItem(input); // Tilmelder brugeren den valgte session
                     break;
             }
         }
+        /// <summary>
+        /// Påbegynder tilmeldingssekvens hvis input er valid.
+        /// </summary>
         private void MenuItem(string input)
         {
-            if (int.TryParse(input, out int index))
+            if (int.TryParse(input, out int index)) // Hvis input er int køres løkken
             {
                 List<Session> sessions = Activity.ListOfSession;
 
-                if (index >= 1 && index <= sessions.Count)
+                if (index >= 1 && index <= sessions.Count) // Tjekker om input er out of range
                 {
                     Session chosen = sessions[index - 1];
-
-                    new JoinSessionHandler(chosen);
+                    new JoinSessionHandler(chosen); // Starter tilmeldingen af en session. Se evt. sekvensdiagram 3 - use case 3
                 }
                 else
                 {

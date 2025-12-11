@@ -75,5 +75,4 @@ namespace semesterprøve
             return true; // Indtil nu ubrugt boolean (kunne bruge den til at bekræfte tilmelding)
         } 
     }
-
 }
