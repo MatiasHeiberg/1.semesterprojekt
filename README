@@ -1,0 +1,15 @@
+# 1. semesterprøve - Datamatikeruddanelsen 2025
+
+Dette repository indeholder vores 1. semesterprøve på Datamatikerudannelsen.
+Projektet er udviklet i C# og består af både en konsol applikation og en*WPF-applikation, som genbruger samme logik.
+
+## Struktur
+
+Repositoriet er opdelt således:
+
+### /source
+Indeholder hovedapplikationen og alt primær funktionalitet.
+
+### /WPFsemesterprøve
+Indeholder WPF laget af applikationen.
+WPF er set til at referere til /source-filerne, så det burde være fuldt funktionelt og koblet sammen som det står.
