@@ -1,3 +1,7 @@
+# ignoring notes and typst docs
+02 notes/
+03 docs/
+
 # to exclude Obsidian's settings (including plugin and hotkey configurations)
 .obsidian/
 
