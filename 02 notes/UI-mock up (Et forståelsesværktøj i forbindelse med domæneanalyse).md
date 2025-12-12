@@ -1,2 +1,0 @@
-
-I inceptions-fasen brugte vi et UI-Mockup(INDSÆT [[Bilag 5 - UI-Mockup]]) som internt kommunikationsværktøj. I retrospekt var det konkrete mockup dog udenfor scope, selvom de aldrig var tiltænkt andet formål end intern kommunikation bidrog de til forvirring vedrørende domænet. På trods af, at de blev udfærdiget på få minutter, introducerede det unødig kompleksitet og antog et hierarki (Arrangement->Spilsession).

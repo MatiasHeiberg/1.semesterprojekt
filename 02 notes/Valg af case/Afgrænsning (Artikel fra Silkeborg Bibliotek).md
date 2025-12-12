@@ -1,2 +1,0 @@
-I følgende projekt har vi, med udgangspunkt i opgavekravene for et system, der håndterer medlemskaber og aktiviteter, taget udgangspunkt i Silkeborgs biblioteks brætspilscafe. Afsættet har i den nedenstående forretningsdel derfor centreret sig om den specifikke cafe, hvorfra vi har udarbejdet nogle konkrete problemstillinger, der har været grundlag for vores designdel og vores senere udvikling af vores softwaresystem. 
-

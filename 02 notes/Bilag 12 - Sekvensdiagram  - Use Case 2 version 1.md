@@ -1,1 +1,0 @@
-![[Sekvensdiagram - Use case 2 version 1.png]]

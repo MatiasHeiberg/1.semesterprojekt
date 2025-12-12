@@ -1,1 +1,0 @@
-![[Sekvensdiagram - systemflow version 1.png]]

@@ -1,9 +1,0 @@
-views:
-  - type: list
-    name: Procesnoter
-    filters:
-      and:
-        - file.inFolder("1_Procesnoter")
-    order:
-      - file.name
-    markers: none

@@ -1,1 +1,0 @@
-Vi har forsøgt at strukturere vores aktiviteter ud fra faserne i Unified Process (UP): (1) Inception, (2) Elaboration og (3) Construction. Differentieringen mellem faserne har dog været uklare for os, derfor har vores fokus lagt på kronologien af vores aktiviteter, frem for at vælge dem ud fra hvilken fase projektet var i. 
